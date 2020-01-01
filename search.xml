@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>再见2019，你好2020</title>
+      <link href="/2019/12/31/zai-jian-2019-ni-hao-2020/"/>
+      <url>/2019/12/31/zai-jian-2019-ni-hao-2020/</url>
+      
+        <content type="html"><![CDATA[<p>2019感谢所有的遇见！！！</p><p>虽然2019过去了，</p><p>不管你是珍惜还是遗憾，</p><p>不管你是欢喜还是无奈。</p><p>2019终究回不去了</p><p>不管你是轻松还是疲惫，</p><p>不管你是烦恼还是顺遂。</p><p>再见2019</p><p>呸呸呸，不见2019！</p><p>这一年，是忙碌的一年，也是瞬间即逝的一年。</p><p>是艰辛的一年。</p><p>这一年，有苦有泪太难言，</p><p>得到失去太心酸！</p><p>好好说声再见，</p><p>感谢经历，让我成长；</p><p>感谢过往，让我坚强；</p><p>感谢磨难，让我成就；</p><p>感谢帮助，给我信心！</p><p>感谢所有的相遇！</p><p>Hello 2020！</p><p>新的一年，让过往清零，</p><p>把所有的不愉快放到网络的一个角落。</p><p>新的一年，要怀揣希望，</p><p>把生活继续。</p><p>新的一年，携带梦想，</p><p>杨帆启航！</p><p>信安之路 三年之约。</p><p>在此感谢@尊师XCSOFT@大哥@Al0ne@御风安全@W6z4r</p><p>感谢各位大佬带我入门。</p><p>2020，</p><p>愿你活成想要的自己，</p><p>也祝大哥早日上岸。</p><p>加油加油加油！冲冲冲。</p><p>春夏秋冬轮回更替，</p><p>一年四季景色各异。</p><p>纵然，</p><p>很多事情我无能为力，</p><p>我认命……..</p><p>但是我不服命。</p><p>只求，</p><p>面对困难我坚持到底！</p><p>2019，</p><p>是苦难也好，是荆棘也罢，</p><p>都已经熬过。</p><p>是误解也罢，是烦恼也罢，</p><p>都应该放下。</p><p>2019我听的最多的一句话就是“我太难了”</p><p>再难，没有虚度，</p><p>再苦，没有轻易言弃。</p><p>2020，</p><p>愿你以梦为马，不负韶华！</p><p>愿你走出万里，不改初心！</p><p>生而为人，</p><p>还请努力</p><p>再别忘了初心。</p><p>人生就像一场旅行，</p><p>你要相信，</p><p>你经历的。就是最好的风景，</p><p>你走过的，都是最美的痕迹。</p><p>2019，</p><p>再也不见，</p><p>2020，</p><p>还请努力！</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 往事随风 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 2020冲鸭~ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>newblog</title>
       <link href="/2019/12/22/newblog/"/>
       <url>/2019/12/22/newblog/</url>
