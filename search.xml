@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>hosts禁止访问某个网站，或者禁网限速</title>
+      <link href="/2020/01/06/hosts-jin-zhi-fang-wen-mou-ge-wang-zhan-huo-zhe-jin-wang-xian-su/"/>
+      <url>/2020/01/06/hosts-jin-zhi-fang-wen-mou-ge-wang-zhan-huo-zhe-jin-wang-xian-su/</url>
+      
+        <content type="html"><![CDATA[<p>很多人的家里都有小朋友，因为他们普遍都喜欢玩4399小游戏、7k7k小游戏、之类的页游。<br>我们可以通过禁止访问某一个网页这样的一些措施，来限制小朋友打开网页。（方法也有很多）</p><p><strong>首先呢先来介绍一下hosts这个文件是用来干嘛的。</strong></p><blockquote><p>hosts</p><p>Hosts是一个没有扩展名的系统文件，可以用记事本等工具打开，其作用就是将一些常用的网址域名与其对应的IP地址建立一个关联“数据库”，当用户在浏览器中输入一个需要登录的网址时，系统会首先自动从Hosts文件中寻找对应的IP地址，一旦找到，系统会立即打开对应网页，如果没有找到，则系统会再将网址提交DNS域名解析服务器进行IP地址的解析。<br>需要注意的是，Hosts文件配置的映射是静态的，如果网络上的计算机更改了请及时更新IP地址，否则将不能访问。</p></blockquote><blockquote><p>Hosts工作原理</p><p>浏览器访问网站，要首先通过DNS服务器把要访问的网站域名解析成其指定的IP地址，之后，浏览器才能对此网站进行定位并且访问其数据。<br>操作系统规定，在进行DNS请求以前，先检查系自己的Hosts文件中是否有这个域名和IP的映射关系。如果有，则直接访问这个IP地址指定的网络位置，如果没有，再向已知的DNS服务器提出域名解析请求。也就是说Hosts的IP解析优先级比DNS要高。</p></blockquote><p><strong>个别浏览器会显示网站重定向，以此来达到本地禁止访问网页</strong></p><blockquote><p>存储位置</p><p>hosts文件在不同操作系统（甚至不同Windows版本）的位置都不大一样，<br>以下为hosts文件在不同系统中所处的目录<br>Windows XP/2000/Vista/7/8/8.1/10:C:windowssystem32driversetc\<br>（XP系统无法使用bat批处理命令直接替换hosts，需手动替换后重新插拔网线或重启方使hosts生效）<br>（可更改HKEY_LOCAL_MACHINESYSTEMCurrentControlSetServicesTcpipParametersDataBasePath项修改host位置）<br>Windows 95/98/Me：%WinDir% （其实就是C:WINDOWS）<br>Linux及其他类Unix操作系统：/etc/<br>Mac OS 9及更早的系统：System Folder: Preferences或System folder（文件格式可能与Windows和Linux所对应的文件不同）<br>Mac OS X：/private/etc（使用BSD风格的hosts文件）<br>OS/2及eComStation：”bootdrive”:mptnetc\<br>Android：/system/etc/<br>Symbian第1/2版手机：C:systemdata\<br>Symbian第3版手机：C:private10000882（能使用兼容AllFiles的文件浏览器访问。）<br>iPhone OS：/etc/(需要越狱)<br>iPad OS：/private/etc<br>webOS:/etc</p></blockquote><h2 id="我的Hosts文件内容如下："><a href="#我的Hosts文件内容如下：" class="headerlink" title="我的Hosts文件内容如下："></a>我的Hosts文件内容如下：</h2><pre><code># Copyright (c) 1993-2009 Microsoft Corp.## This is a sample HOSTS file used by Microsoft TCP/IP for Windows.## This file contains the mappings of IP addresses to host names. Each# entry should be kept on an individual line. The IP address should# be placed in the first column followed by the corresponding host name.# The IP address and the host name should be separated by at least one# space.## Additionally, comments (such as these) may be inserted on individual# lines or following the machine name denoted by a '#' symbol.## For example:##      102.54.94.97     rhino.acme.com          # source server#       38.25.63.10     x.acme.com              # x client host# localhost name resolution is handled within DNS itself.#    127.0.0.1        localhost#    ::1              localhost</code></pre><blockquote><p>如果怀疑你的Hosts文件被篡改或删除，可以采用以上代码，进行恢复。</p><p>另外#号后都是注释，所以清空hosts文件对系统正常运行并没有什么影响。</p><p>建议大家保留Hosts文件</p></blockquote><h4 id="具体作用"><a href="#具体作用" class="headerlink" title="具体作用"></a>具体作用</h4><p>1、加快域名解析<br>2、方便局域网用户<br>3、顺利连接系统<br>4.虚拟域名<br>最后呢就是今天禁止/屏蔽网站（5、屏蔽网站（域名重定向））</p><h4 id="屏蔽网站联网的手法"><a href="#屏蔽网站联网的手法" class="headerlink" title="屏蔽网站联网的手法"></a>屏蔽网站联网的手法</h4><p>有很多网站不经过用户同意就将各种各样的插件安装到你的计算机中，其中有些说不定就是木马或病毒。对于这些网站我们可以利用Hosts把该网站的域名映射到错误的IP或本地计算机的IP，这样就不用访问了。在WINDOWS系统中，约定 127.0.0.1 为本地计算机的IP地址, 0.0.0.0是错误的IP地址。<br>如果，我们在Hosts中，写入以下内容：<br>127.0.0.1要屏蔽的网站A的域名<br>0.0.0.0要屏蔽的网站B的域名</p><h4 id="文件存放路径：C-WindowsSystem32driversetc"><a href="#文件存放路径：C-WindowsSystem32driversetc" class="headerlink" title="文件存放路径：C:WindowsSystem32driversetc"></a>文件存放路径：C:WindowsSystem32driversetc</h4><p>这样，计算机解析域名A和 B时，就解析到本机IP或错误的IP，达到了屏蔽网站A 和B的目的。</p><blockquote><p><strong>Hosts填写格式ip地址+空格+网址</strong></p></blockquote><p><img src="https://cdn.jsdelivr.net/gh/Yafine/cdn@2.5/source/loading4.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/host1.png" alt=""></p><p><strong>lnternet安全设置。</strong></p><p><img src="https://cdn.jsdelivr.net/gh/Yafine/cdn@2.5/source/loading4.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/host2.png" alt=""></p><p>ps：在没有生效的情况下使用。</p><p><em>最后Ctrl+R调出管理员命令窗口<br>输入：<br>ipconfig /flushdns<br>回车<br>成功刷新DNS缓存</em>如图所示：</p><p><img src="https://cdn.jsdelivr.net/gh/Yafine/cdn@2.5/source/loading4.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/host3.png" alt=""></p><h4 id="还有一种方法就是利用一些网盾or杀毒软件进行断网或屏蔽。"><a href="#还有一种方法就是利用一些网盾or杀毒软件进行断网或屏蔽。" class="headerlink" title="还有一种方法就是利用一些网盾or杀毒软件进行断网或屏蔽。"></a>还有一种方法就是利用一些网盾or杀毒软件进行断网或屏蔽。</h4><p><strong>我用的是火绒安全软件</strong>这个软件挺强大的：禁网限速等等都有<br>系统防护，联网控制给软件禁用网络达到我们的预期效果（基本上用户软件都能时间禁网）如图所示</p><p><img src="https://cdn.jsdelivr.net/gh/Yafine/cdn@2.5/source/loading4.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/host4.png" alt=""></p><p><em>ps：方法不仅有这些，防火墙设置都可以实现。</em></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> Hosts妙用 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网络技术 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>如何使用优雅的姿势绕过网吧收费系统</title>
       <link href="/2020/01/06/ru-he-shi-yong-you-ya-de-zi-shi-rao-guo-wang-ba-shou-fei-xi-tong/"/>
       <url>/2020/01/06/ru-he-shi-yong-you-ya-de-zi-shi-rao-guo-wang-ba-shou-fei-xi-tong/</url>
