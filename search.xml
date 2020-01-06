@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>如何使用优雅的姿势绕过网吧收费系统</title>
+      <link href="/2020/01/06/ru-he-shi-yong-you-ya-de-zi-shi-rao-guo-wang-ba-shou-fei-xi-tong/"/>
+      <url>/2020/01/06/ru-he-shi-yong-you-ya-de-zi-shi-rao-guo-wang-ba-shou-fei-xi-tong/</url>
+      
+        <content type="html"><![CDATA[<p><strong>软件绕过:</strong>摇钱树网管系统（年龄比我还要大，通过软件漏洞绕过 有些方法理论可以）<br>既然软件绕过 方法比较猥琐。我们可以考虑用硬件绕过。<br><strong>物理绕过：</strong>通过外增一些物理介质达到白嫖目的</p><p>今天就以摇钱树网吧管理系统 为例 进行实战。</p><p>在实战之前呢，先喝口阔乐压压惊。先壮壮胆。<br>好了cat00011cat就不废话啦，</p><p><img src="https://cdn.jsdelivr.net/gh/Yafine/cdn@2.5/source/loading4.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/wb.jpg" alt=""></p><p>绕过原理：插入U盘通过BIOS驱动自己的U盘。进入自己烧录的Windows TOGO 系统什么是TOGO系统呢？？？顾名思义 可以带着跑的随身系统。</p><p><strong>物理介质绕过</strong><br>材料：<br>一个ShanDisk U盘</p><p><img src="https://cdn.jsdelivr.net/gh/Yafine/cdn@2.5/source/loading4.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/wb1.jpg" alt=""></p><p>一个烧录软件：WTGA5010<br>一个ISO镜像文件（建议是使用Win10镜像）<br>会进BIOS</p><p>步骤：<br>1.安装烧录工具Win10系统自带，我这里使用WTGA进行烧录。（安装方法下一步下一步下一步完成）<br>插入U盘；打开软件WTAG之后，选择自己的ISO镜像文件—选择ShanDiakU盘（其它的理论上都不用设置）点击部署即可。</p><p><img src="https://cdn.jsdelivr.net/gh/Yafine/cdn@2.5/source/loading4.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/wb3.png" alt=""></p><p><img src="https://cdn.jsdelivr.net/gh/Yafine/cdn@2.5/source/loading4.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/wb4.png" alt=""></p><p><img src="https://cdn.jsdelivr.net/gh/Yafine/cdn@2.5/source/loading4.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/wb5.png" alt=""></p><p>进入漫长的等待过程（在这个时候建议大家收藏本博客thecat.top 记住偏锋小白菜）</p><p><img src="https://cdn.jsdelivr.net/gh/Yafine/cdn@2.5/source/loading4.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/wb6.png" alt=""></p><p>等待软件提示写入完成（期间系统会提示格式化U盘）千万不要点击格式化。要不然前功尽弃。</p><p><img src="https://cdn.jsdelivr.net/gh/Yafine/cdn@2.5/source/loading4.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/wb7.png" alt=""></p><p>进入BIOS界面，选择U盘启动</p><p><img src="https://cdn.jsdelivr.net/gh/Yafine/cdn@2.5/source/loading4.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/wb8.jpg" alt=""></p><p><img src="https://cdn.jsdelivr.net/gh/Yafine/cdn@2.5/source/loading4.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/wb9.jpg" alt=""></p><p>对Windows进行相关配置即可</p><p><img src="https://cdn.jsdelivr.net/gh/Yafine/cdn@2.5/source/loading4.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/wb10.jpg" alt=""></p><p>进入系统之后配置相关驱动即可（完善系统）</p><p><img src="https://cdn.jsdelivr.net/gh/Yafine/cdn@2.5/source/loading4.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/wb11.jpg" alt=""></p><p>至此全部过程就结束了，本教程仅供技术交流切勿用于违法犯罪！</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 绕过网吧收费 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 破解 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>GitHub + jsDelivr + PicGo + Imagine 打造稳定快速、高效免费图床</title>
       <link href="/2020/01/06/da-zao-wen-ding-kuai-su-gao-xiao-mian-fei-tu-chuang/"/>
       <url>/2020/01/06/da-zao-wen-ding-kuai-su-gao-xiao-mian-fei-tu-chuang/</url>
