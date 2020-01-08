@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>优雅的入侵网络摄像头</title>
+      <link href="/2020/01/08/you-ya-de-ru-qin-wang-luo-she-xiang-tou/"/>
+      <url>/2020/01/08/you-ya-de-ru-qin-wang-luo-she-xiang-tou/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>弱密码摄像头批量入侵，端口37777,8000，默认密码账号admin</p></blockquote><p>这个一个非常简单易懂，没有什么太多技术含量的，默认弱密码摄像头入侵。</p><ul><li>首先，使用Scanport 批量扫描你所选IP的此类型号摄像头的端口，37777,8000，也可以指定IP或者扫自己周围IP的，这样比较快，如果说范围太大可能会很慢。</li></ul><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200108111554.png" alt=""></p><ul><li>(海康的服务控制端口是8000，大华的是37777，经过测试确实这两款还是存在不少弱密码没有修改，虽然很多地方都爆料过，但是现在大部分地区对于网络安全还是缺乏安全意识。)</li><li>第二步，打开工具PSS4.6参数生成器，把全部已经搜索到的IP，直接复制到PSS4.6参数生成器当中，配置好PSS的路径和密码，点击输出即可。</li></ul><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200108111555.png" alt=""></p><p>接下来就可以登录PSS，发现输出的密码已经填好，直接登录即可。</p><p>然后点登录，就进去了，但是，现在发现有很多都是查看不了的，可能是很多原因因素导致的，还需要自己更深入的去了解，想办法去解决，如果只是随便看看，当中肯定是有一两个是可以查看的。  </p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200108111556.png" alt=""></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 渗透大华网络摄像头 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网络攻防 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>windows——优雅地实现批量下载</title>
+      <link href="/2020/01/08/windows-you-ya-di-shi-xian-pi-liang-xia-zai/"/>
+      <url>/2020/01/08/windows-you-ya-di-shi-xian-pi-liang-xia-zai/</url>
+      
+        <content type="html"><![CDATA[<h3 id="下载-艺术"><a href="#下载-艺术" class="headerlink" title="下载=艺术"></a>下载=艺术</h3><p>今天，嗯，emm，朋友找我下载一些付费的课程，<br><em>她说：“她的一些网课视频只能在手机上下载，并且只能用QQ浏览器下载。”</em><br><em>我当时一听，这么流氓的吗？？？</em></p><p>当时我便打开啦我的电脑，<br>通过分析网页数据，找到了这个“网络资源”的URL。<br>之后我爬取所有的URL；<br>找到了三种方法批量下载：<br>1、使用TELEPROTULTRA进行多线程批量下载。（这个方法太占用内存）<br>2、使用迅雷的批量下载（这里好像会限速，所以我并没有采用这个方法）<br><em>提到批量下载，更多的人第一个想到的是迅雷——可惜纵然推出了轻量版，迅雷仍然属于不可忍受的广告类软件之一。</em><br>3.利用网络爬虫爬取也是可以的（这个门槛比较高，我就不分享我那不堪入目的代码啦）<br><strong>接下来是今天的主角，他的优点轻快、效率高</strong></p><blockquote><p>WGET</p><p>这<br>wget 是一个从网络上自动下载文件的自由工具，支持通过 HTTP、HTTPS、FTP 三个最常见的 TCP/IP协议 下载，并可以使用 HTTP 代理。”wget” 这个名称来源于 “World Wide Web” 与 “get” 的结合。<br>所谓自动下载，是指 wget 可以在用户退出系统的之后在继续后台执行，直到下载任务完成。</p></blockquote><h4 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h4><p>再开始下载之前我们得配置WGET.EXE程序（Linux系统也有对应的软件）<br><em>这个配置方法我个人感觉是比较通俗易懂的</em><br>我把事先准备好的WGET.EXE程序，<br>移动到C:WindowsSystem32文件夹下</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200108105340.png" alt=""></p><p>移动完成之后，我们ctrl r cmd来到dos命令窗口，输入wget；<br>显示以下结果，说明WGET.EXE程序完美安装</p><pre><code> WGET: missing URL   Usage: WGET [OPTION]... [URL]...  Try `WGET --help' for more options.</code></pre><h4 id="如何优雅的批量下载HTTP协议头的网络资源"><a href="#如何优雅的批量下载HTTP协议头的网络资源" class="headerlink" title="如何优雅的批量下载HTTP协议头的网络资源"></a>如何优雅的批量下载HTTP协议头的网络资源</h4><p>新建一个文件夹，我们把整理好的url.txt文本<br>放在新建的这个文件夹里，之后在地址栏输入cmd按Enter<br>进入dos窗口，注意我们新建的这个文件夹就是“网络资源”缓存的路径，<br><em>当然可以在dos界面直接进入文件夹并指定缓存路径。</em></p><p>我们在dos命令窗口输入命令执行下载<br>命令格式：</p><pre><code>wget -i xxx.txtwget http://xxx.xxx.com</code></pre><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200108105339.png" alt=""></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200108105338.png" alt=""></p><blockquote><h4 id="WGET下载"><a href="#WGET下载" class="headerlink" title="WGET下载"></a>WGET下载</h4></blockquote><h5 id="蓝奏云直通车"><a href="#蓝奏云直通车" class="headerlink" title="蓝奏云直通车"></a><a href="https://www.lanzous.com/i5s0hyj" target="_blank" rel="noopener">蓝奏云直通车</a></h5><p>此方法适用于HTTP协议头传输的资源</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> Wget批量下载 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Wget </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>巧用bat批处理对文件后缀名进行批量修改</title>
       <link href="/2020/01/08/qiao-yong-bat-pi-chu-li-dui-wen-jian-hou-zhui-ming-jin-xing-pi-liang-xiu-gai/"/>
       <url>/2020/01/08/qiao-yong-bat-pi-chu-li-dui-wen-jian-hou-zhui-ming-jin-xing-pi-liang-xiu-gai/</url>
