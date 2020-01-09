@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="优雅的入侵网络摄像头, 偏锋小白菜">
-    <meta name="description" content="对大华网络摄像头的一次渗透测试">
+    <meta name="keywords" content="局域网下ARP欺骗以及DNS劫持, 偏锋小白菜">
+    <meta name="description" content="域名劫持是古老的黑客技术，通过攻击域名解析服务器（DNS），或伪造域名解析服务器（DNS）的方法，把目标网站域名解析到错误的地址从而实现用户无法访问目标网站的目的。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>优雅的入侵网络摄像头 | 偏锋小白菜</title>
+    <title>局域网下ARP欺骗以及DNS劫持 | 偏锋小白菜</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -303,12 +303,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">优雅的入侵网络摄像头</h1>
+                    <h1 class="description center-align post-title">局域网下ARP欺骗以及DNS劫持</h1>
                 </div>
             </div>
         </div>
@@ -330,8 +330,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2/">
-                                <span class="chip bg-color">网络攻防</span>
+                            <a href="/tags/Kali-Linux/">
+                                <span class="chip bg-color">Kali Linux</span>
                             </a>
                         
                     </div>
@@ -342,8 +342,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%B8%97%E9%80%8F%E5%A4%A7%E5%8D%8E%E7%BD%91%E7%BB%9C%E6%91%84%E5%83%8F%E5%A4%B4/" class="post-category">
-                                渗透大华网络摄像头
+                            <a href="/categories/%E5%B1%80%E5%9F%9F%E7%BD%91DNS%E5%8A%AB%E6%8C%81ARP%E6%AC%BA%E9%AA%97/" class="post-category">
+                                局域网DNS劫持ARP欺骗
                             </a>
                         
                     </div>
@@ -355,28 +355,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-01-08
+                    2020-01-09
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-01-08
+                    2020-01-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    390
+                    959
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 				
@@ -392,22 +392,37 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<p>弱密码摄像头批量入侵，端口37777,8000，默认密码账号admin</p>
-</blockquote>
-<p>这个一个非常简单易懂，没有什么太多技术含量的，默认弱密码摄像头入侵。</p>
+                <p><strong>DNS又称为域名劫持</strong><br>定义：<br>域名劫持是互联网攻击的一种方式，通过攻击域名解析服务器（DNS），或伪造域名解析服务器（DNS）的方法，把目标网站域名解析到错误的地址从而实现用户无法访问目标网站的目的。</p>
+<p>原理：<br>局域网劫持, 攻击者通过伪装成网关, 劫持受害者的网络请求, 将网络请求拦截到指定的服务器；这就是DNS欺骗的基本原理。DNS欺骗其实并不是真的“黑掉”了对方的网站，而是冒名顶替、招摇撞骗罢了。</p>
+<p><strong>局域网、交换机 、AP Dns劫持姿势！</strong><br>对学校机房进行一次简单的劫持（危害，可以通过钓鱼网页 把网吧电脑全部集成肉鸡，进行DDOS攻击等等…让学校网吧所有机子集体瘫痪、卡屏）<br>目的为了让学校重视网络安全！（已经通知网管并协助修复）</p>
 <ul>
-<li>首先，使用Scanport 批量扫描你所选IP的此类型号摄像头的端口，37777,8000，也可以指定IP或者扫自己周围IP的，这样比较快，如果说范围太大可能会很慢。</li>
+<li><p>攻击前的配置  </p>
+<p>再欺骗之前呢，为了能让受害者访问到我们设置的钓鱼网页or挂马网页；</p>
+</li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200108111554.png" alt=""></p>
+<p>1、我们需要开启Apache Web服务环境，<br>命令：<code>/etc/init.d/apache2 start</code><br>如果没有开启，受害者的主机不能访问任何网页！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200109210755.jpg" alt=""></p>
+<p>2、接着再终端输入：/etc/ettercap/etter.dns（也可以根据路径找到文件，双击打开修改）<br>在文档里修改<a href="http://www.linux.org后面的数据即可，指定欺骗的域名和跳转的IP地址，可以结合钓鱼网站，自动化浏览器攻击等技术进行入侵。" target="_blank" rel="noopener">www.linux.org后面的数据即可，指定欺骗的域名和跳转的IP地址，可以结合钓鱼网站，自动化浏览器攻击等技术进行入侵。</a></p>
+<p>3、最后在根目录/var/www/index.html修改自己劫持响应的网页<br>现在我们的配置文件以及Web服务已经修改并配置完成；</p>
+<p><em>先喝口百事阔乐压压惊<del>~</del></em></p>
 <ul>
-<li>(海康的服务控制端口是8000，大华的是37777，经过测试确实这两款还是存在不少弱密码没有修改，虽然很多地方都爆料过，但是现在大部分地区对于网络安全还是缺乏安全意识。)</li>
-<li>第二步，打开工具PSS4.6参数生成器，把全部已经搜索到的IP，直接复制到PSS4.6参数生成器当中，配置好PSS的路径和密码，点击输出即可。</li>
+<li>接下来开始实施ARP欺骗以及DNS攻击</li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200108111555.png" alt=""></p>
-<p>接下来就可以登录PSS，发现输出的密码已经填好，直接登录即可。</p>
-<p>然后点登录，就进去了，但是，现在发现有很多都是查看不了的，可能是很多原因因素导致的，还需要自己更深入的去了解，想办法去解决，如果只是随便看看，当中肯定是有一两个是可以查看的。  </p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200108111556.png" alt=""></p>
+<p><strong>GUI界面的攻击</strong><br>0x1<br>首先打开ettercap这个软件<br>终端输入命令ettercap -G进入ettercap的GUI界面，选择Unified sniffing(Ctrl H)，然后在弹出的选项中选择eth0（如果你有无线网卡可以选择wlan0）这个一般不用修改,视情况而定,选择自己正确挂载的网卡即可。</p>
+<p>0x2<br>在Hosts下选择Scan for hosts(Ctrl+S)扫描局域网所有在线IP，然后选择Hosts list(Ctrl+H)列出局域网下所有IP<br>接着选择判断默认网关,选中并且右键加入Add to Target1;被攻击者选中IP右键加入Add to Target2;</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200109210753.jpg" alt=""></p>
+<p>0x3<br>在Mitm中选择Arp poisoning(攻击方式为ARP)，<br>在MIMT Attack:ARP Poisoning窗口下,勾选Sniff remote connections这个选项并确定。</p>
+<p>0x4<br>在Plugins菜单栏下打开Manage the plugins(Ctrl+P)选择攻击插件，将DNS劫持插件dns_spoof双击选中；出现*号表示已经选中。</p>
+<p>0x5<br>在菜单栏Start下选择Stare sniffing(Shift+Ctrl+W)发起攻击</p>
+<p>Tip:<br>如果没有成功, 可以打开 ettercap的配置文件 =&gt; vim /etc/ettercap/etter.conf</p>
+<ul>
+<li>以上是GUI界面的操作，接下来演示通过终端命令如何劫持</li>
+</ul>
+<p>打开终端,运行ettercap输入以下命令:<br>ettercap -T -q -i eth0 -P dns_spoof -M arp<br>命令注释:<br>-M MAC监听<br>-T 脱机监听<br>-P 过滤筛选器<br>-i 使用此网络接口<br>eth0 本机网卡<br>ARP拦截局域网所有的DNS映射到本机的etter.dns中</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200109210754.jpg" alt=""></p>
+<p>窗口滚动,说明局域网内的鱼上钩了。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200109211059.jpg" alt=""></p>
+<p>只要打开网页,DNS都会映射到攻击机的IP上,淫荡的任你玩弄!!!<br>(进而窃听植入病毒DNS投毒钓鱼劫持会话 配合msf完成一系列的攻击)</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -451,7 +466,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lateral404.github.io/2020/01/08/you-ya-de-ru-qin-wang-luo-she-xiang-tou/">https://lateral404.github.io/2020/01/08/you-ya-de-ru-qin-wang-luo-she-xiang-tou/</a>
+                    <a href="https://lateral404.github.io/2020/01/09/ju-yu-wang-xia-arp-qi-pian-yi-ji-dns-jie-chi/">https://lateral404.github.io/2020/01/09/ju-yu-wang-xia-arp-qi-pian-yi-ji-dns-jie-chi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -489,8 +504,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2/">
-                                    <span class="chip bg-color">网络攻防</span>
+                                <a href="/tags/Kali-Linux/">
+                                    <span class="chip bg-color">Kali Linux</span>
                                 </a>
                             
                         </div>
@@ -656,46 +671,48 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/01/08/web-fu-wu-qi-tong-xin-yuan-li/">
+                <a href="/2020/01/09/ju-yu-wang-xia-arp-qi-pian-yi-ji-dns-jie-chi/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="/medias/featureimages/2.jpg" class="responsive-img" alt="Web服务器通信原理">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="/medias/featureimages/9.jpg" class="responsive-img" alt="局域网下ARP欺骗以及DNS劫持">
                         
-                        <span class="card-title">Web服务器通信原理</span>
+                        <span class="card-title">局域网下ARP欺骗以及DNS劫持</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            什么是B/S、C/S架构？
+                            域名劫持是古老的黑客技术，通过攻击域名解析服务器（DNS），或伪造域名解析服务器（DNS）的方法，把目标网站域名解析到错误的地址从而实现用户无法访问目标网站的目的。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-01-08
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%80%86%E9%A3%8E%E5%BE%AE%E7%AC%91%E7%9A%84Web%E8%8F%9C%E9%B8%A1/" class="post-category">
-                                    逆风微笑的Web菜鸡
+                            <a href="/categories/%E5%B1%80%E5%9F%9F%E7%BD%91DNS%E5%8A%AB%E6%8C%81ARP%E6%AC%BA%E9%AA%97/" class="post-category">
+                                    局域网DNS劫持ARP欺骗
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Web%E5%AE%89%E5%85%A8/">
-                        <span class="chip bg-color">Web安全</span>
+                    <a href="/tags/Kali-Linux/">
+                        <span class="chip bg-color">Kali Linux</span>
                     </a>
                     
                 </div>
@@ -709,19 +726,19 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/01/08/windows-you-ya-di-shi-xian-pi-liang-xia-zai/">
+                <a href="/2020/01/08/yun-nan-wei-kang-bei-han-lei-duo-sheng-yi/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="/medias/featureimages/10.jpg" class="responsive-img" alt="windows——优雅地实现批量下载">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="/medias/featureimages/23.jpg" class="responsive-img" alt="云南唯康杯，含泪夺省一">
                         
-                        <span class="card-title">windows——优雅地实现批量下载</span>
+                        <span class="card-title">云南唯康杯，含泪夺省一</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            通过Wget批量下载HTTP协议头的文件
+                            真的这段时间，失去了很多也收获了很多。
                         
                     </div>
                     <div class="publish-info">
@@ -732,8 +749,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Wget%E6%89%B9%E9%87%8F%E4%B8%8B%E8%BD%BD/" class="post-category">
-                                    Wget批量下载
+                            <a href="/categories/%E4%B8%AD%E8%81%8C%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1%E6%8A%80%E8%83%BD%E5%A4%A7%E8%B5%9B/" class="post-category">
+                                    中职电子商务技能大赛
                                 </a>
                             
                             
@@ -743,8 +760,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Wget/">
-                        <span class="chip bg-color">Wget</span>
+                    <a href="/tags/%E5%94%AF%E5%BA%B7%E6%9D%AF/">
+                        <span class="chip bg-color">唯康杯</span>
                     </a>
                     
                 </div>
