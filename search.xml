@@ -4,6 +4,81 @@
   
     
     <entry>
+      <title>bat实现微信电脑版多开</title>
+      <link href="/2020/01/11/bat-shi-xian-wei-xin-dian-nao-ban-duo-kai/"/>
+      <url>/2020/01/11/bat-shi-xian-wei-xin-dian-nao-ban-duo-kai/</url>
+      
+        <content type="html"><![CDATA[<p><strong>新建一个.txt文本，输入下面的代码</strong></p><p><em>根据自己微信实际安装路径，修改代码</em></p><p>路径查看方式：</p><p>右键微信-属性-目标</p><p><strong>需要多开几个微信就复制几行代码就行。</strong></p><p>格式：</p><pre><code>start D:\"xxxxx"\WeChat\WeChat.exe</code></pre><pre><code>修改前D:\微信PC\WeChat\WeChat.exe修改后start D:\"微信PC"\WeChat\WeChat.exestart D:\"微信PC"\WeChat\WeChat.exestart D:\"微信PC"\WeChat\WeChat.exe这里我就同时开3个微信，开几个就写几行代码</code></pre><p><strong>效果</strong></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200111222828.png" alt=""></p><p><strong>注意</strong><br>‘不要用原来地址中的引号，’<br>‘切换英文输入状态下自己输入’</p><blockquote><p>将文件另存为，重命名<code>xxx.bat</code>保存类型【所有文件】编码【ANSI】最后点击保存<br>一定要带.bat后缀</p></blockquote><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 微信多开 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> bat编程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>用C语言画出一个“爱心”，撩妹技能杠杠的</title>
+      <link href="/2020/01/11/yong-c-yu-yan-hua-chu-yi-ge-ai-xin-liao-mei-ji-neng-gang-gang-de/"/>
+      <url>/2020/01/11/yong-c-yu-yan-hua-chu-yi-ge-ai-xin-liao-mei-ji-neng-gang-gang-de/</url>
+      
+        <content type="html"><![CDATA[<h5 id="用C语言画出一个“爱心”，撩妹技能杠杠的"><a href="#用C语言画出一个“爱心”，撩妹技能杠杠的" class="headerlink" title="用C语言画出一个“爱心”，撩妹技能杠杠的"></a>用C语言画出一个“爱心”，撩妹技能杠杠的</h5><h2 id="编程之美-源于发现"><a href="#编程之美-源于发现" class="headerlink" title="编程之美 源于发现"></a>编程之美 源于发现</h2><h5 id="用C语言，编写自己人生的源代码！！！"><a href="#用C语言，编写自己人生的源代码！！！" class="headerlink" title="用C语言，编写自己人生的源代码！！！"></a>用C语言，编写自己人生的源代码！！！</h5><p><del>学习C语言虽然乏味，枯燥。但是我们可以在玩中学，可以自己输出一些字符画，来放松心情。</del></p><p><strong>爱心字符画代码如下;</strong></p><pre><code>       #include &lt;stdio.h&gt;       int main() {          for (float y = 1.5f; y &gt; -1.5f; y -= 0.1f) {           for (float x = -1.5f; x &lt; 1.5f; x += 0.05f) {              float a = x * x + y * y - 1;                 putchar(a * a * a - x * x * y * y * y &lt;= 0.0f ? '*' : ' ');                     }           putchar('\n');                }           } </code></pre><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200111221604.png" alt=""></p><h4 id="程序运行效果图"><a href="#程序运行效果图" class="headerlink" title="程序运行效果图:"></a>程序运行效果图:</h4><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200111221654.png" alt=""></p><p><strong>在学习中，寻找灵感，不断TOP C语言编程的种种局限和不可能！！！</strong></p><h2 id="只有想不到，没有做不到！！！"><a href="#只有想不到，没有做不到！！！" class="headerlink" title="只有想不到，没有做不到！！！"></a>只有想不到，没有做不到！！！</h2><p>哈哈哈哈嗝，，我要拿它去<del>找女友了</del>哈哈哈哈嗝，，正经事要紧。。。。。哈哈哈哈哈哈嗝<del>~</del></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> For循环 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C语言 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C语言的for循环输出九九乘法口诀表</title>
+      <link href="/2020/01/11/c-yu-yan-de-for-xun-huan-shu-chu-jiu-jiu-cheng-fa-kou-jue-biao/"/>
+      <url>/2020/01/11/c-yu-yan-de-for-xun-huan-shu-chu-jiu-jiu-cheng-fa-kou-jue-biao/</url>
+      
+        <content type="html"><![CDATA[<h4 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下"></a>代码如下</h4><p>编译器用的VC6.0</p><pre><code>   #include&lt;stdio.h&gt;   #include&lt;iostream&gt;   int main() { int row, column;      //row为行，column为列     for (row = 1; row &lt;= 9; row++)   {  for (column = 1; column &lt;= row; column++){ printf("%d*%d=%d  ", row, column, row*column);   }     printf("\n"); }     system("pause");     return 0; } </code></pre><h4 id="如图"><a href="#如图" class="headerlink" title="如图"></a>如图</h4><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200111220836.png" alt=""></p><h4 id="接着"><a href="#接着" class="headerlink" title="接着"></a>接着</h4><p>我们用编译器运行输出效果如图：</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200111221106.png" alt=""></p><p><del>怎么样？？以后再也不怕背不出乘法口诀表啦，</del></p><p>哈哈哈哈哈<del>~</del>哈哈哈哈哈 嗝。。。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> For循环 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C语言 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hexo博客添加一级分类相册功能</title>
       <link href="/2020/01/11/hexo-bo-ke-tian-jia-yi-ji-fen-lei-xiang-ce-gong-neng/"/>
       <url>/2020/01/11/hexo-bo-ke-tian-jia-yi-ji-fen-lei-xiang-ce-gong-neng/</url>
