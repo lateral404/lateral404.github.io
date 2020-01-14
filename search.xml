@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>修改GitBash窗口默认字体大小</title>
+      <link href="/2020/01/14/xiu-gai-gitbash-chuang-kou-mo-ren-zi-ti-da-xiao/"/>
+      <url>/2020/01/14/xiu-gai-gitbash-chuang-kou-mo-ren-zi-ti-da-xiao/</url>
+      
+        <content type="html"><![CDATA[<p>首先右键桌面，打开Git Bash终端。</p><p>在终端中鼠标右键点击，在弹出的菜单栏选择<code>Options</code></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200114173515.png" alt=""></p><p>接着在菜单栏选择<code>Text</code>点击<code>Select</code>自行调整字体——最后点击<code>save</code></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200114173516.png" alt=""></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> Git bash配置 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>MSF目标主机内网渗透之SSH暴力破解</title>
       <link href="/2020/01/14/msf-mu-biao-zhu-ji-nei-wang-shen-tou-zhi-ssh-bao-li-po-jie/"/>
       <url>/2020/01/14/msf-mu-biao-zhu-ji-nei-wang-shen-tou-zhi-ssh-bao-li-po-jie/</url>

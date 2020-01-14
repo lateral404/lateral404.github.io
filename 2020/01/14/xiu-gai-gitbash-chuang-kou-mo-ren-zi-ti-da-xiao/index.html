@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="windows——优雅地实现批量下载, 偏锋小白菜">
-    <meta name="description" content="通过Wget批量下载HTTP协议头的文件">
+    <meta name="keywords" content="修改GitBash窗口默认字体大小, 偏锋小白菜">
+    <meta name="description" content="Git Bash开启老年模式（字体放大）">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>windows——优雅地实现批量下载 | 偏锋小白菜</title>
+    <title>修改GitBash窗口默认字体大小 | 偏锋小白菜</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -325,12 +325,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">windows——优雅地实现批量下载</h1>
+                    <h1 class="description center-align post-title">修改GitBash窗口默认字体大小</h1>
                 </div>
             </div>
         </div>
@@ -352,8 +352,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Wget/">
-                                <span class="chip bg-color">Wget</span>
+                            <a href="/tags/Git/">
+                                <span class="chip bg-color">Git</span>
                             </a>
                         
                     </div>
@@ -364,8 +364,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Wget%E6%89%B9%E9%87%8F%E4%B8%8B%E8%BD%BD/" class="post-category">
-                                Wget批量下载
+                            <a href="/categories/Git-bash%E9%85%8D%E7%BD%AE/" class="post-category">
+                                Git bash配置
                             </a>
                         
                     </div>
@@ -377,28 +377,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-01-08
+                    2020-01-14
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-01-08
+                    2020-01-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    691
+                    106
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 				
@@ -414,25 +414,11 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="下载-艺术"><a href="#下载-艺术" class="headerlink" title="下载=艺术"></a>下载=艺术</h3><p>今天，嗯，emm，朋友找我下载一些付费的课程，<br><em>她说：“她的一些网课视频只能在手机上下载，并且只能用QQ浏览器下载。”</em><br><em>我当时一听，这么流氓的吗？？？</em></p>
-<p>当时我便打开啦我的电脑，<br>通过分析网页数据，找到了这个“网络资源”的URL。<br>之后我爬取所有的URL；<br>找到了三种方法批量下载：<br>1、使用TELEPROTULTRA进行多线程批量下载。（这个方法太占用内存）<br>2、使用迅雷的批量下载（这里好像会限速，所以我并没有采用这个方法）<br><em>提到批量下载，更多的人第一个想到的是迅雷——可惜纵然推出了轻量版，迅雷仍然属于不可忍受的广告类软件之一。</em><br>3.利用网络爬虫爬取也是可以的（这个门槛比较高，我就不分享我那不堪入目的代码啦）<br><strong>接下来是今天的主角，他的优点轻快、效率高</strong></p>
-<blockquote>
-<p>WGET</p>
-<p>这<br>wget 是一个从网络上自动下载文件的自由工具，支持通过 HTTP、HTTPS、FTP 三个最常见的 TCP/IP协议 下载，并可以使用 HTTP 代理。”wget” 这个名称来源于 “World Wide Web” 与 “get” 的结合。<br>所谓自动下载，是指 wget 可以在用户退出系统的之后在继续后台执行，直到下载任务完成。</p>
-</blockquote>
-<h4 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h4><p>再开始下载之前我们得配置WGET.EXE程序（Linux系统也有对应的软件）<br><em>这个配置方法我个人感觉是比较通俗易懂的</em><br>我把事先准备好的WGET.EXE程序，<br>移动到C:WindowsSystem32文件夹下</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200108105340.png" alt=""></p>
-<p>移动完成之后，我们ctrl r cmd来到dos命令窗口，输入wget；<br>显示以下结果，说明WGET.EXE程序完美安装</p>
-<pre><code> WGET: missing URL 
-  Usage: WGET [OPTION]... [URL]...
-  Try `WGET --help' for more options.</code></pre><h4 id="如何优雅的批量下载HTTP协议头的网络资源"><a href="#如何优雅的批量下载HTTP协议头的网络资源" class="headerlink" title="如何优雅的批量下载HTTP协议头的网络资源"></a>如何优雅的批量下载HTTP协议头的网络资源</h4><p>新建一个文件夹，我们把整理好的url.txt文本<br>放在新建的这个文件夹里，之后在地址栏输入cmd按Enter<br>进入dos窗口，注意我们新建的这个文件夹就是“网络资源”缓存的路径，<br><em>当然可以在dos界面直接进入文件夹并指定缓存路径。</em></p>
-<p>我们在dos命令窗口输入命令执行下载<br>命令格式：</p>
-<pre><code>wget -i xxx.txt
-wget http://xxx.xxx.com</code></pre><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200108105339.png" alt=""></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200108105338.png" alt=""></p>
-<blockquote>
-<h4 id="WGET下载"><a href="#WGET下载" class="headerlink" title="WGET下载"></a>WGET下载</h4></blockquote>
-<h5 id="蓝奏云直通车"><a href="#蓝奏云直通车" class="headerlink" title="蓝奏云直通车"></a><a href="https://www.lanzous.com/i5s0hyj" target="_blank" rel="noopener">蓝奏云直通车</a></h5><p>此方法适用于HTTP协议头传输的资源</p>
+                <p>首先右键桌面，打开Git Bash终端。</p>
+<p>在终端中鼠标右键点击，在弹出的菜单栏选择<code>Options</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200114173515.png" alt=""></p>
+<p>接着在菜单栏选择<code>Text</code>点击<code>Select</code>自行调整字体——最后点击<code>save</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200114173516.png" alt=""></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -476,7 +462,7 @@ wget http://xxx.xxx.com</code></pre><p><img src="https://cdn.jsdelivr.net/gh/lat
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lateral404.github.io/2020/01/08/windows-you-ya-di-shi-xian-pi-liang-xia-zai/">https://lateral404.github.io/2020/01/08/windows-you-ya-di-shi-xian-pi-liang-xia-zai/</a>
+                    <a href="https://lateral404.github.io/2020/01/14/xiu-gai-gitbash-chuang-kou-mo-ren-zi-ti-da-xiao/">https://lateral404.github.io/2020/01/14/xiu-gai-gitbash-chuang-kou-mo-ren-zi-ti-da-xiao/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -514,8 +500,8 @@ wget http://xxx.xxx.com</code></pre><p><img src="https://cdn.jsdelivr.net/gh/lat
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Wget/">
-                                    <span class="chip bg-color">Wget</span>
+                                <a href="/tags/Git/">
+                                    <span class="chip bg-color">Git</span>
                                 </a>
                             
                         </div>
@@ -681,46 +667,48 @@ wget http://xxx.xxx.com</code></pre><p><img src="https://cdn.jsdelivr.net/gh/lat
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/01/08/you-ya-de-ru-qin-wang-luo-she-xiang-tou/">
+                <a href="/2020/01/14/xiu-gai-gitbash-chuang-kou-mo-ren-zi-ti-da-xiao/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="/medias/featureimages/23.jpg" class="responsive-img" alt="优雅的入侵网络摄像头">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="/medias/featureimages/7.jpg" class="responsive-img" alt="修改GitBash窗口默认字体大小">
                         
-                        <span class="card-title">优雅的入侵网络摄像头</span>
+                        <span class="card-title">修改GitBash窗口默认字体大小</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            对大华网络摄像头的一次渗透测试
+                            Git Bash开启老年模式（字体放大）
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-01-08
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%B8%97%E9%80%8F%E5%A4%A7%E5%8D%8E%E7%BD%91%E7%BB%9C%E6%91%84%E5%83%8F%E5%A4%B4/" class="post-category">
-                                    渗透大华网络摄像头
+                            <a href="/categories/Git-bash%E9%85%8D%E7%BD%AE/" class="post-category">
+                                    Git bash配置
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2/">
-                        <span class="chip bg-color">网络攻防</span>
+                    <a href="/tags/Git/">
+                        <span class="chip bg-color">Git</span>
                     </a>
                     
                 </div>
@@ -734,31 +722,31 @@ wget http://xxx.xxx.com</code></pre><p><img src="https://cdn.jsdelivr.net/gh/lat
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/01/08/qiao-yong-bat-pi-chu-li-dui-wen-jian-hou-zhui-ming-jin-xing-pi-liang-xiu-gai/">
+                <a href="/2020/01/14/msf-mu-biao-zhu-ji-nei-wang-shen-tou-zhi-ssh-bao-li-po-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="/medias/featureimages/12.jpg" class="responsive-img" alt="巧用bat批处理对文件后缀名进行批量修改">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="/medias/featureimages/1.jpg" class="responsive-img" alt="MSF目标主机内网渗透之SSH暴力破解">
                         
-                        <span class="card-title">巧用bat批处理对文件后缀名进行批量修改</span>
+                        <span class="card-title">MSF目标主机内网渗透之SSH暴力破解</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            bat批处理批量修改文件后缀，提高办公效率
+                            内网渗透之SSH暴力破解攻占目标主机步骤，攻占前提我们得有强大的字典。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-14
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E4%BC%98%E9%9B%85%E7%9A%84%E6%89%B9%E9%87%8F%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E5%90%8E%E7%BC%80%E5%90%8D/" class="post-category">
-                                    优雅的批量修改文件后缀名
+                            <a href="/categories/SSH%E7%88%86%E7%A0%B4/" class="post-category">
+                                    SSH爆破
                                 </a>
                             
                             
@@ -768,8 +756,8 @@ wget http://xxx.xxx.com</code></pre><p><img src="https://cdn.jsdelivr.net/gh/lat
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/bat%E7%BC%96%E7%A8%8B/">
-                        <span class="chip bg-color">bat编程</span>
+                    <a href="/tags/Kali-Linux/">
+                        <span class="chip bg-color">Kali Linux</span>
                     </a>
                     
                 </div>
