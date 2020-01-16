@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Web服务器通信原理, 偏锋小白菜">
-    <meta name="description" content="什么是B/S、C/S架构？">
+    <meta name="keywords" content="初始端口、IP、协议、权限、状态码和CDN, 偏锋小白菜">
+    <meta name="description" content="Web基础知识，冲冲冲！！！">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Web服务器通信原理 | 偏锋小白菜</title>
+    <title>初始端口、IP、协议、权限、状态码和CDN | 偏锋小白菜</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -325,12 +325,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Web服务器通信原理</h1>
+                    <h1 class="description center-align post-title">初始端口、IP、协议、权限、状态码和CDN</h1>
                 </div>
             </div>
         </div>
@@ -352,8 +352,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Web%E5%AE%89%E5%85%A8/">
-                                <span class="chip bg-color">Web安全</span>
+                            <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                                <span class="chip bg-color">网络安全</span>
                             </a>
                         
                     </div>
@@ -364,8 +364,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E9%80%86%E9%A3%8E%E5%BE%AE%E7%AC%91%E7%9A%84Web%E8%8F%9C%E9%B8%A1/" class="post-category">
-                                逆风微笑的Web菜鸡
+                            <a href="/categories/Web%E5%AE%89%E5%85%A8%E5%9F%BA%E7%A1%80/" class="post-category">
+                                Web安全基础
                             </a>
                         
                     </div>
@@ -377,28 +377,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-01-08
+                    2020-01-17
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-01-08
+                    2020-01-17
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    233
+                    506
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 				
@@ -414,26 +414,210 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <ul>
-<li><p>什么是B/S、C/S架构？  </p>
-<p>C/S架构又称Client？Server或客户端/服务器架构。</p>
-</li>
-</ul>
-<p>例如：<br>穿越火线 魔兽世界 我的世界 王者荣耀 QQ 微信</p>
+                <h2 id="端口常识"><a href="#端口常识" class="headerlink" title="端口常识"></a>端口常识</h2><blockquote>
+<p>计算机中拥有65535个端口</p>
+</blockquote>
+<p><strong>Apache容器的默认通信端口</strong></p>
 <ul>
-<li><p>C/S架构的缺点：  </p>
-<p>所有操作都依赖于客户端，当服务器做出某些更改时，客户端必须作出更新，否则无法进行相应操作。</p>
-</li>
-<li><p>B/S又称Brewer/Server或浏览器/服务器架构。  </p>
-<p>例如：</p>
+<li>HTTP端口<ul>
+<li>80端口</li>
+</ul>
 </li>
 </ul>
-<p>洛克王国 QQ农场<br>优势：当服务器做出修改时，不需要实时更新客户端，只需要刷新页面即可。</p>
+<p><strong>Mysql数据库</strong></p>
 <ul>
-<li><p>两种架构各有千秋： </p>
-<p>C/S架构不方便维护和更新。</p>
-<pre><code> B/S架构无法携带精美的素材包。</code></pre></li>
+<li>3306</li>
 </ul>
+<p><strong>Tomcat</strong></p>
+<ul>
+<li>8080</li>
+</ul>
+<p><strong>FTP</strong></p>
+<ul>
+<li>21</li>
+</ul>
+<p><strong>SQL server数据库</strong></p>
+<ul>
+<li>1433</li>
+</ul>
+<p><strong>Oracle数据库</strong></p>
+<ul>
+<li>1521</li>
+</ul>
+<p><strong>SSH</strong></p>
+<ul>
+<li><p>Linux远程控制端口</p>
+<ul>
+<li>22</li>
+</ul>
+</li>
+</ul>
+<p><strong>Windows远程控制端口</strong></p>
+<ul>
+<li>3389</li>
+</ul>
+<h2 id="协议常识"><a href="#协议常识" class="headerlink" title="协议常识"></a>协议常识</h2><ul>
+<li><p>HTTP协议—Web（浏览器）</p>
+</li>
+<li><p>HTTPS协议</p>
+</li>
+<li><p>TCP/IP协议</p>
+</li>
+<li><p>UDP协议</p>
+</li>
+</ul>
+<p>http://(只需要用：//)</p>
+<h2 id="权限常识"><a href="#权限常识" class="headerlink" title="权限常识"></a>权限常识</h2><ul>
+<li><p><strong>网站</strong></p>
+<ul>
+<li><p>前台</p>
+<ul>
+<li>主要用于展示文章内容</li>
+</ul>
+</li>
+<li><p>后台</p>
+<ul>
+<li>主要管理文章内容</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>权限</strong></p>
+<ul>
+<li><p>前台</p>
+<ul>
+<li>Admin权限</li>
+</ul>
+</li>
+<li><p>后台</p>
+<ul>
+<li>User权限</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="常见的后台地址"><a href="#常见的后台地址" class="headerlink" title="常见的后台地址"></a>常见的后台地址</h2><p><strong>admin</strong></p>
+<ul>
+<li><p>/admin/</p>
+</li>
+<li><p>admin.php</p>
+<ul>
+<li><a href="http://www.baidu.com/admin.php" target="_blank" rel="noopener">www.baidu.com/admin.php</a></li>
+</ul>
+</li>
+</ul>
+<p><strong>manager</strong>(manage)</p>
+<p><strong>system</strong></p>
+<p><strong>adm</strong></p>
+<p><strong>administrator</strong></p>
+<p><strong>login</strong></p>
+<p><strong>admin_login</strong></p>
+<h2 id="数据库配置文件默认名称"><a href="#数据库配置文件默认名称" class="headerlink" title="数据库配置文件默认名称"></a>数据库配置文件默认名称</h2><ul>
+<li><p>PHP中默认数据库配置文件</p>
+<ul>
+<li><p>config.xxx</p>
+</li>
+<li><p>database.xxx</p>
+</li>
+<li><p>conn.php</p>
+</li>
+<li><p>data.php</p>
+</li>
+</ul>
+</li>
+<li><p>ASP中数据库配置文件</p>
+<ul>
+<li><p>Global.asa</p>
+</li>
+<li><p>conn.asp</p>
+</li>
+<li><p>config.asp</p>
+</li>
+</ul>
+</li>
+<li><p>ASP.NET数据库配置文件</p>
+<ul>
+<li>web.config</li>
+</ul>
+</li>
+</ul>
+<h2 id="权限继承"><a href="#权限继承" class="headerlink" title="权限继承"></a>权限继承</h2><p>SYSTEM——系统权限</p>
+<p>Administrator——管理员权限–&gt;&gt;apache–&gt;&gt;administrator</p>
+<p>User权限——来宾权限</p>
+<p>网站降权运行（中间件提权）——客户端——Apache——服务端</p>
+<p><strong>用户组</strong></p>
+<ul>
+<li><p>Administrator</p>
+<ul>
+<li><p>admin</p>
+<ul>
+<li>管理员权限</li>
+</ul>
+</li>
+<li><p>test</p>
+<ul>
+<li>管理员权限</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Users</p>
+<ul>
+<li><p>apache</p>
+<ul>
+<li>users</li>
+</ul>
+</li>
+<li><p>mysql</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="状态码介绍"><a href="#状态码介绍" class="headerlink" title="状态码介绍"></a>状态码介绍</h2><ul>
+<li><p>200</p>
+<ul>
+<li>代表某个文件存在于服务端</li>
+</ul>
+</li>
+<li><p>403</p>
+<ul>
+<li>代表客户端无权限访问某个目录或文件</li>
+</ul>
+</li>
+<li><p>404</p>
+<ul>
+<li>代表某个目录或文件不存在</li>
+</ul>
+</li>
+<li><p>500</p>
+<ul>
+<li>代表服务端因为某些原因导致出错</li>
+</ul>
+</li>
+<li><p>502</p>
+<ul>
+<li>当物理服务器不在进行工作。CDN就会返回一个502状态码</li>
+</ul>
+</li>
+<li><p>跳转</p>
+<ul>
+<li><p>301</p>
+<ul>
+<li>永久性跳转（thecat.top—<a href="http://www.thecat.top" target="_blank" rel="noopener">www.thecat.top</a> 爬虫会收录跳转的新连接权重会慢慢转移）</li>
+</ul>
+</li>
+<li><p>302</p>
+<ul>
+<li>临时性跳转</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="CDN是什么"><a href="#CDN是什么" class="headerlink" title="CDN是什么?"></a>CDN是什么?</h2><p>内容分发服务器–加速网页打开速度。</p>
+<p>就近原则。</p>
+<h2 id="相对路径与绝对路径"><a href="#相对路径与绝对路径" class="headerlink" title="相对路径与绝对路径"></a>相对路径与绝对路径</h2><p>绝对路径从盘符开始，相对路径从根目录开始。</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -477,7 +661,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lateral404.github.io/2020/01/08/web-fu-wu-qi-tong-xin-yuan-li/">https://lateral404.github.io/2020/01/08/web-fu-wu-qi-tong-xin-yuan-li/</a>
+                    <a href="https://lateral404.github.io/2020/01/17/chu-shi-duan-kou-ip-xie-yi-quan-xian-zhuang-tai-ma-he-cdn/">https://lateral404.github.io/2020/01/17/chu-shi-duan-kou-ip-xie-yi-quan-xian-zhuang-tai-ma-he-cdn/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -515,8 +699,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Web%E5%AE%89%E5%85%A8/">
-                                    <span class="chip bg-color">Web安全</span>
+                                <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                                    <span class="chip bg-color">网络安全</span>
                                 </a>
                             
                         </div>
@@ -682,46 +866,48 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/01/08/hacker-ji-zhu-xue-de-zai-hao-que-wu-fa-qin-ru-ni-de-xin/">
+                <a href="/2020/01/17/chu-shi-duan-kou-ip-xie-yi-quan-xian-zhuang-tai-ma-he-cdn/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="/medias/featureimages/10.jpg" class="responsive-img" alt="Hacker技术学的再好，却无法侵入你的心！">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="/medias/featureimages/22.jpg" class="responsive-img" alt="初始端口、IP、协议、权限、状态码和CDN">
                         
-                        <span class="card-title">Hacker技术学的再好，却无法侵入你的心！</span>
+                        <span class="card-title">初始端口、IP、协议、权限、状态码和CDN</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            梦醒了，我才知道Hack不需要爱情。
+                            Web基础知识，冲冲冲！！！
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-01-08
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%88%91%E7%9A%84%E9%BB%91%E5%AE%A2%E6%A2%A6/" class="post-category">
-                                    我的黑客梦
+                            <a href="/categories/Web%E5%AE%89%E5%85%A8%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    Web安全基础
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hack/">
-                        <span class="chip bg-color">Hack</span>
+                    <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                        <span class="chip bg-color">网络安全</span>
                     </a>
                     
                 </div>
@@ -735,31 +921,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/01/08/you-ya-de-ru-qin-wang-luo-she-xiang-tou/">
+                <a href="/2020/01/16/wang-zhan-shi-ru-he-zu-cheng-de-ni/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="/medias/featureimages/23.jpg" class="responsive-img" alt="优雅的入侵网络摄像头">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="/medias/featureimages/3.jpg" class="responsive-img" alt="网站是如何组成的呢？">
                         
-                        <span class="card-title">优雅的入侵网络摄像头</span>
+                        <span class="card-title">网站是如何组成的呢？</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            对大华网络摄像头的一次渗透测试
+                            互联网上的网站是如何搭建并运行还能让互联网用户访问的呢？
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-16
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%B8%97%E9%80%8F%E5%A4%A7%E5%8D%8E%E7%BD%91%E7%BB%9C%E6%91%84%E5%83%8F%E5%A4%B4/" class="post-category">
-                                    渗透大华网络摄像头
+                            <a href="/categories/Web%E5%AE%89%E5%85%A8%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    Web安全基础
                                 </a>
                             
                             
@@ -769,8 +955,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2/">
-                        <span class="chip bg-color">网络攻防</span>
+                    <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                        <span class="chip bg-color">网络安全</span>
                     </a>
                     
                 </div>
