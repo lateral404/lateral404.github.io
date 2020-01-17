@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Burp安装与实践</title>
+      <link href="/2020/01/17/burp-an-zhuang-yu-shi-jian/"/>
+      <url>/2020/01/17/burp-an-zhuang-yu-shi-jian/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p><strong>软件下载：</strong><a href="https://pan.baidu.com/s/1ERPzdPV5NLsK0DqAgDpn0w" target="_blank" rel="noopener">Burp2.0.11Pro百度网盘</a></p></blockquote><p><strong><code>Burp Suite 介绍</code></strong></p><ul><li>Burp Suite 是用于攻击web 应用程序的集成平台，包含了许多工具。</li><li>Burp Suite为这些工具设计了许多接口，以加快攻击应用程序的过程。</li><li>所有工具都共享一个请求，并能处理对应的HTTP 消息、持久性、认证、代理、日志、警报。</li></ul><p><strong>工具箱</strong></p><ul><li>Proxy——是一个拦截HTTP/S的代理服务器，作为一个在浏览器和目标应用程序之间的中间人，允许你拦截，查看，修改在两个方向上的原始数据流。</li><li>Spider——是一个应用智能感应的网络爬虫，它能完整的枚举应用程序的内容和功能。</li><li>Scanner[仅限专业版]——是一个高级的工具，执行后，它能自动地发现web 应用程序的安全漏洞。</li><li>Intruder——是一个定制的高度可配置的工具，对web应用程序进行自动化攻击，如：枚举标识符，收集有用的数据，以及使用fuzzing 技术探测常规漏洞。</li><li>Repeater——是一个靠手动操作来补发单独的HTTP 请求，并分析应用程序响应的工具。</li><li>Sequencer——是一个用来分析那些不可预知的应用程序会话令牌和重要数据项的随机性的工具。</li><li>Decoder——是一个进行手动执行或对应用程序数据者智能解码编码的工具。</li><li>Comparer——是一个实用的工具，通常是通过一些相关的请求和响应得到两项数据的一个可视化的“差异”。</li></ul><h3 id="Java环境配置"><a href="#Java环境配置" class="headerlink" title="Java环境配置"></a>Java环境配置</h3><p><strong>0x1</strong></p><p><code>安装burp的前提需要Java环境的支持</code></p><p>双击<code>Java环境一键配置.bat</code>这个软件一件自动化配置；</p><p>有了Java环境之后；</p><p>我们就可以开始接下来的操作！！！</p><h3 id="破解步骤"><a href="#破解步骤" class="headerlink" title="破解步骤"></a>破解步骤</h3><p>第一步打开<code>burp-loader-keygen-jas502n.jar破解补丁</code>，</p><p>把<code>burp</code>和<code>破解补丁</code>放在<code>同目录下</code></p><p>点击<code>Run</code></p><p>运行之后修改<code>License text</code>选项框里面的字符<br>改成自己喜欢的把。</p><p>把那个<code>License</code>值复制粘贴到burp的那个框框里。</p><p>之后点击<code>Next</code></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200117130412.png" alt=""></p><h3 id="0x2Next"><a href="#0x2Next" class="headerlink" title="0x2Next"></a>0x2Next</h3><p>接着点击<code>Manual activation</code>这个选项</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200117130417.png" alt=""></p><h3 id="0x3生成注册码"><a href="#0x3生成注册码" class="headerlink" title="0x3生成注册码"></a>0x3生成注册码</h3><p><em>对burp执行注册</em></p><h2 id="Manual-Activation"><a href="#Manual-Activation" class="headerlink" title="Manual Activation"></a><code>Manual Activation</code></h2><p>进入到<code>Manual Activation</code></p><p>将<code>Copy request</code>里的<code>key值</code></p><p>复制粘贴到<code>Activation Request</code>的输入框里</p><p>这个时候破解补丁会生成一个<code>key值</code><br>将<code>Activation Response</code>生成的key值<br>复制粘贴到<code>Paste Response</code>输入框</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200117130414.png" alt=""></p><p><strong>点击Next进行下一步</strong></p><p>接着点击<code>Finish</code></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200117130413.png" alt=""></p><blockquote><p>如果出现一个提示是否删除缓存，，点击取消即可</p></blockquote><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200117130415.png" alt=""></p><p><em>等待程序启动即可</em></p><h3 id="完美破解"><a href="#完美破解" class="headerlink" title="完美破解"></a>完美破解</h3><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200117130416.png" alt=""></p><blockquote><p>要是觉得每次打开软件都不方便，都需要去到目录打开。</p><p>我们可以写一个简单的.bat <em>在软件目录写好</em></p><p>发送快捷方式到桌面即可</p><p>bat代码如下</p></blockquote><pre><code>@echo nojava -jar burpsuite_pro_v2.0.11beta.jarpause</code></pre><blockquote><p><strong>Burp1.7</strong>：<a href="https://share.weiyun.com/5Js5vyD" target="_blank" rel="noopener">微云网盘下载</a></p></blockquote><p>下载好工具之后，我们得下载<a href="https://www.java.com/zh_CN/download/windows-64bit.jsp" target="_blank" rel="noopener">Java jre</a></p><p>需要注意的是安装Java jre路径不能是中文路径，最好使用默认路径安装。（使用javajdk的话需要配置系统变量，然而使用Java jre就不用配置，安装好直接可以用）</p><p>装好Java jre环境之后，我们双击打开burp就行，，不用安装哦。</p><h3 id="设置代理："><a href="#设置代理：" class="headerlink" title="设置代理："></a>设置代理：</h3><p>火狐浏览器推荐使用一个插件<strong>Foxy proxy</strong>设置代理。127.0.0.1:8080</p><ul><li><p>全局代理</p><p>Burp将拦截所有HTTP/HTTPS传输的数据包</p><ul><li><p>如何设置全局代理？</p><p>IE浏览器–&gt;&gt;设置–&gt;&gt;Internet选项–&gt;&gt;连接–&gt;&gt;局域网设置–&gt;&gt;为LAN设置VPN连接</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200117133921.png" alt=""></p></li></ul></li><li><p>局部代理</p><p>Burp只拦截当前代理浏览器的传输的数据包</p></li></ul><p>Burp相当于一个中间人，可以控制数据包的传输。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工欲善其事必先利其器 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网络安全 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>初始端口、IP、协议、权限、状态码和CDN</title>
       <link href="/2020/01/17/chu-shi-duan-kou-ip-xie-yi-quan-xian-zhuang-tai-ma-he-cdn/"/>
       <url>/2020/01/17/chu-shi-duan-kou-ip-xie-yi-quan-xian-zhuang-tai-ma-he-cdn/</url>
@@ -73,6 +98,19 @@
             <tag> 网络安全 </tag>
             
         </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Web安全基础一</title>
+      <link href="/2020/01/16/web-an-quan-ji-chu-yi/"/>
+      <url>/2020/01/16/web-an-quan-ji-chu-yi/</url>
+      
+        <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
       
     </entry>
     
