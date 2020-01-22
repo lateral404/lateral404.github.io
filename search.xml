@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>如何进入暗网世界（技术交流）</title>
+      <link href="/2020/01/22/ru-he-jin-ru-an-wang-shi-jie-ji-zhu-jiao-liu/"/>
+      <url>/2020/01/22/ru-he-jin-ru-an-wang-shi-jie-ji-zhu-jiao-liu/</url>
+      
+        <content type="html"><![CDATA[<h1 id="如何快速进入暗网？？？"><a href="#如何快速进入暗网？？？" class="headerlink" title="如何快速进入暗网？？？"></a>如何快速进入暗网？？？</h1><p>据说我们能看的互联网只是极小极小的冰山一角，而大多数人看不到的，才是真正的互联网，这里潜藏着人性最为黑暗的一面。</p><p>暗网呢就是指的是一些灰色的非法网站，这些非法的网站将他们的资源联系到一起形成了一个庞大的网络，这就是暗网。这些网站的进入方式也和我们传统的访问不太一样，并不是输入个域名和地址就可以访问的。这样不就很容易的被安全部门追查到了吗？这么愚蠢的行为，我相信暗网的人绝对不会这么傻的/【【【【</p><p><strong>现在我就演示一下如何带你去访问暗网</strong><br>再次声明，本文只针对爱好者纯技术学习,仅用于技术交流；请勿用于违法犯罪。遵守国家网络安全法，携手共建国家网络安全！</p><p><strong>下载TOR（洋葱浏览器）/安装</strong><br>简单介绍一下这款浏览器：<br>Tor是一款匿名访问网络的的软件，用户通过Tor可以在因特网上进行匿名交流，同时能让你保持匿名的免费开源软件。</p><p><a href="https://www.torproject.org/download/" target="_blank" rel="noopener">Tor浏览器官方下载</a></p><p><a href="https://github.com/TheTorProject/gettorbrowser" target="_blank" rel="noopener">GitHub下载</a></p><p><em>注意别安装在Windows的C盘上</em><br>如果想要完全匿名，为了绝对安全起见，把程序安装在U盘上。U盘一拔，谁也不知道你干了什么。</p><p><strong>连上VPN翻墙</strong><br>VPN软件可以上网搜索（最好连接美国节点）</p><p><a href="https://hotspot-shield.en.softonic.com/" target="_blank" rel="noopener">VPN下载</a></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200122095630.png" alt=""></p><p><strong>设置高级隐私</strong></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200122095629.png" alt=""></p><p>防止在进入暗网的过程中，网站执行恶意脚本<br><strong>关闭Tor浏览器</strong><br>等待更新</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200122095633.png" alt=""></p><p>重启浏览器</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200122095631.png" alt=""></p><p><strong>输入暗网域名 进入暗网</strong><br>通过这个浏览器去访问这个暗网才可以访问哦<br>这里就不提供网址啦</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200122095634.png" alt=""></p><p>这个就是暗网的样子。暗网域名都是onion结尾的（这上面的网站大多数的交易都是违法的，其中交易的货币都是通过比特币来进行的。）</p><p><a href="https://www.lanzous.com/b0bq3oxfi" target="_blank" rel="noopener">进入暗网软件下载</a>　密码４９ｌｚ</p><blockquote><p>郑重提醒：本文纯属技术学习，心里要有杆秤。坏的方面我不去做，你也别去做，里面大部分的交易都属于非法交易。望各位自重。</p></blockquote><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 暗网 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网络安全 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Burp安装与实践</title>
       <link href="/2020/01/17/burp-an-zhuang-yu-shi-jian/"/>
       <url>/2020/01/17/burp-an-zhuang-yu-shi-jian/</url>
