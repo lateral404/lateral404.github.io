@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Hexo+DaoVoice实现网页在线及时通讯功能</title>
+      <link href="/2020/01/25/hexo-daovoice-shi-xian-wang-ye-zai-xian-ji-shi-tong-xun-gong-neng/"/>
+      <url>/2020/01/25/hexo-daovoice-shi-xian-wang-ye-zai-xian-ji-shi-tong-xun-gong-neng/</url>
+      
+        <content type="html"><![CDATA[<h3 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h3><p>博客已经有留言功能，为什么还要加入这个功能呢？</p><p>因为评论留言我不可能一秒不离开的守着博客看，而且反馈较慢；毕竟自己还很菜，需要不断学习。现在DaoVoice彻底解决了这个痛点；</p><p>及时在线通讯，直接联系到作者。有问题或者咨询，可以第一时间得到反馈。并且DaoVoice现在打通了微信端，在网页上发送的消息，会直接推送到作者的微信上，另有小程序支持消息回复等，非常方便。</p><h3 id="食用步骤"><a href="#食用步骤" class="headerlink" title="食用步骤"></a>食用步骤</h3><ul><li><p>1、注册DaoVioce，<a href="http://dashboard.daovoice.io" target="_blank" rel="noopener">注册页面直达</a></p><ul><li>注册登录地址如下:<br><a href="http://www.daovoice.io/" target="_blank" rel="noopener">http://www.daovoice.io/</a><br>官网进行注册,需要邀请码: b6dbddb6 复制粘贴就可以了~!<br>或者通过下面链接进入：<br><a href="http://dashboard.daovoice.io/get-started?invite_code=b6dbddb6" target="_blank" rel="noopener">http://dashboard.daovoice.io/get-started?invite_code=b6dbddb6</a></li></ul></li></ul><p>这里可以使用Github账号授权快速登录。</p><ul><li><p>2、获取App Id<br>注册成功后，第一次登录，会弹出一个窗口，填完相关信息后。点击应用设置，点击安装到网站，然后就可以找到我们需要的appid了。</p></li><li><p>3、最后找到主题目录下的<code>_config.yml</code>打开并配置App Id     DaoVioce<del>默认禁用</del></p><p>如图所示：</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200125012501.PNG" alt=""></p></li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 即时通讯 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hexo配置留言评论篇</title>
       <link href="/2020/01/24/hexo-pei-zhi-liu-yan-ping-lun-pian/"/>
       <url>/2020/01/24/hexo-pei-zhi-liu-yan-ping-lun-pian/</url>
