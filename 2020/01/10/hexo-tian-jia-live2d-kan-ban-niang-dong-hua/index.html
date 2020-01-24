@@ -391,7 +391,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    296
+                    345
                 </div>
                 
 
@@ -415,7 +415,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h3 id="Live2D模型官方配置文档"><a href="#Live2D模型官方配置文档" class="headerlink" title="Live2D模型官方配置文档"></a>Live2D模型官方配置文档</h3><p>官网地址配置：<a href="https://www.npmjs.com/package/hexo-helper-live2d" target="_blank" rel="noopener">https://www.npmjs.com/package/hexo-helper-live2d</a></p>
-<h3 id="食用步骤"><a href="#食用步骤" class="headerlink" title="食用步骤"></a>食用步骤</h3><p>首先检查博客根目录（<del>注意不是主题根目录</del>）<code>package.json</code>文件里是否有”<code>hexo-helper-live2d&quot;:&quot;^3.1.1&quot;</code>，依赖。</p>
+<h3 id="食用步骤"><a href="#食用步骤" class="headerlink" title="食用步骤"></a>食用步骤</h3><p>首先检查博客根目录（<del>注意不是主题根目录</del>）<code>package.json</code>文件里是否有”<code>hexo-helper-live2d":"^3.1.1"</code>，依赖。</p>
 <p>有的话使用命令卸载：<code>npm uninstall hexo-helper-live2d</code>（<del>没有忽略</del>）</p>
 <p><strong>安装命令</strong>：<code>npm install --save hexo-helper-live2d</code></p>
 <p><em>提示</em>：命令都是在博客根目录执行，并非主题目录。</p>
@@ -443,7 +443,25 @@
 <h3 id="开始部署并渲染；"><a href="#开始部署并渲染；" class="headerlink" title="开始部署并渲染；"></a>开始部署并渲染；</h3><p>依次执行<code>hexo clean</code> &amp; <code>hexo g</code> &amp; <code>hexo s</code></p>
 <p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200110224052.png" alt=""></p>
 <h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200110224056.png" alt=""></p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -458,7 +476,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lateral404.github.io" rel="external nofollow noreferrer">Cat00011cat</a>
+                    <a href="https://www.thecat.top" rel="external nofollow noreferrer">Cat00011cat</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -468,7 +486,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lateral404.github.io/2020/01/10/hexo-tian-jia-live2d-kan-ban-niang-dong-hua/">https://lateral404.github.io/2020/01/10/hexo-tian-jia-live2d-kan-ban-niang-dong-hua/</a>
+                    <a href="https://www.thecat.top/2020/01/10/hexo-tian-jia-live2d-kan-ban-niang-dong-hua/">https://www.thecat.top/2020/01/10/hexo-tian-jia-live2d-kan-ban-niang-dong-hua/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -481,7 +499,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="https://lateral404.github.io" target="_blank">Cat00011cat</a>
+                    <a href="https://www.thecat.top" target="_blank">Cat00011cat</a>
                     !
                 </span>
             </div>
@@ -837,13 +855,13 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             <span id="year">2019</span>
-            <a href="https://lateral404.github.io" target="_blank">Cat00011cat</a>
+            <a href="https://www.thecat.top" target="_blank">Cat00011cat</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/lateral404/" target="_blank">cat00011cat</a>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">31.1k</span>&nbsp;字
+                class="white-color">32.6k</span>&nbsp;字
             
             
             

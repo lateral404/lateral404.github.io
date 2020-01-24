@@ -391,7 +391,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    181
+                    233
                 </div>
                 
 
@@ -434,7 +434,25 @@
 <p>C/S架构不方便维护和更新。</p>
 <pre><code> B/S架构无法携带精美的素材包。</code></pre></li>
 </ul>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -449,7 +467,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lateral404.github.io" rel="external nofollow noreferrer">Cat00011cat</a>
+                    <a href="https://www.thecat.top" rel="external nofollow noreferrer">Cat00011cat</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -459,7 +477,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lateral404.github.io/2020/01/08/web-fu-wu-qi-tong-xin-yuan-li/">https://lateral404.github.io/2020/01/08/web-fu-wu-qi-tong-xin-yuan-li/</a>
+                    <a href="https://www.thecat.top/2020/01/08/web-fu-wu-qi-tong-xin-yuan-li/">https://www.thecat.top/2020/01/08/web-fu-wu-qi-tong-xin-yuan-li/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -472,7 +490,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="https://lateral404.github.io" target="_blank">Cat00011cat</a>
+                    <a href="https://www.thecat.top" target="_blank">Cat00011cat</a>
                     !
                 </span>
             </div>
@@ -828,13 +846,13 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             <span id="year">2019</span>
-            <a href="https://lateral404.github.io" target="_blank">Cat00011cat</a>
+            <a href="https://www.thecat.top" target="_blank">Cat00011cat</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/lateral404/" target="_blank">cat00011cat</a>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">31.1k</span>&nbsp;字
+                class="white-color">32.6k</span>&nbsp;字
             
             
             

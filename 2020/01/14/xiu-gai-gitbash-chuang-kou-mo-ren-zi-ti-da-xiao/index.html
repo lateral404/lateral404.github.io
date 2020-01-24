@@ -391,7 +391,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    54
+                    106
                 </div>
                 
 
@@ -419,7 +419,25 @@
 <p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200114173515.png" alt=""></p>
 <p>接着在菜单栏选择<code>Text</code>点击<code>Select</code>自行调整字体——最后点击<code>save</code></p>
 <p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200114173516.png" alt=""></p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -434,7 +452,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lateral404.github.io" rel="external nofollow noreferrer">Cat00011cat</a>
+                    <a href="https://www.thecat.top" rel="external nofollow noreferrer">Cat00011cat</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -444,7 +462,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lateral404.github.io/2020/01/14/xiu-gai-gitbash-chuang-kou-mo-ren-zi-ti-da-xiao/">https://lateral404.github.io/2020/01/14/xiu-gai-gitbash-chuang-kou-mo-ren-zi-ti-da-xiao/</a>
+                    <a href="https://www.thecat.top/2020/01/14/xiu-gai-gitbash-chuang-kou-mo-ren-zi-ti-da-xiao/">https://www.thecat.top/2020/01/14/xiu-gai-gitbash-chuang-kou-mo-ren-zi-ti-da-xiao/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -457,7 +475,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="https://lateral404.github.io" target="_blank">Cat00011cat</a>
+                    <a href="https://www.thecat.top" target="_blank">Cat00011cat</a>
                     !
                 </span>
             </div>
@@ -813,13 +831,13 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             <span id="year">2019</span>
-            <a href="https://lateral404.github.io" target="_blank">Cat00011cat</a>
+            <a href="https://www.thecat.top" target="_blank">Cat00011cat</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/lateral404/" target="_blank">cat00011cat</a>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">31.1k</span>&nbsp;字
+                class="white-color">32.6k</span>&nbsp;字
             
             
             

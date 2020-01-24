@@ -391,7 +391,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    528
+                    574
                 </div>
                 
 
@@ -429,9 +429,9 @@
 <p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200120170349.png" alt=""></p>
 <p>访问<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></p>
 <p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200120170408.png" alt=""></p>
-<p>配置Git用户名邮箱<br><code>git config --global user.name &quot;此处填写你注册时的用户名&quot;</code></p>
+<p>配置Git用户名邮箱<br><code>git config --global user.name "此处填写你注册时的用户名"</code></p>
 <p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200120170350.png" alt=""></p>
-<p><code>git config --global user.email &quot;此处填写你注册时的邮箱&quot;</code></p>
+<p><code>git config --global user.email "此处填写你注册时的邮箱"</code></p>
 <p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200120170351.png" alt=""></p>
 <p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200120170352.png" alt=""></p>
 <blockquote>
@@ -440,7 +440,7 @@
 <p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200120170353.png" alt=""></p>
 <p>本地博客发布到Github Pages<br>首先需要安装发布的插件，在站点目录下执行下面的命令，也就是创建的博客目录下：<br><code>npm install hexo-deployer-git --save</code></p>
 <p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200120170354.png" alt=""></p>
-<p>紧接着，将本地目录与GitHub关联起来，输入下面的命令行：<br><code>ssh-keygen -t rsa -C &quot;你的邮箱地址&quot;</code></p>
+<p>紧接着，将本地目录与GitHub关联起来，输入下面的命令行：<br><code>ssh-keygen -t rsa -C "你的邮箱地址"</code></p>
 <p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200120170355.png" alt=""></p>
 <p>复制本地Key填入Github</p>
 <p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200120170357.png" alt=""></p>
@@ -478,7 +478,25 @@
 <p><code>gulp build</code> 在最后又加了个 hexo d ，等于说生成、压缩文件后又帮你自动部署Github了。</p>
 <p><code>hexo new xxx</code> 新建一篇文章xxx</p>
 <p><code>hexo new page xxx</code> 新建一个页面xxx</p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -493,7 +511,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lateral404.github.io" rel="external nofollow noreferrer">Cat00011cat</a>
+                    <a href="https://www.thecat.top" rel="external nofollow noreferrer">Cat00011cat</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -503,7 +521,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lateral404.github.io/2020/01/13/bao-mu-ji-da-jian-hexo-bu-zou/">https://lateral404.github.io/2020/01/13/bao-mu-ji-da-jian-hexo-bu-zou/</a>
+                    <a href="https://www.thecat.top/2020/01/13/bao-mu-ji-da-jian-hexo-bu-zou/">https://www.thecat.top/2020/01/13/bao-mu-ji-da-jian-hexo-bu-zou/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -516,7 +534,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="https://lateral404.github.io" target="_blank">Cat00011cat</a>
+                    <a href="https://www.thecat.top" target="_blank">Cat00011cat</a>
                     !
                 </span>
             </div>
@@ -872,13 +890,13 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             <span id="year">2019</span>
-            <a href="https://lateral404.github.io" target="_blank">Cat00011cat</a>
+            <a href="https://www.thecat.top" target="_blank">Cat00011cat</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/lateral404/" target="_blank">cat00011cat</a>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">31.1k</span>&nbsp;字
+                class="white-color">32.6k</span>&nbsp;字
             
             
             

@@ -391,7 +391,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    558
+                    562
                 </div>
                 
 
@@ -432,23 +432,23 @@
 <p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200124112510.PNG" alt=""></p>
 <p>3、固定小埋显示位置</p>
 <p>将以下代码放到MyBlog\themes\cat00011cat\layout_partial路径下的footer.ejs文件顶部</p>
-<pre><code>&lt;footer class=&quot;page-footer bg-color&quot;&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;/live2d/css/live2d.css&quot; /&gt;
-&lt;div id=&quot;landlord&quot;&gt;
-    &lt;div class=&quot;message&quot; style=&quot;opacity:0&quot;&gt;&lt;/div&gt;
-    &lt;canvas id=&quot;live2d&quot; width=&quot;166&quot; height=&quot;250&quot; class=&quot;live2d&quot;&gt;&lt;/canvas&gt;
-    &lt;div class=&quot;hide-button&quot;&gt;隐藏&lt;/div&gt;
+<pre><code>&lt;footer class="page-footer bg-color"&gt;
+&lt;link rel="stylesheet" href="/live2d/css/live2d.css" /&gt;
+&lt;div id="landlord"&gt;
+    &lt;div class="message" style="opacity:0"&gt;&lt;/div&gt;
+    &lt;canvas id="live2d" width="166" height="250" class="live2d"&gt;&lt;/canvas&gt;
+    &lt;div class="hide-button"&gt;隐藏&lt;/div&gt;
 &lt;/div&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-    var message_Path = &#39;/live2d/&#39;
-    var home_Path = &#39;http://www.thecat.top&#39;
-    var voice_Path = &#39;/live2d/&#39;
+&lt;script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+    var message_Path = '/live2d/'
+    var home_Path = 'http://www.thecat.top'
+    var voice_Path = '/live2d/'
 &lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;/live2d/js/live2d.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;/live2d/js/message.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-    loadlive2d(&quot;live2d&quot;, &quot;/live2d/model/tia/model.json&quot;);
+&lt;script type="text/javascript" src="/live2d/js/live2d.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/live2d/js/message.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+    loadlive2d("live2d", "/live2d/model/tia/model.json");
 &lt;/script&gt;</code></pre><p>如图</p>
 <p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200124112511.PNG" alt=""></p>
 <p>4、最后hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</p>
@@ -456,7 +456,25 @@
 <p>效果</p>
 <p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200124121620.PNG" alt=""></p>
 <p>有了声音的小埋，更加的逼真阔爱 哈哈哈哈</p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -471,7 +489,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lateral404.github.io" rel="external nofollow noreferrer">Cat00011cat</a>
+                    <a href="https://www.thecat.top" rel="external nofollow noreferrer">Cat00011cat</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -481,7 +499,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lateral404.github.io/2020/01/24/get-dao-yi-ge-live2d-xiao-mai/">https://lateral404.github.io/2020/01/24/get-dao-yi-ge-live2d-xiao-mai/</a>
+                    <a href="https://www.thecat.top/2020/01/24/get-dao-yi-ge-live2d-xiao-mai/">https://www.thecat.top/2020/01/24/get-dao-yi-ge-live2d-xiao-mai/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -494,7 +512,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="https://lateral404.github.io" target="_blank">Cat00011cat</a>
+                    <a href="https://www.thecat.top" target="_blank">Cat00011cat</a>
                     !
                 </span>
             </div>
@@ -852,13 +870,13 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             <span id="year">2019</span>
-            <a href="https://lateral404.github.io" target="_blank">Cat00011cat</a>
+            <a href="https://www.thecat.top" target="_blank">Cat00011cat</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/lateral404/" target="_blank">cat00011cat</a>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">31.1k</span>&nbsp;字
+                class="white-color">32.6k</span>&nbsp;字
             
             
             

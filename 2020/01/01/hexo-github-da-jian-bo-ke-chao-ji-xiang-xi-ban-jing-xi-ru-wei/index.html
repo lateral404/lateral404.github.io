@@ -486,14 +486,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    15.3k
+                    15.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    60 分
+                    61 分
                 </div>
                 
 				
@@ -709,7 +709,7 @@ hexo s</code></pre>
 <p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/Yafine/Yafine-imgs/images/20191117223049.png" alt="">)<img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/Yafine/Yafine-imgs/images/20191117223049.png" alt=""></p>
 <p>然后回到Git的命令行界面，测试一下是否与GitHub连接成功。输入下面的命令行：</p>
 <pre class=" language-bash"><code class="language-bash"><span class="token function">ssh</span> -T git@github.com</code></pre>
-<p>点击回车，然后会出现一个询问内容，输入<code>yes</code>，回车，会出现一段内容，<code>Hi &lt;account name&gt;! You&#39;ve successfully authenticated, but GitHub doesnot provide shell access.</code>。 说明连接成功。此处这个<code>&lt;account name&gt;</code>应该是你Github的用户名。</p>
+<p>点击回车，然后会出现一个询问内容，输入<code>yes</code>，回车，会出现一段内容，<code>Hi &lt;account name&gt;! You've successfully authenticated, but GitHub doesnot provide shell access.</code>。 说明连接成功。此处这个<code>&lt;account name&gt;</code>应该是你Github的用户名。</p>
 <ol start="4">
 <li>进入博客站点目录，用文本编辑器打开<code>_config.yml</code>，这个<code>_config.yml</code>是博客的配置文件，在以后的博客修改，如个性化修改，博客SEO优化等都会使用到，修改如下图的几个地方：</li>
 </ol>
@@ -738,7 +738,7 @@ hexo d
 hexo g -d</code></pre>
 <p>上传完成后，在浏览器中打开<strong>https://&lt;用户名&gt;.github.io</strong>，查看上传的网页。如果页面变成了之前本地调试时的样子，说明上传以及完成了。没变的话查看一下上传时命令行窗口的信息有没有错误信息，没有的话清除一下浏览器缓存试试。</p>
 <h1 id="五、hexo博客主题安装以及一些个性化修改"><a href="#五、hexo博客主题安装以及一些个性化修改" class="headerlink" title="五、hexo博客主题安装以及一些个性化修改"></a>五、hexo博客主题安装以及一些个性化修改</h1><blockquote>
-<p><strong>转自：</strong><a href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README.md" target="_blank" rel="noopener">🇺🇸English Document</a> | <a href="https://blinkfox.github.io/" target="_blank" rel="noopener">演示示例</a> | QQ 交流群1（已满）: <a href="https://jq.qq.com/?_wv=1027&k=5zMDYHT" target="_blank" rel="noopener"><code>926552981</code></a> | QQ 交流群2（推荐）: <a href="https://jq.qq.com/?_wv=1027&k=53q2Ayp" target="_blank" rel="noopener"><code>971887688</code></a></p>
+<p><strong>转自：</strong><a href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README.md" target="_blank" rel="noopener">🇺🇸English Document</a> | <a href="https://blinkfox.github.io/" target="_blank" rel="noopener">演示示例</a> | QQ 交流群1（已满）: <a href="https://jq.qq.com/?_wv=1027&amp;k=5zMDYHT" target="_blank" rel="noopener"><code>926552981</code></a> | QQ 交流群2（推荐）: <a href="https://jq.qq.com/?_wv=1027&amp;k=53q2Ayp" target="_blank" rel="noopener"><code>971887688</code></a></p>
 <p>这是一个采用 <code>Material Design</code> 和响应式设计的 Hexo 博客主题。</p>
 </blockquote>
 <h2 id="主题特性"><a href="#主题特性" class="headerlink" title="主题特性"></a>主题特性</h2><ul>
@@ -1310,7 +1310,7 @@ tags:
     <span class="token property">opacity</span><span class="token punctuation">:</span> <span class="token number">0.8</span><span class="token punctuation">;</span>  //透明效果 值范围 <span class="token number">0</span>~<span class="token number">1</span>，看情况自己修改
 <span class="token punctuation">}</span></code></pre>
 <h2 id="3-添加动态诗词"><a href="#3-添加动态诗词" class="headerlink" title="3. 添加动态诗词"></a>3. 添加动态诗词</h2><p>采用的是<a href="https://www.jinrishici.com/" target="_blank" rel="noopener">今日诗词</a>，每次返回一句诗词，根据时间、地点、天气、事件智能推荐。官网有<a href="https://www.jinrishici.com/doc/" target="_blank" rel="noopener">API文档</a>，可以去看一下，有多种安装方式，最简单的方式就是从官网获取代码，在<code>/themes/matery/layout/_partial/head.ejs</code>添加下面的一行代码：</p>
-<p>然后再将<code>/themes/matery/layout/_partial/bg-cover-content.ejs</code>中的<code>&lt;%= config.description %&gt;</code>修改为把<code>&lt;%= config.description %&gt;</code>改为<code>&lt;%- &#39;&lt;span id=&quot;jinrishici-sentence&quot;&gt;正在加载今日诗词....&lt;/span&gt;&#39; %&gt;</code>，这个使用前提是将主题配置文件的<code>subtitle</code>的值改为<code>false</code>。</p>
+<p>然后再将<code>/themes/matery/layout/_partial/bg-cover-content.ejs</code>中的<code>&lt;%= config.description %&gt;</code>修改为把<code>&lt;%= config.description %&gt;</code>改为<code>&lt;%- '&lt;span id="jinrishici-sentence"&gt;正在加载今日诗词....&lt;/span&gt;' %&gt;</code>，这个使用前提是将主题配置文件的<code>subtitle</code>的值改为<code>false</code>。</p>
 <h2 id="4-鼠标点击文字特效"><a href="#4-鼠标点击文字特效" class="headerlink" title="4. 鼠标点击文字特效"></a>4. 鼠标点击文字特效</h2><p>实现方法，引入js文件，在主题文件下的<code>/source/js/</code>下新建<code>click_show_text.js</code>，其代码如下：</p>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> a_idx <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token function">jQuery</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ready</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>$<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -1347,7 +1347,7 @@ tags:
 <p>或者使用我的cdn链接，理论上一直有效<strong><a href="https://cdn.jsdelivr.net/gh/Yafine/cdn@2.5/source/js/click_show_text.js" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/Yafine/cdn@2.5/source/js/click_show_text.js</a></strong>，然后在添加到<code>themes/matery/layout/layout.ejs</code>。</p>
 <h2 id="5-修改原有相册"><a href="#5-修改原有相册" class="headerlink" title="5. 修改原有相册"></a>5. 修改原有相册</h2><p>参考教程：<a href="https://liyangzone.com/2019/07/22/hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E4%B8%80%E7%BA%A7%E5%88%86%E7%B1%BB%E7%9B%B8%E5%86%8C/" target="_blank" rel="noopener">传送门</a></p>
 <h2 id="6-添加天气小插件"><a href="#6-添加天气小插件" class="headerlink" title="6. 添加天气小插件"></a>6. 添加天气小插件</h2><p>首先去中国天气官网：<a href="https://cj.weather.com.cn/plugin/pc%EF%BC%8C%E9%85%8D%E7%BD%AE%E8%87%AA%E5%B7%B1%E7%9A%84%E6%8F%92%E4%BB%B6%EF%BC%8C%E9%80%89%E6%8B%A9%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8F%92%E4%BB%B6%E2%80%94>%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%B7%E5%BC%8F%E2%80%94%E2%80%94>%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%EF%BC%8C%E7%84%B6%E5%90%8E%E4%BC%9A%E7%94%9F%E6%88%90%E4%B8%80%E6%AE%B5%E4%BB%A3%E7%A0%81%EF%BC%8C%E5%A4%8D%E5%88%B6%E7%B2%98%E8%B4%B4%E5%88%B0" target="_blank" rel="noopener">https://cj.weather.com.cn/plugin/pc，配置自己的插件，选择自定义插件—&gt;自定义样式——&gt;生成代码，然后会生成一段代码，复制粘贴到</a> <code>themes/matery/layout/layout.ejs</code>即可。</p>
-<h2 id="7-关于我页面添加个人简历"><a href="#7-关于我页面添加个人简历" class="headerlink" title="7. 关于我页面添加个人简历"></a>7. 关于我页面添加个人简历</h2><p>打开<code>theme/matery/layout/about.ejs</code>文件，大约在13行。有一个<code>&lt;div class=&quot;card&quot;&gt;</code>标签，找出其对应结尾的标签，大约在61行左右，然后在新增如下代码：</p>
+<h2 id="7-关于我页面添加个人简历"><a href="#7-关于我页面添加个人简历" class="headerlink" title="7. 关于我页面添加个人简历"></a>7. 关于我页面添加个人简历</h2><p>打开<code>theme/matery/layout/about.ejs</code>文件，大约在13行。有一个<code>&lt;div class="card"&gt;</code>标签，找出其对应结尾的标签，大约在61行左右，然后在新增如下代码：</p>
 <pre class=" language-html"><code class="language-html">
 
 
@@ -1480,7 +1480,7 @@ yarn add hexo-external-link</code></pre>
 <li><strong>enable_base64_encode</strong> - 是否对跳转<code>url</code>使用<code>base64编码</code> - 默认 fasle</li>
 <li><strong>url_param_name</strong> - url参数名,在跳转到外链传递给<code>html_file_name</code>的参数名 - 默认 ‘u’</li>
 <li><strong>html_file_name</strong> - 跳转到外链的页面文件路径 - 默认 ‘go.html’</li>
-<li><strong>target_blank</strong> - 是否为外链的<code>a</code>标签添加<code>target=&#39;_blank&#39;</code> - 默认 true</li>
+<li><strong>target_blank</strong> - 是否为外链的<code>a</code>标签添加<code>target='_blank'</code> - 默认 true</li>
 <li><strong>link_rel</strong> - 设置外链的<code>a</code>标签的rel属性 - 默认 ‘external nofollow noopener noreferrer’</li>
 <li><strong>domain</strong> - 如果开启了防盗链,除了 localhost 和 domain 之外调用会跳到主页,同时也是判断链接是否为外链的依据 - 默认 window.location.host</li>
 <li><strong>safety_chain</strong> - go.html 为了防止外链盗用 对域名进行的判断 - 默认 false</li>
@@ -1826,7 +1826,7 @@ gulp<span class="token punctuation">.</span><span class="token function">task</s
 </li>
 </ol>
 <blockquote>
-<p>值得注意的是：这个加入了图片压缩，如果不想用图片压缩可以把第154行的 <code>&quot;compressImage&quot;,</code> 和第165行的 <code>,&quot;compressImage&quot;</code> 去掉即可</p>
+<p>值得注意的是：这个加入了图片压缩，如果不想用图片压缩可以把第154行的 <code>"compressImage",</code> 和第165行的 <code>,"compressImage"</code> 去掉即可</p>
 </blockquote>
 <h3 id="方法二：hexo-neat插件实现代码压缩"><a href="#方法二：hexo-neat插件实现代码压缩" class="headerlink" title="方法二：hexo-neat插件实现代码压缩"></a>方法二：hexo-neat插件实现代码压缩</h3><p>可能以上方法比较复杂，来介绍个简单的，<a href="https://github.com/rozbo/hexo-neat" target="_blank" rel="noopener">hexo-neat</a>插件也是用来压缩代码的，底层也是通过gulp来实现的。</p>
 <p>但是这个插件是有Bug的：</p>
@@ -1950,7 +1950,25 @@ neat_js:
         height: 64px;
         width: 64px;
     }</code></pre><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200120005110.png" alt=""></p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -1965,7 +1983,7 @@ neat_js:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lateral404.github.io" rel="external nofollow noreferrer">YangAir</a>
+                    <a href="https://www.thecat.top" rel="external nofollow noreferrer">YangAir</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -1975,7 +1993,7 @@ neat_js:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lateral404.github.io/2020/01/01/hexo-github-da-jian-bo-ke-chao-ji-xiang-xi-ban-jing-xi-ru-wei/">https://lateral404.github.io/2020/01/01/hexo-github-da-jian-bo-ke-chao-ji-xiang-xi-ban-jing-xi-ru-wei/</a>
+                    <a href="https://www.thecat.top/2020/01/01/hexo-github-da-jian-bo-ke-chao-ji-xiang-xi-ban-jing-xi-ru-wei/">https://www.thecat.top/2020/01/01/hexo-github-da-jian-bo-ke-chao-ji-xiang-xi-ban-jing-xi-ru-wei/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1988,7 +2006,7 @@ neat_js:
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="https://lateral404.github.io" target="_blank">YangAir</a>
+                    <a href="https://www.thecat.top" target="_blank">YangAir</a>
                     !
                 </span>
             </div>
@@ -2438,13 +2456,13 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             <span id="year">2019</span>
-            <a href="https://lateral404.github.io" target="_blank">Cat00011cat</a>
+            <a href="https://www.thecat.top" target="_blank">Cat00011cat</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/lateral404/" target="_blank">cat00011cat</a>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">31.1k</span>&nbsp;字
+                class="white-color">32.6k</span>&nbsp;字
             
             
             
