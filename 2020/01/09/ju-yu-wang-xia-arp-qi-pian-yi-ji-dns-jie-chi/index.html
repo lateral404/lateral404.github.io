@@ -36,7 +36,7 @@
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
-                    <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">偏锋小白菜</span>
                 </a>
@@ -145,7 +145,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
+        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">偏锋小白菜</div>
         <div class="logo-desc">
@@ -423,7 +423,7 @@
 </li>
 </ul>
 <p>1、我们需要开启Apache Web服务环境，<br>命令：<code>/etc/init.d/apache2 start</code><br>如果没有开启，受害者的主机不能访问任何网页！</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200109210755.jpg" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200109210755.jpg" alt=""></p>
 <p>2、接着再终端输入：/etc/ettercap/etter.dns（也可以根据路径找到文件，双击打开修改）<br>在文档里修改<a href="http://www.linux.org后面的数据即可，指定欺骗的域名和跳转的IP地址，可以结合钓鱼网站，自动化浏览器攻击等技术进行入侵。" target="_blank" rel="noopener">www.linux.org后面的数据即可，指定欺骗的域名和跳转的IP地址，可以结合钓鱼网站，自动化浏览器攻击等技术进行入侵。</a></p>
 <p>3、最后在根目录/var/www/index.html修改自己劫持响应的网页<br>现在我们的配置文件以及Web服务已经修改并配置完成；</p>
 <p><em>先喝口百事阔乐压压惊<del>~</del></em></p>
@@ -432,7 +432,7 @@
 </ul>
 <p><strong>GUI界面的攻击</strong><br>0x1<br>首先打开ettercap这个软件<br>终端输入命令ettercap -G进入ettercap的GUI界面，选择Unified sniffing(Ctrl H)，然后在弹出的选项中选择eth0（如果你有无线网卡可以选择wlan0）这个一般不用修改,视情况而定,选择自己正确挂载的网卡即可。</p>
 <p>0x2<br>在Hosts下选择Scan for hosts(Ctrl+S)扫描局域网所有在线IP，然后选择Hosts list(Ctrl+H)列出局域网下所有IP<br>接着选择判断默认网关,选中并且右键加入Add to Target1;被攻击者选中IP右键加入Add to Target2;</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200109210753.jpg" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200109210753.jpg" alt=""></p>
 <p>0x3<br>在Mitm中选择Arp poisoning(攻击方式为ARP)，<br>在MIMT Attack:ARP Poisoning窗口下,勾选Sniff remote connections这个选项并确定。</p>
 <p>0x4<br>在Plugins菜单栏下打开Manage the plugins(Ctrl+P)选择攻击插件，将DNS劫持插件dns_spoof双击选中；出现*号表示已经选中。</p>
 <p>0x5<br>在菜单栏Start下选择Stare sniffing(Shift+Ctrl+W)发起攻击</p>
@@ -441,9 +441,9 @@
 <li>以上是GUI界面的操作，接下来演示通过终端命令如何劫持</li>
 </ul>
 <p>打开终端,运行ettercap输入以下命令:<br>ettercap -T -q -i eth0 -P dns_spoof -M arp<br>命令注释:<br>-M MAC监听<br>-T 脱机监听<br>-P 过滤筛选器<br>-i 使用此网络接口<br>eth0 本机网卡<br>ARP拦截局域网所有的DNS映射到本机的etter.dns中</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200109210754.jpg" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200109210754.jpg" alt=""></p>
 <p>窗口滚动,说明局域网内的鱼上钩了。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200109211059.jpg" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200109211059.jpg" alt=""></p>
 <p>只要打开网页,DNS都会映射到攻击机的IP上,淫荡的任你玩弄!!!<br>(进而窃听植入病毒DNS投毒钓鱼劫持会话 配合msf完成一系列的攻击)</p>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -658,10 +658,10 @@
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -727,7 +727,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="/medias/featureimages/16.jpg" class="responsive-img" alt="Hexo添加live2D看板娘动画">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="/medias/featureimages/16.jpg" class="responsive-img" alt="Hexo添加live2D看板娘动画">
                         
                         <span class="card-title">Hexo添加live2D看板娘动画</span>
                     </div>
@@ -776,7 +776,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="/medias/featureimages/23.jpg" class="responsive-img" alt="云南唯康杯，含泪夺省一">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="/medias/featureimages/23.jpg" class="responsive-img" alt="云南唯康杯，含泪夺省一">
                         
                         <span class="card-title">云南唯康杯，含泪夺省一</span>
                     </div>
