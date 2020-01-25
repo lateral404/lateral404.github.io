@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>迁移Hexo报错ERRORPluginloadfailed:hexo-filer-github-emojis</title>
+      <link href="/2020/01/26/qian-yi-hexo-bao-cuo-errorpluginloadfailed-hexo-filer-github-emojis/"/>
+      <url>/2020/01/26/qian-yi-hexo-bao-cuo-errorpluginloadfailed-hexo-filer-github-emojis/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Hexo迁移报错"><a href="#Hexo迁移报错" class="headerlink" title="Hexo迁移报错"></a>Hexo迁移报错</h2><p>今天将hexo迁移到另一台设备，结果发现报错<code>ERROR Plugin load failed:hexo-filer-github-emojis</code></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126050313.png" alt=""></p><ul><li><p>解决方法</p><p>重新安装<code>npm install hexo-filter-github-emojis --save</code></p></li><li><p><code>hexo cl &amp;&amp; hexo g &amp;&amp; hexo s</code>清空 生成 并 预览</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/Catloday.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126051022.PNG" alt=""></p></li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 迁移报错 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hexo+DaoVoice实现网页在线及时通讯功能</title>
       <link href="/2020/01/25/hexo-daovoice-shi-xian-wang-ye-zai-xian-ji-shi-tong-xun-gong-neng/"/>
       <url>/2020/01/25/hexo-daovoice-shi-xian-wang-ye-zai-xian-ji-shi-tong-xun-gong-neng/</url>
