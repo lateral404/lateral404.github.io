@@ -322,10 +322,23 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lateral404/image/image/20200129221955.jfif')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -384,7 +397,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-01-11
+                    2020-01-29
                 </div>
                 
 
@@ -440,9 +453,8 @@
 <p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200111170914.png" alt=""></p>
 <h4 id="2、生成相册目录和相册列表"><a href="#2、生成相册目录和相册列表" class="headerlink" title="2、生成相册目录和相册列表"></a>2、生成相册目录和相册列表</h4><p>这是为什么呢？因为hexo把这个文件当成一个普通的文章来渲染了，而我们需要自定义样式，不能让它渲染成普通的文章。要让它渲染成一个<code>layout</code>,也就是我们自定义的模板。需要以下操作：<br>在<code>index.md</code>文件里添加以下内容，注意，那几个中划线也不要少了。</p>
 <hr>
-<p>title: 相册<br>layout: “galleries”</p>
-<hr>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200111170902.png" alt=""></p>
+<p>title: 相册</p>
+<h2 id="layout-“galleries”"><a href="#layout-“galleries”" class="headerlink" title="layout: “galleries”"></a>layout: “galleries”</h2><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200111170902.png" alt=""></p>
 <p>首先添加自定义CSS样式文件，该<code>主题</code>目录下的<code>source/css</code>里新建<code>gallery.css</code>文件，复制以下css样式进去：</p>
 <pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.gallery-wrapper</span></span><span class="token punctuation">{</span>
   <span class="token property">padding-top</span><span class="token punctuation">:</span> <span class="token number">30</span>px<span class="token punctuation">;</span>
@@ -657,9 +669,8 @@ for (var i = 0, len = photos.length; i &lt; len; i++) {
 <p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200111170904.png" alt=""></p>
 <p>然后下面再分别新建<code>index.md</code>文件，文件内容为:</p>
 <hr>
-<p>title: 2017<br>layout: “gallery”</p>
-<hr>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200111170905.png" alt=""></p>
+<p>title: 2017</p>
+<h2 id="layout-“gallery”"><a href="#layout-“gallery”" class="headerlink" title="layout: “gallery”"></a>layout: “gallery”</h2><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200111170905.png" alt=""></p>
 <p>建好相应目录和文件之后，如果你的图片路径也没有错的话，相册目录和列表就都会渲染出来了，如下所示：</p>
 <p>依次输入命令：<code>hexo clean</code> &amp; <code>hexo g</code> &amp; <code>hexo s -g</code> </p>
 <p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200111170916.png" alt=""></p>
@@ -945,8 +956,7 @@ for (var i = 0, len = photos.length; i &lt; len; i++) {
                 <a href="/2020/01/11/c-yu-yan-de-for-xun-huan-shu-chu-jiu-jiu-cheng-fa-kou-jue-biao/">
                     <div class="card-image">
                         
-                        
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="/medias/featureimages/17.jpg" class="responsive-img" alt="C语言的for循环输出九九乘法口诀表">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200129221301.jfif" class="responsive-img" alt="C语言的for循环输出九九乘法口诀表">
                         
                         <span class="card-title">C语言的for循环输出九九乘法口诀表</span>
                     </div>
@@ -1101,7 +1111,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">34.6k</span>&nbsp;字
+                class="white-color">35.4k</span>&nbsp;字
             
             
             

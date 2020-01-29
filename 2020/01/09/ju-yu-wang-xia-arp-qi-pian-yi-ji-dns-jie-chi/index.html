@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="局域网下ARP欺骗以及DNS劫持, 偏锋小白菜">
-    <meta name="description" content="域名劫持是古老的黑客技术，通过攻击域名解析服务器（DNS），或伪造域名解析服务器（DNS）的方法，把目标网站域名解析到错误的地址从而实现用户无法访问目标网站的目的。">
+    <meta name="description" content="域名劫持是古老的黑客技术，通过攻击域名解析服务器（DNS），或伪造域名解析服务器（DNS）的方法，把目标网站域名解析到错误的地址从而实现用户无法访问目标网站的目的">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -322,10 +322,23 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lateral404/image/image/20200129220205.jfif')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -384,7 +397,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-01-09
+                    2020-01-29
                 </div>
                 
 
@@ -775,8 +788,7 @@
                 <a href="/2020/01/08/yun-nan-wei-kang-bei-han-lei-duo-sheng-yi/">
                     <div class="card-image">
                         
-                        
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="/medias/featureimages/23.jpg" class="responsive-img" alt="云南唯康杯，含泪夺省一">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200111000023.png" class="responsive-img" alt="云南唯康杯，含泪夺省一">
                         
                         <span class="card-title">云南唯康杯，含泪夺省一</span>
                     </div>
@@ -784,7 +796,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            真的这段时间，失去了很多也收获了很多。
+                            真的这段时间，失去了很多也收获了很多；沧桑了，都
                         
                     </div>
                     <div class="publish-info">
@@ -882,7 +894,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">34.6k</span>&nbsp;字
+                class="white-color">35.4k</span>&nbsp;字
             
             
             

@@ -322,10 +322,23 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lateral404/image/image/20200129222543.jfif')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -384,7 +397,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-01-16
+                    2020-01-29
                 </div>
                 
 
@@ -439,8 +452,6 @@
 <ul>
 <li><h4 id="什么算作为漏洞？"><a href="#什么算作为漏洞？" class="headerlink" title="什么算作为漏洞？"></a>什么算作为漏洞？</h4><p><strong>只要干扰了网站正常运营的缺陷，它就是漏洞。</strong></p>
 </li>
-</ul>
-<ul>
 <li><h4 id="如何定义漏洞的危害程度？"><a href="#如何定义漏洞的危害程度？" class="headerlink" title="如何定义漏洞的危害程度？"></a>如何定义漏洞的危害程度？</h4><p>1.<strong>根据漏洞的影响进行定义</strong></p>
 <p>和钱挂钩的基本上都是高危</p>
 <p>2.<strong>根据漏洞的利用复杂性进行定义</strong></p>
@@ -738,8 +749,7 @@
                 <a href="/2020/01/16/wang-zhan-shi-ru-he-zu-cheng-de-ni/">
                     <div class="card-image">
                         
-                        
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="/medias/featureimages/3.jpg" class="responsive-img" alt="网站是如何组成的呢？">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200129223037.jfif" class="responsive-img" alt="网站是如何组成的呢？">
                         
                         <span class="card-title">网站是如何组成的呢？</span>
                     </div>
@@ -787,8 +797,7 @@
                 <a href="/2020/01/14/xiu-gai-gitbash-chuang-kou-mo-ren-zi-ti-da-xiao/">
                     <div class="card-image">
                         
-                        
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="/medias/featureimages/7.jpg" class="responsive-img" alt="修改GitBash窗口默认字体大小">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200129222709.jfif" class="responsive-img" alt="修改GitBash窗口默认字体大小">
                         
                         <span class="card-title">修改GitBash窗口默认字体大小</span>
                     </div>
@@ -894,7 +903,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">34.6k</span>&nbsp;字
+                class="white-color">35.4k</span>&nbsp;字
             
             
             

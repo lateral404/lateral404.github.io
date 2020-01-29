@@ -322,6 +322,19 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -724,8 +737,7 @@
                 <a href="/2020/01/11/hexo-bo-ke-tian-jia-yi-ji-fen-lei-xiang-ce-gong-neng/">
                     <div class="card-image">
                         
-                        
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="/medias/featureimages/1.jpg" class="responsive-img" alt="Hexo博客添加一级分类相册功能">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200129221955.jfif" class="responsive-img" alt="Hexo博客添加一级分类相册功能">
                         
                         <span class="card-title">Hexo博客添加一级分类相册功能</span>
                     </div>
@@ -773,8 +785,7 @@
                 <a href="/2020/01/09/ju-yu-wang-xia-arp-qi-pian-yi-ji-dns-jie-chi/">
                     <div class="card-image">
                         
-                        
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="/medias/featureimages/9.jpg" class="responsive-img" alt="局域网下ARP欺骗以及DNS劫持">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200129220205.jfif" class="responsive-img" alt="局域网下ARP欺骗以及DNS劫持">
                         
                         <span class="card-title">局域网下ARP欺骗以及DNS劫持</span>
                     </div>
@@ -782,7 +793,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            域名劫持是古老的黑客技术，通过攻击域名解析服务器（DNS），或伪造域名解析服务器（DNS）的方法，把目标网站域名解析到错误的地址从而实现用户无法访问目标网站的目的。
+                            域名劫持是古老的黑客技术，通过攻击域名解析服务器（DNS），或伪造域名解析服务器（DNS）的方法，把目标网站域名解析到错误的地址从而实现用户无法访问目标网站的目的
                         
                     </div>
                     <div class="publish-info">
@@ -880,7 +891,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">34.6k</span>&nbsp;字
+                class="white-color">35.4k</span>&nbsp;字
             
             
             

@@ -322,10 +322,23 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lateral404/image/image/20200129221955.jfif')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -384,7 +397,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-01-26
+                    2020-01-29
                 </div>
                 
 
@@ -705,8 +718,7 @@
                 <a href="/2020/01/28/shi-yong-github-coding-shuang-bu-shu-shi-xian-guo-nei-wai-wang-zhan-jia-su/">
                     <div class="card-image">
                         
-                        
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="/medias/featureimages/18.jpg" class="responsive-img" alt="使用GitHub+Coding双部署实现国内外网站加速">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200129221955.jfif" class="responsive-img" alt="使用GitHub+Coding双部署实现国内外网站加速">
                         
                         <span class="card-title">使用GitHub+Coding双部署实现国内外网站加速</span>
                     </div>
@@ -754,8 +766,7 @@
                 <a href="/2020/01/25/hexo-daovoice-shi-xian-wang-ye-zai-xian-ji-shi-tong-xun-gong-neng/">
                     <div class="card-image">
                         
-                        
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="/medias/featureimages/3.jpg" class="responsive-img" alt="Hexo+DaoVoice实现网页在线及时通讯功能">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200129221955.jfif" class="responsive-img" alt="Hexo+DaoVoice实现网页在线及时通讯功能">
                         
                         <span class="card-title">Hexo+DaoVoice实现网页在线及时通讯功能</span>
                     </div>
@@ -763,7 +774,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            有什么问题可以通过这个功能滴滴我哦~我看到或有时间都会回复的。
+                            有什么问题可以通过这个功能滴滴我哦~我看到或有时间都会回复的
                         
                     </div>
                     <div class="publish-info">
@@ -861,7 +872,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">34.6k</span>&nbsp;字
+                class="white-color">35.4k</span>&nbsp;字
             
             
             

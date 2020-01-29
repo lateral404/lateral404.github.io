@@ -322,6 +322,19 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -737,8 +750,7 @@
                 <a href="/2020/01/24/hexo-pei-zhi-liu-yan-ping-lun-pian/">
                     <div class="card-image">
                         
-                        
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="/medias/featureimages/13.jpg" class="responsive-img" alt="Hexo配置留言评论篇">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200129221955.jfif" class="responsive-img" alt="Hexo配置留言评论篇">
                         
                         <span class="card-title">Hexo配置留言评论篇</span>
                     </div>
@@ -786,8 +798,7 @@
                 <a href="/2020/01/22/ru-he-jin-ru-an-wang-shi-jie-ji-zhu-jiao-liu/">
                     <div class="card-image">
                         
-                        
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="/medias/featureimages/14.jpg" class="responsive-img" alt="如何进入暗网世界（技术交流）">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200129223528.jfif" class="responsive-img" alt="如何进入暗网世界（技术交流）">
                         
                         <span class="card-title">如何进入暗网世界（技术交流）</span>
                     </div>
@@ -893,7 +904,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">34.6k</span>&nbsp;字
+                class="white-color">35.4k</span>&nbsp;字
             
             
             

@@ -322,10 +322,23 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '1afa00b296c76e69037503fe43217f5ce7e73995286b4710a374215101b70382';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lateral404/image/image/20200129195554.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -2242,8 +2255,7 @@ neat_js:
                 <a href="/2020/01/06/da-zao-wen-ding-kuai-su-gao-xiao-mian-fei-tu-chuang/">
                     <div class="card-image">
                         
-                        
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="/medias/featureimages/20.jpg" class="responsive-img" alt="GitHub + jsDelivr + PicGo + Imagine 打造稳定快速、高效免费图床">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200129210510.gif" class="responsive-img" alt="GitHub + jsDelivr + PicGo + Imagine 打造稳定快速、高效免费图床">
                         
                         <span class="card-title">GitHub + jsDelivr + PicGo + Imagine 打造稳定快速、高效免费图床</span>
                     </div>
@@ -2251,7 +2263,7 @@ neat_js:
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            使用图床，告别不同平台间繁琐的重新排版...
+                            让你的图片得到保障...
                         
                     </div>
                     <div class="publish-info">
@@ -2291,8 +2303,7 @@ neat_js:
                 <a href="/2020/01/01/html-jian-jie/">
                     <div class="card-image">
                         
-                        
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="/medias/featureimages/22.jpg" class="responsive-img" alt="HTML简介">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200129210804.jfif" class="responsive-img" alt="HTML简介">
                         
                         <span class="card-title">HTML简介</span>
                     </div>
@@ -2492,7 +2503,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">34.6k</span>&nbsp;字
+                class="white-color">35.4k</span>&nbsp;字
             
             
             
