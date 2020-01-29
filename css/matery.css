@@ -1889,7 +1889,7 @@ footer .copy-right {
 }
 
 .top-scroll .btn-floating {
-    background: linear-gradient(to bottom right, #FF5E3A 0%, #FF2A68 100%);
+    background: linear-gradient(to bottom right, #005bea 50%, #00c6fb 100%);
     width: 48px;
     height: 48px;
 }
