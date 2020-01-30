@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>Linux没有IPv4地址解决方法</title>
+      <link href="/posts/undefined.html"/>
+      <url>/posts/undefined.html</url>
+      
+        <content type="html"><![CDATA[<p>我的kali是烧录在U盘的<br>运行环境为U盘<br>kali能够检测到网卡 但是没有ipv4地址解决方法</p><ul><li><p>打开文件夹,找到系统文件;  </p><p>路径:/etc/network/interfaces打开文本interfaces;</p></li></ul><p>配置网卡:<br>auto lo<br>iface lo inet loopback<br>auto eth0<br>iface eth0 inet dhcp<br>之后保存文本;</p><ul><li><p>激活网卡  </p><p>终端输入命令</p></li></ul><p>etc/init.d/networking restart<br>回车,看到ok表示激活成功.</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200130095443.jpg" alt=""></p><p>此时终端输入ifconfig就会发现有了ipv4地址.说明已经成功连接到网络.</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200130095411.jpg" alt=""></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络问题 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Kali Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>如何优雅的将kali系统安装在U盘</title>
+      <link href="/posts/61329.html"/>
+      <url>/posts/61329.html</url>
+      
+        <content type="html"><![CDATA[<p>制作Kail Linux U盘Live版Persistence（持久化）的改造<br>kali系统不建议直接装到本机，因为这样容易受到攻击！<br>建议直接装到虚拟机或者U盘中&gt;&gt;&gt;&gt;<br>很多朋友也许遇到过这样的情况，安装kali到u盘中reboot computer之后数据不会保存。</p><p>刚开始安装kali到U盘中，每次配置好中文以及阿里云的源时~<br>重启电脑时每次都不会保存<del>~</del>wdnmd<br>于是<a href="http://www.thecat.top">偏锋小白菜</a></p><p>开启了折腾之路<del>~<br>最终经过长达几小时的折腾，还是将U盘数据持久化了</del></p><p><strong>工欲善其事必先利其器</strong><br>接下来步入主题如何优雅的将kali安装到U盘并且实现数据持久化。<br>一个随身携带的kali系统，就好比一把趁手的利剑。直击敌人的心脏！</p><p>网上有用vm虚拟机将kali系统写入U盘，但是个人觉得这个写入过程非常的猥琐！<br>我喜欢复杂的事情 简单做。</p><p>这里呢我推荐两款烧录工具<br>1、Rufus<br>2、UUI<br>[下载地址：<a href="https://www.lanzous.com/b0bq49xpe" target="_blank" rel="noopener">https://www.lanzous.com/b0bq49xpe</a></p><p>密码:ftou][2]<br><em>烧录操作基本上都是自动化的。</em></p><p>烧录好之后进入BIOS<br>选择U盘启动<br>kali的boot menu<br>选择第四个启动选项Persistence进入系统即可完成数据持久化。</p><p>tip:U盘引导选择Live USB Persistence项引导进入Kail Linux就完成了，这时候所有的设置、更新、保存操作都可以持久化了，就可以借助U盘实现Kail Linux在任意电脑上都可以引导使用了。  </p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200130094453.webp" alt=""></p><p>欢迎进入Kail Linux的“渗透测试”世界！</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 便携Kali Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Kali Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>使用GitHub+Coding双部署实现国内外网站加速</title>
       <link href="/posts/6001.html"/>
       <url>/posts/6001.html</url>
@@ -859,6 +909,31 @@
         <tags>
             
             <tag> 平面设计 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>没关系，我愿意被你麻烦！</title>
+      <link href="/posts/56591.html"/>
+      <url>/posts/56591.html</url>
+      
+        <content type="html"><![CDATA[<p><strong>- 我至今还记得09.02日的那篇推文！</strong><br><strong>那是一篇微信公众号推文</strong></p><ul><li><p>推文标题：  </p><p>“没关系，我愿意被你麻烦”</p></li><li><p>内容：  </p><p>懂得麻烦别人，才是最高级别的情商。</p></li></ul><p>这个世界上，没有一个人是一座孤岛，也没有一个人能真正的与世隔绝，既然要相互依存，那就要懂得“麻烦别人”。</p><p>本杰明·富兰克林说：“如果你想交一个朋友，那就请他帮你一个忙。”</p><p>很多人都不愿意拉下面子去麻烦别人，总觉得麻烦别人是一件很不好的事情。</p><p><strong>其实，越懂得麻烦别人，越受人欢迎。</strong></p><h2 id="01-好的关系，都是麻烦出来的"><a href="#01-好的关系，都是麻烦出来的" class="headerlink" title="01. 好的关系，都是麻烦出来的"></a>01. 好的关系，都是麻烦出来的</h2><p>武志红在《巨婴国》中说：</p><p>“很多人怕麻烦别人，但是，不麻烦彼此，关系也就无从建立。”</p><p>曾看过一则公益广告：</p><p>年迈的父亲为了不让出门在外的女儿担心，在电话中称自己过得很好，和朋友们一起排节目，一天忙到晚，却向孩子隐瞒了老伴生病住院，自己独自照顾的事实。</p><p>前阵子，朋友的父亲动了手术，一家人也没敢把这事告诉他，还是舅母在电话里向他透了风声，朋友立马请假赶回家了。</p><p>手术完成得很顺利，之后的几天父亲卧床休息，朋友守在床边斟茶倒水，悉心护理。<strong>父亲却总是连番催促他回去，怕耽误了他的工作。</strong></p><p>就连最亲密的家人也是这样，哪怕他们过得再不如意，也舍不得给子女们增添麻烦，这大概就是标准的中国式父母吧。</p><p>其实，父母可以适度地学会示弱，把一部分的忧虑和难处分给儿女。</p><p><strong>儿女在为父母解决问题的过程中，也有一种被需要的感觉，而不是“被麻烦”。</strong></p><p>倪萍曾出演董卿的节目《朗读者》，董卿助阵倪萍的节目《声临其境》，两期节目因为她们的互相麻烦而增色不少。</p><p><strong>互相麻烦的两个人，关系不会因此疏远，反而变得更加亲密。</strong></p><p>好的关系，一定是相互麻烦的，一方付出，一方感恩，这样才能长久。</p><p><strong>互相麻烦，大家彼此温暖，相互帮助，这样才能使关系更加亲密。</strong></p><p>与家人的关系如此，与朋友的关系也如此。</p><h2 id="02-麻烦，需要尺度和界限"><a href="#02-麻烦，需要尺度和界限" class="headerlink" title="02. 麻烦，需要尺度和界限"></a>02. 麻烦，需要尺度和界限</h2><p>胡适就曾经告诫自己儿子：</p><p><strong>“人和人之间，一定要谨守分寸，不冒犯、不打扰，这样才能不惹麻烦。”</strong></p><p>胡适住在研究院宿舍的时候，妻子违反规定打麻将，他屡劝不止，只好带着妻子搬了出去。</p><p>很多人说，院长是你学生，打个麻将也不是什么大事儿，你至于跟他客气吗。</p><p>胡适说，正因为他是我学生，我才不能麻烦他。</p><p>六神磊磊曾经说过：“淘宝能买的土特产，就别问朋友要了。”</p><p><strong>同理，能麻烦自己的事情不要麻烦别人，能麻烦自己家人的事情不要麻烦外人。</strong></p><p>大家都很忙，杀鸡用牛刀，点火用大炮，属于没事儿找事儿。</p><h2 id="03-越懂得麻烦别人，越受欢迎"><a href="#03-越懂得麻烦别人，越受欢迎" class="headerlink" title="03.越懂得麻烦别人，越受欢迎"></a>03.越懂得麻烦别人，越受欢迎</h2><p>卡耐基在《人性的弱点》中曾说：</p><p><strong>“如果想要让交情变得长久，那么你得让别人适当为你做一点小事，这会让别人有存在感和重要感。”</strong></p><p>心理学上有一句话是：<strong>怕麻烦别人，是内心渴望依恋的表现。</strong></p><p>几年前，一部文艺暖心的电影《桃姐》，整整火了一年。</p><p>剧中，仆人桃姐在罗杰家伺候60多年，与主人公罗杰之间的感情早已超越主仆情，变成了一种亲情。</p><p>而让人印象深刻的是，桃姐生病中风后，主动要求住养老院。<strong>她拒绝别人的搀扶、拒绝罗杰家的礼物，不想麻烦罗杰照顾她。</strong></p><p>害怕麻烦别人的人交际圈通常都很小，人也很宅，某种程度也是对自己的一种保护。</p><p><strong>大部分真心想要和你来往的人，都是不自觉地发自内心做出帮助你的行为。</strong>至少在那一刻，他们并不在意你能给他们什么。</p><p>一个适当麻烦别人的人不是索取和贪婪，而是敢于示弱，告诉别人，你需要帮助。</p><p><strong>示弱不代表无能，而是勇敢地深入一段关系。</strong>因此，越懂得麻烦别人的人，越受欢迎。</p><p>麻烦别人，不是故意偷懒，总有一些问题我们无力独自处理，总有一些事情我们需要与人合作；</p><p>麻烦别人，不是为了自己轻松，而是在自己不擅长的领域寻求帮助；</p><p>麻烦别人，不是投机取巧，而是适当地示弱，适当地敞开心扉，我们才能在解决问题的同时拉近与人的关系，建立自信。</p><p>孤军作战的时代已经过去，懂得麻烦别人，我们才能走的更远；</p><p>懂得麻烦别人，才是最高级别的情商。</p><p>以上内容摘抄至某家具销售服务有限公司！  </p><p>推文虽然不是太长，但是受益匪浅！<br>我不会烦你麻烦me，我希望你麻烦me</p><p>我虽然不喜欢麻烦 做事喜欢简约！<br>但是我喜欢别人麻烦me！</p><p>没关系，我愿意被你麻烦！</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 美文转载 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 生活随笔 </tag>
             
         </tags>
       
