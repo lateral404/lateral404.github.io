@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>如何优雅提取app软件的apk格式中的字体？</title>
+      <link href="/posts/58245.html"/>
+      <url>/posts/58245.html</url>
+      
+        <content type="html"><![CDATA[<p>1、下载apk格式的指定app软件；</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200131185939.png" alt=""></p><p>2、将apk格式的文件名更改为后缀名为zip格式；</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200131185940.png" alt=""></p><p>3、用winrar或者7-zip…解压软件解压，然后就找到其中的ttf格式的字体文件。</p><p>举例说明，我想找到XX纸条APP中使用的字体。那么先下载然后修改为如下的zip文件，然后解压出来，然后再找到解压出来的文件夹，然后直接搜索fonts文件夹，然后再找到ttf文件。如下图所示</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200131185941.png" alt=""></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200131185943.png" alt=""></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200131185942.png" alt=""></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 提取文字 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> APP </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>matery自定义字体</title>
+      <link href="/posts/34148.html"/>
+      <url>/posts/34148.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="全局自定义字体"><a href="#全局自定义字体" class="headerlink" title="全局自定义字体"></a>全局自定义字体</h3><p>1.在hexo根目录找到 <strong>source\font</strong> 文件(没有就创建一个，名字也可以自定义)<br>2.找到 <strong>themes\matery\source\css\my.css</strong> 粘贴以下代码进去即可</p><pre><code>@font-face{    font-family: '字体名字';    src: url('../font/你的字体.ttf');}body{    font-family: '字体名字';}</code></pre><ul><li>全局自定义步骤如图：</li></ul><p>1、<img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200131184237.png" alt=""></p><p>2、<img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200131184238.png" alt=""></p><p>3、<img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200131184239.png" alt=""></p><p>4、<img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200131184240.png" alt=""></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 自定义字体 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hexo百度SEO优化</title>
       <link href="/posts/40881.html"/>
       <url>/posts/40881.html</url>
