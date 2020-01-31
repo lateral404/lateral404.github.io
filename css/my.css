@@ -1,3 +1,13 @@
+/*全局自定义字体*/
+@font-face{
+    font-family: 'YangRegular.ttf';
+    src: url('../font/YangRegular.ttf');
+}
+
+body{
+    font-family: 'YangRegular.ttf';
+}
+
 /* Here is your custom css styles. */
 
 /* hexo-filter-github-emojis */
@@ -55,13 +65,4 @@
     28% {
         transform: translate(0, 0.5px) rotate(1.5deg);
     }
-}
-
-@font-face{
-    font-family: 'YangRegular.ttf';
-    src: url('../font/YangRegular.ttf');
-}
-
-body{
-    font-family: 'YangRegular.ttf';
 }
