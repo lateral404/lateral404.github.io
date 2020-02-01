@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>1分钟自制「加密狗」，没有U盘谁用不了你的电脑</title>
+      <link href="/posts/50651.html"/>
+      <url>/posts/50651.html</url>
+      
+        <content type="html"><![CDATA[<p>所以今天就来教你，如何花 1分钟 自制一个「加密狗」，保护你硬盘中的女神。</p><p><del>除非他人可以把你硬盘拆着走</del></p><p>ps：「加密狗」是一种身份认证的硬件，只有当「加密狗」连接时，设备或程序才能启动。</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200201114909.webp" alt=""></p><p>首先插入你的U盘，在U盘中新建「文本文档」，名称随意，扩展名也随意（我这里是 <code>Key.MY</code>）。</p><p>如果你的电脑不显示扩展名，先在「查看」中勾选扩「文件展名」，我这里就不再啰嗦显示后缀名方法啦，，，</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200201115135.webp" alt=""></p><p>然后再新建一个「文本文档」，打开在里面输入</p><p><code>if not exist F:key.my shutdown -s -t 1</code></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200201115413.webp" alt=""></p><p>代码注释：</p><p>//意思是 如果 F 没有 <code>Key.MY</code> 则在 1 秒内执行关机命令。（你的 U 盘在电脑中可能不是F盘，根据实际情况输入，如果把 <code>-t</code> 后面的数字是倒数时间，单位是秒）</p><p>保存后给它取个响亮的名字，扩展名改为 <code>.bat</code> （批处理文件）</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200201115759.webp" alt=""></p><p>然后将这个 <code>.bat</code> 复制到 C 盘中某个角落</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200201115827.webp" alt=""></p><p>在开始菜单搜索打开「组策略」</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200201120226.webp" alt=""></p><p>Windows 设置 - 脚步（启动/关机） - 启动</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200201120302.webp" alt=""></p><p>找到你刚刚藏到C盘中的 <code>.bat</code> 文件一路确定保存</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200201120350.webp" alt=""></p><p>这样你的简易「加密狗」就完成了。开机如果不插入U盘的话将会自动关机。</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200126061043.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200201120452.gif" alt=""></p><p>原理是开机启动 C 盘中的 <code>.bat</code> 文件，执行命令检查 F 盘中的 认证文件，如果没有找到文件将自动关机。</p><p>家庭版没有自带「组策略」，需要先安装「组策略」，做法是在桌面新建一个「文本文档」并在其中输入以下内容后保存。</p><pre><code>pushd "%~dp0"dir /b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum &gt;List.txtdir /b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum &gt;&gt;List.txtfor /f %%i in ('findstr /i . List.txt 2^&gt;nul') do dism /online /norestart /add-package:"C:\Windows\servicing\Packages\%%i"</code></pre><p>将文本文档修改为 <code>.bat</code> 扩展，右键已管理员身份运行，这样系统会下载安装「组策略」。</p><p>建议将C盘中的 <code>.bat</code> 文件和U盘中的认证文件都隐藏避免误删。</p><p>如果你的 U 盘丢了，可以重新制作一个 认证文件放到新的 U 盘中，或进 PE 删除 .bat 文件。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 加密狗 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 计算机 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>如何优雅提取app软件的apk格式中的字体？</title>
       <link href="/posts/58245.html"/>
       <url>/posts/58245.html</url>
