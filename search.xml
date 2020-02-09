@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>CSRF漏洞的验证与防御</title>
+      <link href="/posts/27182.html"/>
+      <url>/posts/27182.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><h1 id="渗透的本质就是不断的获取最高权限"><a href="#渗透的本质就是不断的获取最高权限" class="headerlink" title="渗透的本质就是不断的获取最高权限"></a>渗透的本质就是不断的获取最高权限</h1></blockquote><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200209160340.jfif" alt=""></p><h2 id="一、Referer防护"><a href="#一、Referer防护" class="headerlink" title="一、Referer防护"></a>一、Referer防护</h2><p>说白了它就是告诉下一个页面我们是从哪一个页面点击进来的。<br><strong>Referer无法被伪造</strong>。</p><p>验证方法：<br>1、判断数据包中是否存在Referer类型。<br>Referer：</p><p>2、判断Refere是否存在并且是否包含我们当前被攻击站点域名。<br>baidu.com</p><p>3、判断Referer的来源地址是否为特定的地址。<strong>（强效验）</strong><br>baidu.com/img.html</p><h3 id="动手实践"><a href="#动手实践" class="headerlink" title="动手实践"></a>动手实践</h3><p>工具：BURP</p><p>地址：<a href="https://bug.chinacycc.com/index.php?type=address" target="_blank" rel="noopener">https://bug.chinacycc.com/index.php?type=address</a></p><p>验证方法：</p><p>拦截下添加收货地址数据包进行分析，</p><p>报文如下：</p><pre><code>POST /action.php HTTP/1.1Host: bug.chinacycc.comUser-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0Accept: */*Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3Content-Type: application/x-www-form-urlencoded; charset=UTF-8X-Requested-With: XMLHttpRequestReferer: https://bug.chinacycc.com/html/add_address.htmlContent-Length: 172Cookie: PHPSESSID=bjjuhd95a6nkg2kh259q4r4cv0; userid=112DNT: 1Connection: closetype=add_address&amp;info=111111111111111&amp;name=11111111&amp;mobile=13145637333&amp;id=&amp;addr_info=%E5%90%89%E6%9E%97%E7%9C%81%2F%E5%90%89%E6%9E%97%E5%B8%82%2F%E9%BE%99%E6%BD%AD%E5%8C%BA</code></pre><p>CTRL R将数据包发送到 重发器进行验证</p><p>1、直接删除Referer，查看是否成功</p><p>2、修改Referer地址，查看是否添加成功</p><p>3、强效验（一带而过）没办法绕过</p><h2 id="二、Token防护（临时密钥）"><a href="#二、Token防护（临时密钥）" class="headerlink" title="二、Token防护（临时密钥）"></a>二、Token防护（临时密钥）</h2><p>当客户端来到收货地址，服务端会分配给客户端一串临时密钥<code>a5d7h88gd7bo0sjs5jkdj228hssj62j61h</code><br>当提交的时候数据和密钥都会一同传给服务端进行验证。<br><strong>TOKEN</strong>长这样<code>&amp;CSRF_TOKEN=a5d7h88gd7bo0sjs5jkdj228hssj62j61h</code><br>有周期性，每隔一段时间自动刷新。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络安全 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网络安全 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>弱口令漏洞</title>
+      <link href="/posts/29163.html"/>
+      <url>/posts/29163.html</url>
+      
+        <content type="html"><![CDATA[<p><strong>弱口令</strong>并非我们所说的123456、1234567890、1314520、770880之类的密码，这些密码都太肤浅，</p><p>弱口令分为<strong>2种类型</strong></p><pre><code>1、常规类型：1234566543211231231111119999996666662、默认类型adminadmin123qaz123123qwerqaz</code></pre><p>我们在爆破的过程中，会出现账户密码输入多次错误导致被封，限制登陆。</p><p>那，</p><h1 id="服务端是如何判断我们输入三次了？"><a href="#服务端是如何判断我们输入三次了？" class="headerlink" title="服务端是如何判断我们输入三次了？"></a>服务端是如何判断我们输入三次了？</h1><p>1、根据IP进行判断：</p><p>建立一个IP数据库用于查询当前登陆者输入的次数是否超过XXX次，一般很少使用；增加服务器负担。</p><p><em>IP被办了，可以重启路由器，；或者挂VPN</em></p><p>2、根据Cookie进行判断</p><p>绕过Cookie判断，，，直接删除cookie在进行爆破，；</p><p>没有Cookie它就没办法判断我们输入错误操过XXX次</p><h2 id="验证码"><a href="#验证码" class="headerlink" title="验证码"></a>验证码</h2><ul><li>验证码分为<strong>服务端和客户端</strong></li></ul><h2 id="基于客户端的验证绕过"><a href="#基于客户端的验证绕过" class="headerlink" title="基于客户端的验证绕过"></a>基于客户端的验证绕过</h2><p>首先我们先测试验证码是否有效，</p><p>第一次验证的时候验证码一定要是正确的；</p><p>我们用BURP抓取登录的这个数据包，</p><p>这个数据包我们先不要放，</p><p>不要让数据包发送出去我们直接丢弃，</p><p>CTRL I发送过去进行爆破，</p><p><strong>爆破IP被封</strong>，使用<code>X-Forwarded-For: You IP</code> 头进行绕过 。</p><p>把这段参数放到Cookie上方</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络安全 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网络安全 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CSRF跨站请求伪造笔记整理</title>
       <link href="/posts/21678.html"/>
       <url>/posts/21678.html</url>

@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="云南唯康杯，含泪夺省一, Cat00011cat,偏锋小白菜,网络日记,个人博客,BLOG">
-    <meta name="description" content="真的这段时间，失去了很多也收获了很多；沧桑了，都">
+    <meta name="keywords" content="CSRF漏洞的验证与防御, Cat00011cat,偏锋小白菜,网络日记,个人博客,BLOG">
+    <meta name="description" content="Referer验证与Tokne密钥防御原理，每天进步一点点！">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>云南唯康杯，含泪夺省一 | Cat00011cat</title>
+    <title>CSRF漏洞的验证与防御 | Cat00011cat</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -325,7 +325,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '';
+        let pwd = '389924b2f9e222d3c162ca06c22d3caf650960e3a3c8ff61b55c3337a39c5f5f';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -338,12 +338,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lateral404/image/image/20200111000023.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lateral404/image/image/20200209160430.jfif')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">云南唯康杯，含泪夺省一</h1>
+                    <h1 class="description center-align post-title">CSRF漏洞的验证与防御</h1>
                 </div>
             </div>
         </div>
@@ -365,8 +365,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%94%AF%E5%BA%B7%E6%9D%AF/">
-                                <span class="chip bg-color">唯康杯</span>
+                            <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                                <span class="chip bg-color">网络安全</span>
                             </a>
                         
                     </div>
@@ -377,8 +377,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E4%B8%AD%E8%81%8C%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1%E6%8A%80%E8%83%BD%E5%A4%A7%E8%B5%9B/" class="post-category">
-                                中职电子商务技能大赛
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" class="post-category">
+                                网络安全
                             </a>
                         
                     </div>
@@ -390,21 +390,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-01-08
+                    2020-02-09
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-01-30
+                    2020-02-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    691
+                    474
                 </div>
                 
 
@@ -428,24 +428,35 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <blockquote>
-<p><strong>2020年云南省电子商务技能大赛”唯康杯“1月5号在红河州正式进行比赛</strong></p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200111000023.png" alt=""></p>
-<p>   其实这次比赛省一等奖，是我想都想不到的名次；为了准备这次的比赛我们“<strong>猪会飞</strong>队”停课近一个多月。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200111000027.jpg" alt=""></p>
-<p>   此次获奖首先要感谢我们的指导老师：赵老师和宋老师以及其老班和他提意见的老师……</p>
-<p>   其实我当时参加这个技能大赛也是一个意外，本打算不参加的因为觉得自己很菜；没有实力，，到现在我都不知道当初哪里来的热血，像打了鸡血一样天天练习电子商务（美工）说实话，当时我Ps都基本上忘记了怎么使用，因为假期都在研究别的网络安全技术，。，因为不服输（文化课可以输，但是我感兴趣的东西我怎么忍心让别人夺走呢？？？）所以那几天一直都在某站学习Ps美工技巧。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200111000022.jpg" alt=""></p>
-<p>   有一次我在宿舍用笔记本电脑练习比赛的美工，都会被值周的老师看见了而且拍照上报教师群（在这里感谢老班的理解与包容）；在这里我想说不一定玩电脑就是打游戏，因为我还有梦想，。希望老师不要再阻止我追寻梦想的道路，我学习成绩确实差劲，但是我想说“术业有专攻，如是而已”</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200111000025.jpg" alt=""></p>
-<p>   毕竟是第一次参加这样的比赛，快比赛的前几天都感觉一直很郁闷，每天坚持练习到很晚直至比赛结束，怕辜负了大家的期望，，好在努力就有结果，！6号比赛结束返校那一天真的在大巴上自闭了一天，因为成绩晚了一天出来；那一天都是闷闷不乐的。7号早上出成绩了，令我感到意外的是我们居然夺得省一等奖；当时比赛想都不敢想的名次，我都不相信自己有这样的实力;不鸣则已 一鸣惊人。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200111000026.jpg" alt=""></p>
-<p>   这一路我们都在打击中不断地进步，完善自身。通过参加此次比赛我认识了很多大佬，也懂得了团队意识的重要性，；人生机会只有一次，没有把握好的话。后悔也没用。</p>
-<p>   感觉通过比赛自己成长了很多！！！</p>
-<p>来年继续加油，冲冲冲！！！   </p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200111000028.jpg" alt=""></p>
-<p>在追梦的道路上，渐行渐远~~</p>
-<p><strong><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200111000024.jpg" alt=""></strong></p>
+<h1 id="渗透的本质就是不断的获取最高权限"><a href="#渗透的本质就是不断的获取最高权限" class="headerlink" title="渗透的本质就是不断的获取最高权限"></a>渗透的本质就是不断的获取最高权限</h1></blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200209160340.jfif" alt=""></p>
+<h2 id="一、Referer防护"><a href="#一、Referer防护" class="headerlink" title="一、Referer防护"></a>一、Referer防护</h2><p>说白了它就是告诉下一个页面我们是从哪一个页面点击进来的。<br><strong>Referer无法被伪造</strong>。</p>
+<p>验证方法：<br>1、判断数据包中是否存在Referer类型。<br>Referer：</p>
+<p>2、判断Refere是否存在并且是否包含我们当前被攻击站点域名。<br>baidu.com</p>
+<p>3、判断Referer的来源地址是否为特定的地址。<strong>（强效验）</strong><br>baidu.com/img.html</p>
+<h3 id="动手实践"><a href="#动手实践" class="headerlink" title="动手实践"></a>动手实践</h3><p>工具：BURP</p>
+<p>地址：<a href="https://bug.chinacycc.com/index.php?type=address" target="_blank" rel="noopener">https://bug.chinacycc.com/index.php?type=address</a></p>
+<p>验证方法：</p>
+<p>拦截下添加收货地址数据包进行分析，</p>
+<p>报文如下：</p>
+<pre><code>POST /action.php HTTP/1.1
+Host: bug.chinacycc.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0
+Accept: */*
+Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+X-Requested-With: XMLHttpRequest
+Referer: https://bug.chinacycc.com/html/add_address.html
+Content-Length: 172
+Cookie: PHPSESSID=bjjuhd95a6nkg2kh259q4r4cv0; userid=112
+DNT: 1
+Connection: close
+
+type=add_address&amp;info=111111111111111&amp;name=11111111&amp;mobile=13145637333&amp;id=&amp;addr_info=%E5%90%89%E6%9E%97%E7%9C%81%2F%E5%90%89%E6%9E%97%E5%B8%82%2F%E9%BE%99%E6%BD%AD%E5%8C%BA</code></pre><p>CTRL R将数据包发送到 重发器进行验证</p>
+<p>1、直接删除Referer，查看是否成功</p>
+<p>2、修改Referer地址，查看是否添加成功</p>
+<p>3、强效验（一带而过）没办法绕过</p>
+<h2 id="二、Token防护（临时密钥）"><a href="#二、Token防护（临时密钥）" class="headerlink" title="二、Token防护（临时密钥）"></a>二、Token防护（临时密钥）</h2><p>当客户端来到收货地址，服务端会分配给客户端一串临时密钥<code>a5d7h88gd7bo0sjs5jkdj228hssj62j61h</code><br>当提交的时候数据和密钥都会一同传给服务端进行验证。<br><strong>TOKEN</strong>长这样<code>&amp;CSRF_TOKEN=a5d7h88gd7bo0sjs5jkdj228hssj62j61h</code><br>有周期性，每隔一段时间自动刷新。</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -489,7 +500,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.thecat.top/posts/10989.html">http://www.thecat.top/posts/10989.html</a>
+                    <a href="http://www.thecat.top/posts/27182.html">http://www.thecat.top/posts/27182.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -527,8 +538,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%94%AF%E5%BA%B7%E6%9D%AF/">
-                                    <span class="chip bg-color">唯康杯</span>
+                                <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                                    <span class="chip bg-color">网络安全</span>
                                 </a>
                             
                         </div>
@@ -699,7 +710,7 @@
         repo: 'Leaving-a-message',
         owner: 'lateral404',
         admin: "lateral404",
-        id: '2020-01-08T23-08-42',
+        id: '2020-02-09T18-31-33',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -983,45 +994,47 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/32390.html">
+                <a href="/posts/27182.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200129220205.jfif" class="responsive-img" alt="局域网下ARP欺骗以及DNS劫持">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200209160430.jfif" class="responsive-img" alt="CSRF漏洞的验证与防御">
                         
-                        <span class="card-title">局域网下ARP欺骗以及DNS劫持</span>
+                        <span class="card-title">CSRF漏洞的验证与防御</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            域名劫持是古老的黑客技术，通过攻击域名解析服务器（DNS），或伪造域名解析服务器（DNS）的方法，把目标网站域名解析到错误的地址从而实现用户无法访问目标网站的目的
+                            Referer验证与Tokne密钥防御原理，每天进步一点点！
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-01-09
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%B1%80%E5%9F%9F%E7%BD%91DNS%E5%8A%AB%E6%8C%81ARP%E6%AC%BA%E9%AA%97/" class="post-category">
-                                    局域网DNS劫持ARP欺骗
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" class="post-category">
+                                    网络安全
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Kali-Linux/">
-                        <span class="chip bg-color">Kali Linux</span>
+                    <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                        <span class="chip bg-color">网络安全</span>
                     </a>
                     
                 </div>
@@ -1035,30 +1048,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/27878.html">
+                <a href="/posts/29163.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200129215937.jfif" class="responsive-img" alt="Hacker技术学的再好，却无法侵入你的心！">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200209180359.png" class="responsive-img" alt="弱口令漏洞">
                         
-                        <span class="card-title">Hacker技术学的再好，却无法侵入你的心！</span>
+                        <span class="card-title">弱口令漏洞</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            梦醒了，我才知道Hack不需要爱情
+                            弱口令漏洞的爆破思路以及BURP爆破功能介绍
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-09
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%88%91%E7%9A%84%E9%BB%91%E5%AE%A2%E6%A2%A6/" class="post-category">
-                                    我的黑客梦
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" class="post-category">
+                                    网络安全
                                 </a>
                             
                             
@@ -1068,8 +1081,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hack/">
-                        <span class="chip bg-color">Hack</span>
+                    <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                        <span class="chip bg-color">网络安全</span>
                     </a>
                     
                 </div>
