@@ -397,21 +397,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-02-09
+                    2020-02-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    394
+                    925
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 				
@@ -459,6 +459,59 @@ qwerqaz</code></pre><p>我们在爆破的过程中，会出现账户密码输入
 <p>CTRL I发送过去进行爆破，</p>
 <p><strong>爆破IP被封</strong>，使用<code>X-Forwarded-For: You IP</code> 头进行绕过 。</p>
 <p>把这段参数放到Cookie上方</p>
+<h1 id="Burp-Intruder（BURP-英吹的）介绍"><a href="#Burp-Intruder（BURP-英吹的）介绍" class="headerlink" title="Burp Intruder（BURP 英吹的）介绍"></a>Burp Intruder（BURP 英吹的）介绍</h1><p>首先来聊一下爆破过程的几种方法，总体来说，按照 Burp 工具，可以了解到基本上有四种方法，分别是 Sniper、Cluster bomb、Battering ram、Pitch fork。具体的使用方法如下：</p>
+<ul>
+<li>Sniper (狙击手) 方法:</li>
+</ul>
+<blockquote>
+<p>当使用sniper模式时，加载一个单一的payload，对标记的点进行爆破，当然，如果只有一个标记点不用说，直接爆破，但是这个模式对于两个或者两个以上的标记点采用的方法时其中一个标记点加载字典内容，另一个标记点保持默认，当字典结束之后，互相交换，之前加载字典的标记点变成默认，默认的变成加载字典如下图所示：</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200210162338.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200210162407.png" alt=""></p>
+<ul>
+<li>Cluster bomb（集束炸弹）方法：</li>
+</ul>
+<blockquote>
+<p>当使用这个方法的时候，两个字典会不断的迭代吧，我也说不清楚，反正他的规模就是两个payload的笛卡尔积，</p>
+<p>说白了就是 <strong>一对多</strong></p>
+<p>举一个很形象的例子吧：</p>
+<pre><code>pay1字典：123 
+
+pay2字典：456 </code></pre><p>那么使用这种方法的结果就是这样的：</p>
+<pre><code>1-4、1-5、1-6
+
+2-4、2-5、2-6 
+
+3-4、3-5、3-6 </code></pre><p>如下图所示：</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200210163507.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200210163525.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200210163533.png" alt=""></p>
+<ul>
+<li>Battering ram 方法：</li>
+</ul>
+<blockquote>
+<p>对于这个方法，我学习了之后认为他就是sniper一个参数情况的特殊版，只不过在这里Battering ram指的是只加载一个字典，如果只有一个标记点，那么没什么区别，如果有多个标记点，那么标记点的内容是一样的，都是字典中的某一个，所以因为名字叫做“攻城锤”，狙击枪变成锤子啦，哈哈哈哈…….如下图：</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200210164404.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200210164421.png" alt=""></p>
+<ul>
+<li>Pitch fork 方法：</li>
+</ul>
+<blockquote>
+<p>这个方法比较特殊，要求必须传入两个以上的标记点，如果只有一个会报错，当标记 两个之后，</p>
+<p>举一个例子： </p>
+<pre><code>pay1：1，2，3 
+
+pay2：4，5，6 
+
+那么爆破的值为：1-4、2-5、3-6 
+
+当字典不是对称（密码不一样多）的时候，会取最小值！</code></pre><p>如下图所示：</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200210165209.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200210165223.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200210165232.png" alt=""></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1157,7 +1210,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">49.1k</span>&nbsp;字
+                class="white-color">49.6k</span>&nbsp;字
             
             
             
