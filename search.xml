@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>短网址工作原理</title>
+      <link href="/posts/40893.html"/>
+      <url>/posts/40893.html</url>
+      
+        <content type="html"><![CDATA[<p>短网址在线生成<a href="http://suo.im" target="_blank" rel="noopener">http://suo.im</a></p><p>#原理<br>说白了短网址服务器就是在中间起到一个转发的作用<br>当我们在浏览器里输入<a href="http://t.cn/sD8Hs" target="_blank" rel="noopener">http://t.cn/sD8Hs</a> 时候<br>1、DNS首先解析获取<a href="http://t.cn/" target="_blank" rel="noopener">http://t.cn/</a> 的ip地址<br>2、当DNS获得IP地址以后（127.0.0.1），会去短网址服务器查询短码sD8Hs。<br>3、请求会通过301重定向，永久重定向到我们的长链接。<br><strong>他的好处就是对我的网址进行隐藏。</strong></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络安全 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网络安全 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>XSS漏洞笔记二</title>
       <link href="/posts/63847.html"/>
       <url>/posts/63847.html</url>
@@ -246,31 +271,6 @@
         <tags>
             
             <tag> 计算机 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>短网址工作原理</title>
-      <link href="/posts/40893.html"/>
-      <url>/posts/40893.html</url>
-      
-        <content type="html"><![CDATA[<p>短网址在线生成<a href="http://suo.im" target="_blank" rel="noopener">http://suo.im</a></p><p>#原理<br>说白了短网址服务器就是在中间起到一个转发的作用<br>当我们在浏览器里输入<a href="http://t.cn/sD8Hs" target="_blank" rel="noopener">http://t.cn/sD8Hs</a> 时候<br>1、DNS首先解析获取<a href="http://t.cn/" target="_blank" rel="noopener">http://t.cn/</a> 的ip地址<br>2、当DNS获得IP地址以后（127.0.0.1），会去短网址服务器查询短码sD8Hs。<br>3、请求会通过301重定向，永久重定向到我们的长链接。<br><strong>他的好处就是对我的网址进行隐藏。</strong></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
-      <categories>
-          
-          <category> 网络安全 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 网络安全 </tag>
             
         </tags>
       
