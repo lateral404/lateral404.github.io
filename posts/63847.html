@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="巧用bat批处理对文件后缀名进行批量修改, Cat00011cat,偏锋小白菜,网络日记,个人博客,BLOG">
-    <meta name="description" content="bat批处理批量修改文件后缀，提高办公效率">
+    <meta name="keywords" content="XSS漏洞笔记二, Cat00011cat,偏锋小白菜,网络日记,个人博客,BLOG">
+    <meta name="description" content="XSS知识总结">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>巧用bat批处理对文件后缀名进行批量修改 | Cat00011cat</title>
+    <title>XSS漏洞笔记二 | Cat00011cat</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -325,7 +325,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '';
+        let pwd = '389924b2f9e222d3c162ca06c22d3caf650960e3a3c8ff61b55c3337a39c5f5f';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -338,12 +338,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lateral404/image/image/20200211030016.jfif')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">巧用bat批处理对文件后缀名进行批量修改</h1>
+                    <h1 class="description center-align post-title">XSS漏洞笔记二</h1>
                 </div>
             </div>
         </div>
@@ -365,8 +365,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/bat%E7%BC%96%E7%A8%8B/">
-                                <span class="chip bg-color">bat编程</span>
+                            <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                                <span class="chip bg-color">网络安全</span>
                             </a>
                         
                     </div>
@@ -377,8 +377,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E4%BC%98%E9%9B%85%E7%9A%84%E6%89%B9%E9%87%8F%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E5%90%8E%E7%BC%80%E5%90%8D/" class="post-category">
-                                优雅的批量修改文件后缀名
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" class="post-category">
+                                网络安全
                             </a>
                         
                     </div>
@@ -390,28 +390,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-01-08
+                    2020-02-13
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-01-30
+                    2020-02-13
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    494
+                    710
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 				
@@ -427,43 +427,34 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h3><p>今天呢，帮大哥diy爬取了一些类似于室内家具效果图的图片素材<br><del>偏锋小菜鸡</del>一会功夫爬取了近千张的素材，美滋滋的打开文件夹  </p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200108102915.png" alt=""></p>
-<p>结果一看，！！！？？？？是这样子的；如图所示</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200108103033.png" alt=""></p>
-<p>发现图片后缀名全是错误的，例如这样<strong>-JPEG</strong></p>
-<p>哇，这个总不能我一张一张的改吧？？？<br>我此时此刻的心情是这样的<em>&amp;……&amp;&amp;*</em>&amp;……%&amp;&amp;&amp;……%&amp;……</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200108103031.png" alt=""></p>
-<p><em>偏锋小菜鸡</em>，灵机一闪想到了批量重命名文件名；想必理论上命名后缀也可以的。</p>
-<h4 id="进入实战"><a href="#进入实战" class="headerlink" title="进入实战"></a>进入实战</h4><p>果不其然，可以做一个批处理命令，一键修改文件名后缀。</p>
-<pre><code>@echo off
-echo --------------------------------------------------偏锋专用批量修改脚本---------------------------- 
-----------------------
-echo ------------------------------------------------------------------------------------------------- 
--------------------------
-color a
-pause
-echo 【您即将进行批量修改后缀名操作.....】
-pause
-echo 【！！！包括此文件后缀也会被更改！！！】
-pause
-ren * *.jpg
-pause
-echo 按任意键退出
-pause</code></pre><p><strong>代码注释：</strong></p>
-<pre><code>echo xxx                         ::输出提示信息
-@echo off/no                     ::打开回显或关闭回显功能/如果想关闭“ECHO OFF”命令行自身的显示，则需要在该 
-                                   命令行前加上“@”
-pause                            ::暂停
-color                            ::字体颜色
-ren * *.jpg                      ::ren重命名命令； “ * ”代表文件参数（通俗来说就是需要修改的文件名字）当然 
-                                   文件名统一的话也可以修改，例如ren                       img.png *.jpg (记得一个参数一个空格)</code></pre><p><strong>脚本打开效果</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200108103032.png" alt=""></p>
-<h4 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h4><p>创建一个txt文本，将以上代码复制到文本中，保存修改文本后缀.txt为.bat（如图所示）</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200108103034.png" alt=""></p>
-<p>双击打开脚本，按照提示操作，，最后我们可以看到文件后缀全部修改为.jpg了；如图所示</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200108103035.png" alt=""></p>
-<p>至此，总算搞定了。</p>
+                <p>在XSS测试过程中，输入XSS可以弹框；</p>
+<p>但是刷新页面就不能执行代码，是因为代码被过滤了。</p>
+<p><strong>原因是因为XSS代码再存入服务端的时候没有被过滤，在取出数据的时候进行了实体化编码过滤。</strong></p>
+<p>#思路：</p>
+<p>A页面  用户端-个人中心-收货地址（编码实体化）</p>
+<p>B页面  后台-用户订单（显收货地址，再下单的时候需要选择收货地址；默认收货地址）；可能在后台没做过滤，就导致原样输出这个XSS代码。<br>有些时候A页面不触发，会在B页面触发。</p>
+<p>盲打XSS，有框的地方就插一下。</p>
+<p>#HTTP Only：</p>
+<p>它的作用就是保护重要Cookie不被盗取；</p>
+<p>如何判断网站是否有HTTP Only，F12-存储-Cookie-点击url-进去会看到HTTP Only的标题，值为False说明没有，值为true说明有。</p>
+<p>#HTTPS站点与HTTP站点在测试XSS注意事项</p>
+<p>说白了XSS代码，就是从远程引入一个JS文件并读取JS代码，从而造成一个攻击。</p>
+<p>如果有Http Only我们该如何扩大化危害？</p>
+<p>一、Js URL跳转</p>
+<p><code>&lt;script language="JavaScript" type="text/javascript"&gt;window.location.href='https://xss.chinacycc.com/'; &lt;/script&gt;</code></p>
+<p>当我们将其插入到有XSS漏洞的地方，网页会立马跳转到我们的网页。</p>
+<p><strong>如何改回来，去掉反弹：</strong></p>
+<p>首先开启一个BURP抓包，</p>
+<p>然后进入含有我们插入XSS URL恶意跳转的页面，进行抓包拦截；</p>
+<p>单击右键-Do intercept-response to this request （抓取返回包） 接着点击 放过 ；等待BURP抓取返回包（服务器传输给客户端的数据包）</p>
+<p>在返回包里找到我们那段代码将其删除，这样网页就不会跳转了；</p>
+<p>最后在最初我们插入XSS跳转代码的地方，将这段恶意代码彻底的删除。这样就OK了。</p>
+<p>2、搭建相似的钓鱼页面</p>
+<p>这样即便在有HTTP only的情况下，我们也能骗取管理员输入账户密码。</p>
+<p>3、弹出下载木马的地址</p>
+<p>说白了就是让管理员下载我们的某个exe木马文件，拿下管理员PC权限；进行密码获取。<br>伪装Flash下载页面，（打开flash官网，右键保存源代码。只需要把缺少的地址补全即可）</p>
+<p>二、401钓鱼</p>
+<p>弹出服务端验证窗口，让管理员输入密码。<br>在截获密码的一瞬间，我们立即把网页恢复，这样他就找不到痕迹了。</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -507,7 +498,7 @@ ren * *.jpg                      ::ren重命名命令； “ * ”代表文件�
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.thecat.top/posts/4400.html">http://www.thecat.top/posts/4400.html</a>
+                    <a href="http://www.thecat.top/posts/63847.html">http://www.thecat.top/posts/63847.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -545,8 +536,8 @@ ren * *.jpg                      ::ren重命名命令； “ * ”代表文件�
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/bat%E7%BC%96%E7%A8%8B/">
-                                    <span class="chip bg-color">bat编程</span>
+                                <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                                    <span class="chip bg-color">网络安全</span>
                                 </a>
                             
                         </div>
@@ -717,7 +708,7 @@ ren * *.jpg                      ::ren重命名命令； “ * ”代表文件�
         repo: 'Leaving-a-message',
         owner: 'lateral404',
         admin: "lateral404",
-        id: '2020-01-08T10-10-24',
+        id: '2020-02-13T03-31-33',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1001,45 +992,47 @@ ren * *.jpg                      ::ren重命名命令； “ * ”代表文件�
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/undefined.html">
+                <a href="/posts/63847.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200129214218.png" class="responsive-img" alt="windows——优雅地实现批量下载">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200211030016.jfif" class="responsive-img" alt="XSS漏洞笔记二">
                         
-                        <span class="card-title">windows——优雅地实现批量下载</span>
+                        <span class="card-title">XSS漏洞笔记二</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            通过Wget批量下载HTTP协议头的文件
+                            XSS知识总结
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-01-08
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-13
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Wget%E6%89%B9%E9%87%8F%E4%B8%8B%E8%BD%BD/" class="post-category">
-                                    Wget批量下载
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" class="post-category">
+                                    网络安全
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Wget/">
-                        <span class="chip bg-color">Wget</span>
+                    <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                        <span class="chip bg-color">网络安全</span>
                     </a>
                     
                 </div>
@@ -1053,30 +1046,30 @@ ren * *.jpg                      ::ren重命名命令； “ * ”代表文件�
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/35247.html">
+                <a href="/posts/48491.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200129213410.jfif" class="responsive-img" alt="Win10开启暗黑模式小技巧">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200211030016.jfif" class="responsive-img" alt="XSS平台注册后使用方法">
                         
-                        <span class="card-title">Win10开启暗黑模式小技巧</span>
+                        <span class="card-title">XSS平台注册后使用方法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            保护视力，Win10也能像MacOS一样开启暗黑模式
+                            以前老搞不懂XSS平台是干嘛的现在懂了，写个笔记记录一下；小白也要努力打怪升级！这样才不会辜负自己。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-11
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Win10%E5%BC%80%E5%90%AF%E8%A3%85%E9%80%BC%E6%A8%A1%E5%BC%8F/" class="post-category">
-                                    Win10开启装逼模式
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" class="post-category">
+                                    网络安全
                                 </a>
                             
                             
@@ -1086,8 +1079,8 @@ ren * *.jpg                      ::ren重命名命令； “ * ”代表文件�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Win%E7%B3%BB%E7%BB%9F/">
-                        <span class="chip bg-color">Win系统</span>
+                    <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                        <span class="chip bg-color">网络安全</span>
                     </a>
                     
                 </div>
