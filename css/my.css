@@ -1,4 +1,4 @@
-/*全局自定义字体*/
+/*全局自定义字体
 @font-face{
     font-family: 'YangRegular.ttf';
     src: url('../font/YangRegular.ttf');
@@ -7,6 +7,8 @@
 body{
     font-family: 'YangRegular.ttf';
 }
+*/
+
 
 /* Here is your custom css styles. */
 
