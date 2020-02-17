@@ -4,6 +4,81 @@
   
     
     <entry>
+      <title>逻辑漏洞</title>
+      <link href="/posts/45471.html"/>
+      <url>/posts/45471.html</url>
+      
+        <content type="html"><![CDATA[<p>绕过验证码直接绑定新的手机号<br>思路：<br>用自己的账号正常走完绑定新手机号码的流程，<br>1、输入正确验证码，开启burp下一步抓取数据包；抓取返回包，将返回包中正确的参数记录，我们将要修改的受害者账户的返回包修改为正确的然后放包，发现直接跳转到绑定新手机号码的页面。</p><p>任意用户密码重置的10种常见姿势<br>1 验证码不失效</p><pre><code>造成原因：找回密码的时候获取的验证码缺少时间限制仅值判断了验证码是够正确未判断验证码是否过期测试方法：通过枚举找到真正的验证码输入验证码完成验证-案例输入目标手机号，获取验证码随意输入验证码1234点击下一步，拦截数据包</code></pre><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218011355.png" alt=""></p><p>POST /Account/CheckYQCode HTTP/1.1<br>Host: <a href="http://www.xxxx.cn" target="_blank" rel="noopener">www.xxxx.cn</a><br>User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0<br>Accept: <em>/</em><br>Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3<br>Accept-Encoding: gzip, deflate, br<br>Content-Type: application/x-www-form-urlencoded; charset=UTF-8<br>X-Requested-With: XMLHttpRequest<br><a href="http://www.xxxx.cn/userCenter/toForgetPsdPage.html?mobile=" target="_blank" rel="noopener">http://www.xxxx.cn/userCenter/toForgetPsdPage.html?mobile=</a><br>Content-Length: 11<br>Cookie: ASP.NET_SessionId=30jfruwn22h2xng3ahhzo2jx<br>Connection: close YQCode=1234</p><p>得到正确的验证码是1059然后到网站上输入验证码跳转到输入新密码的页面完成重置密码<br><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218011548.png" alt=""></p><p>2验证码直接返回</p><pre><code>1.输入目标手机号，点击获取验证码2.验证码直接返回1269，输入验证码跳转到重置页面</code></pre><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218011815.png" alt=""></p><p>3.验证码未绑定用户</p><pre><code>造成原因：输入手机号和验证码进行重置密码的时候，仅对验证码是够正确进行了判断，未对该验证码是否与手机号匹配做验证。测试方法：在提交手机号和验证码的时候，替换手机号为他人手机号进行测试，成功通过验证并重置他人密码。</code></pre><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218012009.png" alt=""><br><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218012031.png" alt=""><br>首先使用自己的手机号接收验证码然后输入自己手机号接收到的验证码，点击下一步并拦截数据包最后替换数据包里的目标手机号，然后发包<br><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218012149.png" alt=""><br>这个案例也是验证码未绑定用户延伸一下，有时候测试会碰到这种，我们发现用户名被加密了，我们又无法得知加密算法，怎么办？大部分这种都不需要知道加密算法，比如这个例子，得到的liuyy的加密后的值是80e688602c4b11e66320c421e3b71ef2，那么我们就可以直接用这个keycode了<br><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218012149.png" alt=""><br>步骤是一样的，输入我们的用户名和收到的验证码，然后把我们的keycode替换为liuyy的那个keycode，这样就可以重置liuyy的密码了。（漏洞原因还是是判断了验证码是否正确，而没有判断该验证码是否跟该用户匹配。）</p><p>4.修改接收的手机或邮箱</p><pre><code>造成原因：用户名、手机号、验证码三者没有统一进行验证，仅判断了三者中的手机号和验证是否匹配和正确，如果正确则判断成功并进入下一流程。测试方法：输入用户名获取验证码，修改接收验证码的手机号为自己的号码，自己手机成功接收验证码，提交到网站进行验证，验证成功并进入下一流程。</code></pre><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218012417.png" alt=""><br><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218012533.png" alt=""><br>点击找回密码，首先我们输入zhangwei，然后点击获取验证码，这个时候把手机号改为我们自己的号码，输入我们自己的号码和验证码，成功跳到重置密码的页面，密码重置成功</p><p>5本地验证的绕过</p><pre><code>造成原因：客户端在本地进行验证码是否正确的判断，而该判断结果也可以在本地修改，最终导致欺骗客户端，误以为我们已经输入了正确的验证码。测试方法：重置目标用户，输入错误验证码，修改返回包，把错误改为正确，即可绕过验证步骤，最终重置用户密码。</code></pre><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218012636.png" alt=""><br><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218012814.png" alt=""><br>输入手机号13888888888，输入验证码123456，验证码错误的时候，返回包返回的是0<br><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218012836.png" alt=""><br>这里我们所做的就是把0修改为1，可以借工具修改返回包，我们把0改为1，然后查看页面，成功跳转到修改密码的页面，输入新密码即可修改用户13888888888的密码</p><p>6跳过验证步骤</p><pre><code>造成原因：对修改密码的步骤，没有做校验，导致可以直接输入最终修改密码的网址，直接跳转到该页面，然后输入新密码达到重置密码的目的。测试方法：首先使用自己的账号走一次流程，获取每个步骤的页面链接，然后记录页面3对应的输入新密码的链接，重置他人用户时，获取验证码后，直接输入页面3链接到新密码的界面，输入密码重置成功。</code></pre><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218013040.png" alt=""><br><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218013058.png" alt=""><br><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218013119.png" alt=""><br>使用账户wangshuai，点击获取验证码，然后补齐下面的链接<a href="https://xxx/page/login/veifyAccess.html?username=wangshuai&amp;email=wangshuai@xxx.com.cn，访问后即可直接重置该用户的密码" target="_blank" rel="noopener">https://xxx/page/login/veifyAccess.html?username=wangshuai&amp;email=wangshuai@xxx.com.cn，访问后即可直接重置该用户的密码</a></p><p>7未校验用户字段的值</p><pre><code>造成原因：在整个重置密码的流程中，只对验证码和手机号做了校验，未对后面设置新密码的用户身份做判断，导致在最后一步通过修改用户身份来重置他人的密码。测试方法：使用自己的手机号走流程，在走到最后一个设置密码的流程时，修改数据包里的用户信息。</code></pre><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218013236.png" alt=""></p><p>8修改密码处id可替换</p><pre><code>造成原因：修改密码的时候，没有对原密码进行判断，且根据id的值来修改用户的密码，类似的SQL语句：update user set password="qwer1234" where id = ‘1’修改数据包里的id的值，即可修改他人密码。测试方法：修改自己用户密码，抓取数据包，替换数据包中用户对应的id值，即可修改他人的密码。</code></pre><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218013406.png" alt=""><br><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218013439.png" alt=""><br>点击立即提交，得到右边的数据包，测试发现修改id为5，就可以把对应的用户密码修改为123456，没有对用户的原始密码判断，也没有判断id是否属于该用户。8.修改密码处id可替换<br><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218013618.png" alt=""><br>成功修改id为5的用户密码为123456，而且可以通过遍历id修改所有用户的密码</p><p>9.cookie值的替换</p><pre><code>造成原因：重置密码走到最后一步的时候仅判断唯一的用户标识cookie是否存在，并没有判断该cookie有没有通过之前重置密码过程的验证，导致可替换cookie重置他人用户密码。（cookie可指定用户获取）测试方法：重置自己用户密码到达最后阶段，抓到数据包，并在第一阶段重新获取目标用户cookie，替换cookie到我们抓取的数据包中，发包测试。</code></pre><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218014004.png" alt=""><br><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218014646.png" alt=""><br><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218014832.png" alt=""><br>到第一步去获取验证码的时候，点击下一页，可以获取到该用户wangshuai对应的内容Cookie: JSESSIONID=E1AC27A7302C03C9432DE2254B99311A</p><p>10.修改信息时替换字段值</p><pre><code>造成原因：在执行修改信息的sql语句的时候，用户的密码也当作字段执行了，而且是根据隐藏参数loginid来执行的，这样就导致修改隐藏参数loginid的值，就可以修改他人的用户密码。测试方法：修改个人资料的时候，抓取数据包，然后来修改数据包的参数和对应的值，参数名一般可以在其他地方找到，替换隐藏参数即可修改他人的密码等信息。</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络安全 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网络安全 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>硬盘故障</title>
+      <link href="/posts/48769.html"/>
+      <url>/posts/48769.html</url>
+      
+        <content type="html"><![CDATA[<p>起因，插入硬盘；正常打开我的电脑刷新页面，但是发现硬盘盘符迟迟不显示，？？？？？<br>这个时候，我傻了都，，，昨天还好好的，可不能说没就没了呀几十G资源呢，，<br>于是我不慌的打开控制面板，设备管理器卸载驱动，在刷新驱动，检测驱动，，都不显示盘符，<br>开始慌了<br>（设备可以正常识别）再次傻了都，，，</p><p>解决方案：<br>思路：既然没有盘符，那我们给它整一个不就完美解决了？<br>WIN10系统返回桌面，在桌面按Win+X 打开磁盘管理 如下所示：<br><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218000804.png" alt=""><br>为硬盘指定一个盘符就行，这里系统会自动指定。不用设置，直接点击添加即可；如下图所示<br><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218001227.png" alt=""><br>最后回到我的电脑，就会看到硬盘成功显示，<br>嘿嘿嘿，</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 计算机 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>快速查看端口被谁占用了</title>
+      <link href="/posts/30324.html"/>
+      <url>/posts/30324.html</url>
+      
+        <content type="html"><![CDATA[<p>1、打开Windows Powershell输入命令 netstat -ano 列出所有通信端口<br><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218003613.png" alt=""><br>2、CLOSE_WAIT表示关闭 ESTABLLSHED表示活跃状态<br><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218003938.png" alt=""><br>3、tasklist /svc 查看端口ID<br><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218004258.png" alt=""><br>４、输入 cmd 接着在输入 tasklist /svc ｜ find “端口号”<br><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218005005.png" alt=""></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 计算机 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>短网址工作原理</title>
       <link href="/posts/40893.html"/>
       <url>/posts/40893.html</url>
