@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>Sqlmap安装笔记</title>
+      <link href="/posts/61123.html"/>
+      <url>/posts/61123.html</url>
+      
+        <content type="html"><![CDATA[<p>今天看了网上的安装教程，感觉不是太详细。</p><p>对于像我这样的小白使用起来会很吃力。</p><p><del>以前我记得刚踏入安全的时候，连BURP的Java环境变量都不会安装，都是找师傅来帮我安装的。</del></p><p>用到的工具我也经打包好了，点击下面的超链接就可以下载。</p><p><a href="https://www.lanzous.com/i9lvksj" target="_blank" rel="noopener">Python2.7.3+Sqlmap高速下载</a></p><p>官方下载地址可能速度会稍微慢，</p><p><a href="https://www.python.org/" target="_blank" rel="noopener">Python下载</a></p><p><a href="http://sqlmap.org/" target="_blank" rel="noopener">Sqlmap下载</a></p><p>python建议使用2.7.x版本，因为高版本兼容性不是太好，对小白安装门槛相对较高。python安装就一直点击下一步即可。</p><h3 id="Windows配置环境变量："><a href="#Windows配置环境变量：" class="headerlink" title="Windows配置环境变量："></a>Windows配置环境变量：</h3><p>在环境变量中添加Python目录：  </p><p><strong>1、小白式配置</strong></p><p>Winduw+R打开运行对话框，然后在运行对话框中输入(cmd) 打开cmd后输入:</p><pre><code>path=%path%;C:\Python </code></pre><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200223153703.png" alt=""></p><p>注意: C:\Python 是Python的安装目录。</p><p><strong>2、猥琐大叔配置姿势</strong></p><p>也可以通过以下方式设置：<br>右键点击”计算机”，然后点击”属性”<br>然后点击”高级系统设置”<br>选择”系统变量”窗口下面的”Path”,双击即可！<br><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200223154521.png" alt=""><br>然后在”Path”行，添加python安装路径即可(我的C:\Python)，所以在后面，添加该路径即可。 ps：记住，路径直接用分号”；”隔开！</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200223154929.png" alt=""></p><p>最后设置成功以后，在cmd命令行，输入命令”python”，就可以有相关显示。</p><h3 id="Sqlmap的安装"><a href="#Sqlmap的安装" class="headerlink" title="Sqlmap的安装"></a>Sqlmap的安装</h3><p>将下载的SQLMAP安装包解压到文件夹sqlmap中，并拷贝到 “C:\Python27” 目录下；</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200223155614.png" alt=""></p><p>注意： sqlmap是拷贝到你python的真实安装目录下，因为我的Python是安装到”C:\Python27”所以我的sqlmap拷贝到这个目录下。具体情况具体分析。</p><p>然后在桌面新建立一个cmd的快捷方式，并命名为“SQLMap”；并且设置路径。</p><p>可能还不是太清楚，图文步骤如下，</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200223155708.png" alt=""></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200223155721.png" alt=""></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200223155733.png" alt=""></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200223155747.png" alt=""></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200223160001.png" alt=""></p><p>最后，我们双击打开我们刚刚创建的sqlmap快捷方式，输入</p><p><code>sqlmap.py -h</code></p><p>出现如下信息则表示安装成功。</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200223160733.png" alt=""></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络安全 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网络安全 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Ps计算机等级考试笔记</title>
+      <link href="/posts/48831.html"/>
+      <url>/posts/48831.html</url>
+      
+        <content type="html"><![CDATA[<p>一、<br>计算机等级考试易错题整理：<br>1、20GB的硬盘容量约为？<br>200亿个字节</p><p>2、下列关于ASCII编码的叙述正确的是？<br>所有大写英文字母的ASCII码值都小于小写英文字母’a’的ASCII码值</p><p>3、一个字节为5位的无符号二进制数能表示的十进制数值的范围是？<br>0~31</p><p>4、在下列字符中，其ASCII码最小的一个是？<br>空格字符</p><p>5、十进制数18转换成二进制数是？<br>010010</p><p>6、用助记符代替操作码、地址符号代替操作数的面向机器的语言是？<br>汇编语言</p><p>7、在Photoshop颜色面板中反映的色彩基本属性的是？<br>色相与明度</p><p>8、当图像是索引颜色模式时，无法使用滤镜。</p><p>9、加色系统三原色 红、绿、蓝</p><p>10、选择菜单中修改命令无法提供的功能是？<br>缩放</p><p>11、磁性套索工具选项栏中不影响选取精度的选项是？<br>羽化</p><p>12、能够提供最全面的色彩调整的命令是？<br>曲线</p><p>13、可以完全去除照片的命令是？<br>阈值</p><p>14、可以对图层图像进行对齐和分布的是？<br>链接图层</p><p>15、图层编组描述？<br>两个图层编组后，可以同时移动。</p><p>16、在图层上增加蒙版后，单独移动蒙版的正确操作是？<br>先解除图层与蒙版之间的链接，在选择蒙版，最后使用移动工具。</p><p>二、<br>1、十进制数29转换成无符号二进制数等于？<br>11101</p><p>2、10GB的硬盘表示其存储容量为？<br>一百亿个字节</p><p>3、组成微型机主机的部件是？<br>CPU和内存</p><p>4、已知英文字母m的ASCII码值为6DH，那么字母q的ASCII码值是？<br>71H</p><p>5、一个字节为6位的无符号二进制数能表示的十进制数值范围是？<br>0~63</p><p>6、操作系统对磁盘进行读/写操作的单位是？<br>扇区</p><p>7、一个汉字的国标码需用2字节存储，其每个字节的最高二进制的值分别为？<br>0、0</p><p>8、下列各类计算机程序语言中，不属于高级程序设计语言的是？<br>汇编语言     属于低级语言</p><p>9、在下列字符中，其ASCII码值最大的一个是？<br>A、9<br>B、Z<br>C、d<br>D、X</p><p>正确答案：C      </p><p>10、计算机的主频指的是？<br>时钟频率</p><p>11、属于局域网的是？<br>Novell</p><p>12、在Photoshop中拾色器中表示色彩的纯度属性是？<br>S</p><p>13、色彩位深度是指在一副图像具有 颜色 数量</p><p>14、与设备无关的色彩模式是？<br>Lab</p><p>15、网页上应用的图像其稳健格式应保存为？<br>JPEG</p><p>16、能让图像快速适合屏幕的操作是？<br>双击抓手工具</p><p>17、能快速准确的把包装盒展开图的六个面划分出来的方式是？<br>使用参考线</p><p>18、在Photoshop中，可以准确的控制选区区域的命令是？<br>修改</p><p>19、对图像选区不能进行的操作是？<br>用选区工具移动选区内图像</p><p>20、可用于调整图像偏色的命令是？<br>色彩平衡</p><p>21、调整图像的色彩时，能够保持图像原始色彩信息的方法是应用？<br>调整图层</p><p>22、对背景图层描述错误的是？<br>背景图层上的图像不可被拖放至别的图像文件中</p><p>23、对图层面板中的不透明度描述正确的是？<br>不透明度可以控制普通图层中图像均匀显示的程度</p><p>24、对背景图层可以进行的操作是？<br>转换为普通图层</p><p>25、</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 计算机 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>图片马制作</title>
       <link href="/posts/5813.html"/>
       <url>/posts/5813.html</url>
