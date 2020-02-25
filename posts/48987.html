@@ -435,13 +435,9 @@
 <p>4、SHELL权限             （对网站文件的增删改差权限）</p>
 <p>5、服务器权限             （可以管理整个网站，包括停止网站的运行）</p>
 <p>6、域控权限                 （可以管理整个域内所有服务器的控制权限）</p>
-<pre><code> 7、管理人员PC            （可以管理公司的所有网络设备）
-
- 8、社会工程学             </code></pre></li>
-</ul>
-<h4 id="上传漏洞的类型"><a href="#上传漏洞的类型" class="headerlink" title="上传漏洞的类型"></a>上传漏洞的类型</h4><ul>
-<li></li>
-<li></li>
+<p>7、管理人员PC （可以管理公司的所有网络设备）</p>
+<p>8、社会工程学</p>
+</li>
 </ul>
 <h4 id="上传漏洞的几个要点"><a href="#上传漏洞的几个要点" class="headerlink" title="上传漏洞的几个要点"></a>上传漏洞的几个要点</h4><p>1、测试网站能上传文件</p>
 <p>2、文件的路径必须可知为相对路径            </p>
@@ -468,9 +464,9 @@ index.php?type=downlad&amp;id=1</code></pre><p>这里可以测试越权和注入
 <p>相对路径：网站跟目录到文件所在目录为相对路径</p>
 <p>绝对路径：从当前磁盘第一级目录到文件所在路径为绝对路径</p>
 <p>3、上传的文件后缀名必须为可执行脚本后缀</p>
-<pre><code>容器好比中国人，脚本文件好比外国妞
-
-所以用汉话和外国妞交流那肯定不行。</code></pre><p>4、上传的文件必须可以被解析</p>
+<p>容器好比中国人，脚本文件好比外国妞</p>
+<p>所以用汉话和外国妞交流那肯定不行。</p>
+<p>4、上传的文件必须可以被解析</p>
 <p>案例：Apache禁止解析可执行脚本文件</p>
 <p>思路：</p>
 <p>面对禁止执行可执行脚本的任意文件上传漏洞，我们可以通过上传<code>.HTML</code>文件来扩大危害。</p>
@@ -480,15 +476,13 @@ index.php?type=downlad&amp;id=1</code></pre><p>这里可以测试越权和注入
 <h4 id="WAF防护原理与绕过"><a href="#WAF防护原理与绕过" class="headerlink" title="WAF防护原理与绕过"></a>WAF防护原理与绕过</h4><ul>
 <li>WAF类型</li>
 </ul>
-<ol>
-<li>基于PC电脑二进制软件</li>
-</ol>
+<p>1.基于PC电脑二进制软件</p>
 <p>360杀毒、电脑管家、金山毒霸……</p>
-<p>  2.基于WEB安全的的WAF软件</p>
+<p>2.基于WEB安全的的WAF软件</p>
 <p>安全狗、云锁….</p>
-<p>  3.基于WAF云WAF</p>
+<p>3.基于WAF云WAF</p>
 <p>加速乐WAF、百度云WAF、阿里云盾</p>
-<p>  4.基于硬件类型的WAF</p>
+<p>4.基于硬件类型的WAF</p>
 <blockquote>
 <h5 id="绕过思路："><a href="#绕过思路：" class="headerlink" title="绕过思路："></a>绕过思路：</h5></blockquote>
 <p>首先思考，他是如何判断我们上传的不是.jpg后缀，，，，而是.php后缀？</p>
@@ -525,12 +519,10 @@ index.php?type=downlad&amp;id=1</code></pre><p>这里可以测试越权和注入
 <li><p>将大马.php后缀改为.jpg进行上传；</p>
 </li>
 <li><p>上传一个1.jpg文件，抓包改为1.bat；并且 数据包中加入移动的代码</p>
-<ul>
-<li><code>move D:\phpStudy\PHPTutorial\WWW\pikaqiu\vul\unsafeupload\uploads\1.jpg D:\phpStudy\PHPTutorial\WWW\1.php</code></li>
+</li>
 </ul>
-</li>
-<li><p>在上传1.jpg，抓包改为1.shtml；并且 数据包加入SSI指令</p>
-</li>
+<pre><code>move D:\phpStudy\PHPTutorial\WWW\pikaqiu\vul\unsafeupload\uploads\1.jpg D:\phpStudy\PHPTutorial\WWW\1.php</code></pre><ul>
+<li>在上传1.jpg，抓包改为1.shtml；并且 数据包加入SSI指令</li>
 </ul>
 <pre><code>&lt;!--#exec cmd="D:\phpStudy\PHPTutorial\WWW\pikaqiu\vul\unsafeupload\uploads\1.bat"--&gt;</code></pre><p>都上传成功了，最后访问<a href="http://192.168.1.104/pikaqiu/vul/unsafeuplasd/uploads/1.shtml" target="_blank" rel="noopener">http://192.168.1.104/pikaqiu/vul/unsafeuplasd/uploads/1.shtml</a> 即可；随后网页相应 成功移动一个文件。</p>
 <ul>
