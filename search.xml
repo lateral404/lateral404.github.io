@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>未授权访问漏洞</title>
+      <link href="/posts/41324.html"/>
+      <url>/posts/41324.html</url>
+      
+        <content type="html"><![CDATA[<p>cookie登陆凭证Key：</p><p>通过一个一个删除cookie参数，直到登录账号失效掉线，从而知道哪一个是服务端效验的身份凭证。 一般通过PHPSESSID提取用户的账号密码</p><p>案例：提示非法访问，JS跳转登录页面 如图</p><p><del>呜呜呜呜呜呜，这个页面似曾相识 以前骗了我多少次</del></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200228111728.png" alt=""></p><p><del>火眼金睛发现缺陷</del>  用BURP抓包，并且截获返回包 删除返回包JS跳转代码，即可进入后台 如图</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200228111729.png" alt=""></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络安全 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网络安全 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>计算机大牛必备神器</title>
       <link href="/posts/53580.html"/>
       <url>/posts/53580.html</url>
@@ -21,6 +46,31 @@
         <tags>
             
             <tag> 计算机 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>WAF小常识整理</title>
+      <link href="/posts/40986.html"/>
+      <url>/posts/40986.html</url>
+      
+        <content type="html"><![CDATA[<p>1、首先，这是一个上传头像的数据包，我们按照正常流程上传符合格式的数据包，并且看到了保存文件的路径。如图</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200228100745.png" alt=""></p><p>2、尝试提交PHP脚本文件发现被拦截，服务端返回500状态码。</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200228101036.png" alt=""></p><p>3、发现比对的是文件名；</p><ul><li>p/1.ph都可以上传，证明了文件内容没有被效验。</li></ul><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200228101428.png" alt=""></p><ul><li>PHP被拦截</li></ul><p>说明了WAF检测到敏感字段；</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200228101606.png" alt=""></p><p>4、尝试绕过：</p><p>双等号绕过，打乱正则判断。使其PHP正常上传；</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200228101808.png" alt=""></p><p>访问上传的PHP文件发现可以被容器正常解析；</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200228102033.png" alt=""></p><p>其它绕过思路：</p><p>1、双，单引号绕过</p><p>双等号加双单引号括起来能上传，绕过原理和上一个差不多；都是打乱WAF的正常判断逻辑。</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200228102314.png" alt=""></p><p>2、文件后缀加空格绕过</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200228102454.png" alt=""></p><p>3、换行文件名绕过</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200228102556.png" alt=""></p><p>4、%00截断绕过</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200228102714.png" alt=""></p><p>5、文件名加;绕过</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200228102859.png" alt=""></p><p>6、文件名加‘绕过</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200228103002.png" alt=""></p><ul><li>如何绑定服务器真是IP地址？</li></ul><p>首先找到C:\Windows\System32\drivers\etc下的hosts.sys文件</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200228104517.png" alt=""></p><p>Windows10默认不显示系统文件，打开方式：</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200228104515.png" alt=""></p><p>绑定方法：</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200228104516.png" alt=""></p><p>格式：</p><p><code>ip     xxx.com</code>    将域名绑定指定的DNS解析服务器</p><p>最后，绕WAF的姿势有千万种；只要思路够骚，所有WAF都是弟弟。</p><p>但是我就不够骚，所以我就是弟弟。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络安全 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网络安全 </tag>
             
         </tags>
       
