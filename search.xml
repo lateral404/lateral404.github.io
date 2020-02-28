@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>CORS跨域漏洞的学习</title>
+      <link href="/posts/31933.html"/>
+      <url>/posts/31933.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="同源是啥意思？"><a href="#同源是啥意思？" class="headerlink" title="同源是啥意思？"></a>同源是啥意思？</h3><blockquote><h1 id="同域名-同协议-同端口"><a href="#同域名-同协议-同端口" class="headerlink" title="同域名 同协议 同端口"></a>同域名 同协议 同端口</h1></blockquote><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200229021522.png" alt=""></p><p>三个同缺一不可，才能够进行跨域资源共享。必须要同一个网站，不同目录可以。</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200229021523.png" alt=""></p><p><strong>同源策略 (Same Origin Policy)</strong>，该策略是浏览器的一个安全基石，如果没有同源策略，那么，你打开了一个合法网站，又打开了一个恶意网站。恶意网站的脚本能够随意的操作合法网站的任何可操作资源，没有任何限制。</p><p><strong>CORS，跨域资源共享（Cross-origin resource sharing）</strong>，是H5提供的一种机制，WEB应用程序可以通过在HTTP增加字段来告诉浏览器，哪些不同来源的服务器是有权访问本站资源的，当不同域的请求发生时，就出现了跨域的现象。</p><h3 id="0×01-跨域访问的一些场景："><a href="#0×01-跨域访问的一些场景：" class="headerlink" title="0×01 跨域访问的一些场景："></a>0×01 跨域访问的一些场景：</h3><ul><li>1.比如后端开发完一部分业务代码后，提供接口给前端用，在前后端分离的模式下，前后端的域名是不一致的，此时就会发生跨域访问的问题。</li><li>2.程序员在本地做开发，本地的文件夹并不是在一个域下面，当一个文件需要发送ajax请求，请求另外一个页面的内容的时候，就会跨域。</li><li>3.电商网站想通过用户浏览器加载第三方快递网站的物流信息。</li><li>4.子站域名希望调用主站域名的用户资料接口，并将数据显示出来。</li></ul><p><strong>两个域名如何获取到我们的信息的？？？</strong></p><p>CORS跨域资源共享，让它从另一个站获取我们的登录信息。</p><h3 id="CORS漏洞案例演示："><a href="#CORS漏洞案例演示：" class="headerlink" title="CORS漏洞案例演示："></a>CORS漏洞案例演示：</h3><p>1、首先 <a href="https://www.jd100.com/user/userinfo" target="_blank" rel="noopener">https://www.jd100.com/user/userinfo</a> 抓取一个数据包发送到重放器；</p><p>将Origin参数改为 我们的域名；没有参数可以自行添加。</p><p>添加完毕点击GO 右边响应包如果 包含我们的域名，那么说明允许跨域。</p><p>如图</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200229021521.png" alt=""></p><p>2、访问 <a href="https://bug.chinacycc.com/cors/get.php?url=https://jdapi.jd100.com/uc/v1/getUserInfo" target="_blank" rel="noopener">https://bug.chinacycc.com/cors/get.php?url=https://jdapi.jd100.com/uc/v1/getUserInfo</a> </p><p>抓取数据包，发现没有token。手动添加一个token参数；此时我们会看到我们的跨域域名； 抓取响应包，我们会看到响应包有受害者的信息</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200229021524.png" alt=""></p><p>此时此刻，信息就已经传输到攻击者的服务器。</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200229021525.png" alt=""></p><p>3、访问 <a href="https://bug.chinacycc.com/cors/info.txt" target="_blank" rel="noopener">https://bug.chinacycc.com/cors/info.txt</a> </p><p>查看信息 如图</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200229021526.png" alt=""></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络安全 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网络安全 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>未授权访问漏洞</title>
       <link href="/posts/41324.html"/>
       <url>/posts/41324.html</url>

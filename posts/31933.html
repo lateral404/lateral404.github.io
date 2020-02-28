@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Get到一个Live2d小埋, Cat00011cat,偏锋小白菜,网络日记,个人博客,BLOG">
-    <meta name="description" content="大半夜偷偷Get到一个小埋，哈哈哈哈哈哈哈。">
+    <meta name="keywords" content="CORS跨域漏洞的学习, Cat00011cat,偏锋小白菜,网络日记,个人博客,BLOG">
+    <meta name="description" content="CORS，跨域资源共享（Cross-origin resource sharing）">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Get到一个Live2d小埋 | Cat00011cat</title>
+    <title>CORS跨域漏洞的学习 | Cat00011cat</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -325,7 +325,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '';
+        let pwd = '389924b2f9e222d3c162ca06c22d3caf650960e3a3c8ff61b55c3337a39c5f5f';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -338,12 +338,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Get到一个Live2d小埋</h1>
+                    <h1 class="description center-align post-title">CORS跨域漏洞的学习</h1>
                 </div>
             </div>
         </div>
@@ -365,8 +365,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Hexo/">
-                                <span class="chip bg-color">Hexo</span>
+                            <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                                <span class="chip bg-color">网络安全</span>
                             </a>
                         
                     </div>
@@ -377,8 +377,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Hexo/" class="post-category">
-                                Hexo
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" class="post-category">
+                                网络安全
                             </a>
                         
                     </div>
@@ -390,21 +390,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-01-24
+                    2020-02-29
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-02-21
+                    2020-02-29
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    562
+                    665
                 </div>
                 
 
@@ -427,48 +427,34 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>在一个夜深人静，月黑风高的夜晚。我又一次Get到一只小埋。哈哈哈哈</p>
-<p>起因，从typecho转移过来，还是喜欢以前的小埋就打算把它也搬过来，可实在使用Live2D插件的时候替换小埋模型，我发现一个玄学小埋长大了Hahahahahaha</p>
-<p>经过几小时的折腾，我还是没找到原因；既然找不到原因，总不能在一棵树上吊死。</p>
-<p>随后我发现一种不需要插件支持就可以把小埋放到博客上去。实现方法也不是很难<del>~</del>好了，废话不多说。</p>
-<h2 id="一、准备代码和工具"><a href="#一、准备代码和工具" class="headerlink" title="一、准备代码和工具"></a>一、准备代码和工具</h2><ul>
-<li><p><a href="https://www.lanzous.com/b0bq6msmb" target="_blank" rel="noopener"><strong>全家桶已经打包好了：</strong>蓝走运下载</a>（密码：cxkw）</p>
-</li>
-<li><p><a href="https://mx.paul.ren/" target="_blank" rel="noopener">模型下载</a></p>
-</li>
+                <h3 id="同源是啥意思？"><a href="#同源是啥意思？" class="headerlink" title="同源是啥意思？"></a>同源是啥意思？</h3><blockquote>
+<h1 id="同域名-同协议-同端口"><a href="#同域名-同协议-同端口" class="headerlink" title="同域名 同协议 同端口"></a>同域名 同协议 同端口</h1></blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200229021522.png" alt=""></p>
+<p>三个同缺一不可，才能够进行跨域资源共享。必须要同一个网站，不同目录可以。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200229021523.png" alt=""></p>
+<p><strong>同源策略 (Same Origin Policy)</strong>，该策略是浏览器的一个安全基石，如果没有同源策略，那么，你打开了一个合法网站，又打开了一个恶意网站。恶意网站的脚本能够随意的操作合法网站的任何可操作资源，没有任何限制。</p>
+<p><strong>CORS，跨域资源共享（Cross-origin resource sharing）</strong>，是H5提供的一种机制，WEB应用程序可以通过在HTTP增加字段来告诉浏览器，哪些不同来源的服务器是有权访问本站资源的，当不同域的请求发生时，就出现了跨域的现象。</p>
+<h3 id="0×01-跨域访问的一些场景："><a href="#0×01-跨域访问的一些场景：" class="headerlink" title="0×01 跨域访问的一些场景："></a>0×01 跨域访问的一些场景：</h3><ul>
+<li>1.比如后端开发完一部分业务代码后，提供接口给前端用，在前后端分离的模式下，前后端的域名是不一致的，此时就会发生跨域访问的问题。</li>
+<li>2.程序员在本地做开发，本地的文件夹并不是在一个域下面，当一个文件需要发送ajax请求，请求另外一个页面的内容的时候，就会跨域。</li>
+<li>3.电商网站想通过用户浏览器加载第三方快递网站的物流信息。</li>
+<li>4.子站域名希望调用主站域名的用户资料接口，并将数据显示出来。</li>
 </ul>
-<h2 id="二、配置模型"><a href="#二、配置模型" class="headerlink" title="二、配置模型"></a>二、配置模型</h2><p>1、首先将下载的Live2D-XiaoMai—live2d目录下的<code>live2d</code> <code>demo.html</code> <code>README.md</code>文件复制到<code>博客根目录下的public文件夹里</code>   <a href="https://www.lanzous.com/i8udxcb" target="_blank" rel="noopener">文件链接</a></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200124112508.PNG" alt=""></p>
-<p>浏览器输入<a href="http://localhost:4000/demo.html" target="_blank" rel="noopener">http://localhost:4000/demo.html</a> 预览</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200124112509.PNG" alt=""></p>
-<p>2、接下来再把live2d这个文件夹复制一份到<code>博客根目录下的themes\cat00011cat\source</code> 这个路径下</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200124112510.PNG" alt=""></p>
-<p>3、固定小埋显示位置</p>
-<p>将以下代码放到MyBlog\themes\cat00011cat\layout_partial路径下的footer.ejs文件顶部</p>
-<pre><code>&lt;footer class="page-footer bg-color"&gt;
-&lt;link rel="stylesheet" href="/live2d/css/live2d.css" /&gt;
-&lt;div id="landlord"&gt;
-    &lt;div class="message" style="opacity:0"&gt;&lt;/div&gt;
-    &lt;canvas id="live2d" width="166" height="250" class="live2d"&gt;&lt;/canvas&gt;
-    &lt;div class="hide-button"&gt;隐藏&lt;/div&gt;
-&lt;/div&gt;
-&lt;script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript"&gt;
-    var message_Path = '/live2d/'
-    var home_Path = 'http://www.thecat.top'
-    var voice_Path = '/live2d/'
-&lt;/script&gt;
-&lt;script type="text/javascript" src="/live2d/js/live2d.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript" src="/live2d/js/message.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript"&gt;
-    loadlive2d("live2d", "/live2d/model/tia/model.json");
-&lt;/script&gt;</code></pre><p>如图</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200124112511.PNG" alt=""></p>
-<p>4、最后hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</p>
-<p>访问<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 小埋就显示出来了。Ctrl 5强制刷新浏览器缓存。</p>
-<p>效果</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200124121620.PNG" alt=""></p>
-<p>有了声音的小埋，更加的逼真阔爱 哈哈哈哈</p>
+<p><strong>两个域名如何获取到我们的信息的？？？</strong></p>
+<p>CORS跨域资源共享，让它从另一个站获取我们的登录信息。</p>
+<h3 id="CORS漏洞案例演示："><a href="#CORS漏洞案例演示：" class="headerlink" title="CORS漏洞案例演示："></a>CORS漏洞案例演示：</h3><p>1、首先 <a href="https://www.jd100.com/user/userinfo" target="_blank" rel="noopener">https://www.jd100.com/user/userinfo</a> 抓取一个数据包发送到重放器；</p>
+<p>将Origin参数改为 我们的域名；没有参数可以自行添加。</p>
+<p>添加完毕点击GO 右边响应包如果 包含我们的域名，那么说明允许跨域。</p>
+<p>如图</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200229021521.png" alt=""></p>
+<p>2、访问 <a href="https://bug.chinacycc.com/cors/get.php?url=https://jdapi.jd100.com/uc/v1/getUserInfo" target="_blank" rel="noopener">https://bug.chinacycc.com/cors/get.php?url=https://jdapi.jd100.com/uc/v1/getUserInfo</a> </p>
+<p>抓取数据包，发现没有token。手动添加一个token参数；此时我们会看到我们的跨域域名； 抓取响应包，我们会看到响应包有受害者的信息</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200229021524.png" alt=""></p>
+<p>此时此刻，信息就已经传输到攻击者的服务器。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200229021525.png" alt=""></p>
+<p>3、访问 <a href="https://bug.chinacycc.com/cors/info.txt" target="_blank" rel="noopener">https://bug.chinacycc.com/cors/info.txt</a> </p>
+<p>查看信息 如图</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200229021526.png" alt=""></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -502,7 +488,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.thecat.top" rel="external nofollow noreferrer">Cat00011cat</a>
+                    <a href="http://www.thecat.top" rel="external nofollow noreferrer">偏锋小白菜|Cat00011cat</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -512,7 +498,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.thecat.top/posts/32907.html">http://www.thecat.top/posts/32907.html</a>
+                    <a href="http://www.thecat.top/posts/31933.html">http://www.thecat.top/posts/31933.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -525,7 +511,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="http://www.thecat.top" target="_blank">Cat00011cat</a>
+                    <a href="http://www.thecat.top" target="_blank">偏锋小白菜|Cat00011cat</a>
                     !
                 </span>
             </div>
@@ -550,8 +536,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Hexo/">
-                                    <span class="chip bg-color">Hexo</span>
+                                <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                                    <span class="chip bg-color">网络安全</span>
                                 </a>
                             
                         </div>
@@ -722,7 +708,7 @@
         repo: 'Leaving-a-message',
         owner: 'lateral404',
         admin: "lateral404",
-        id: '2020-01-24T11-22-06',
+        id: '2020-02-29T02-31-33',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1006,45 +992,47 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/64593.html">
+                <a href="/posts/31933.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200129221955.jfif" class="responsive-img" alt="Hexo配置留言评论篇">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" class="responsive-img" alt="CORS跨域漏洞的学习">
                         
-                        <span class="card-title">Hexo配置留言评论篇</span>
+                        <span class="card-title">CORS跨域漏洞的学习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            我擦，好牛的样子，666‘去体验一下~~~
+                            CORS，跨域资源共享（Cross-origin resource sharing）
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-01-24
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Hexo/" class="post-category">
-                                    Hexo
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" class="post-category">
+                                    网络安全
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
+                    <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                        <span class="chip bg-color">网络安全</span>
                     </a>
                     
                 </div>
@@ -1058,23 +1046,23 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/25234.html">
+                <a href="/posts/41324.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200129223528.jfif" class="responsive-img" alt="如何进入暗网世界（技术交流）">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" class="responsive-img" alt="未授权访问漏洞">
                         
-                        <span class="card-title">如何进入暗网世界（技术交流）</span>
+                        <span class="card-title">未授权访问漏洞</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            我们日常使用的搜索引擎所无法寻找到的，仅能在电脑上进行一系列特殊的操作设置或在特殊软件的辅助之下又或对本机的特殊授权之后方能进入访问的一种网络——即称之为“暗网”。
+                            未授权访问你本不该访问的网页.....
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-28
                             </span>
                         <span class="publish-author">
                             
