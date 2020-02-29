@@ -248,12 +248,12 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #005bea 50%, #00c6fb 100%);
+    background-image: linear-gradient(to right, #000000 50%, #000000 100%);
 	opacity: 0.8;
 }
 
 .text-color {
-    color: #005bea !important;
+    color: #000000 !important;
 }
 
 .white-color {
@@ -265,7 +265,7 @@ mark {
     position: fixed;
     bottom: 0;
     z-index: 300;
-    background: linear-gradient(to right, #00c6fb 0%, #005bea 100%);
+    background: linear-gradient(to right, #000000 0%, #000000 100%);
     opacity: 0.8;
 }
 
@@ -1303,7 +1303,7 @@ thead {
 
 .chip-container .chip:hover {
     color: #fff;
-    background: linear-gradient(to right, #00c6fb 0%, #005bea 100%) !important;
+    background: linear-gradient(to right, #000000 0%, #000000 100%) !important;
 }
 
 .chip .tag-length {
@@ -1379,7 +1379,7 @@ thead {
     left: 18px;
     height: 100%;
     width: 4px;
-    background: #005bea;
+    background: #000000;
 }
 
 @media only screen and (min-width: 900px) {
@@ -1615,8 +1615,8 @@ thead {
     margin: 0 0.5rem;
     padding: 0;
     color: #fff;
-    border: 1px solid #005bea;
-    background: radial-gradient(#00c6fb, #005bea);
+    border: 1px solid #000000;
+    background: radial-gradient(#000000, #000000);
     font-size: 0.9rem;
     border-radius: 50%;
     box-shadow: 0 4px 6px rgba(50, 50, 93, .21), 0 2px 3px rgba(0, 0, 0, .1);
@@ -1792,8 +1792,8 @@ thead {
 
 .other-skills .chip:hover {
     color: #fff;
-    background: linear-gradient(to right, #00c6fb 0%, #005bea 100%);
-    border: 1px solid #00c6fb;
+    background: linear-gradient(to right, #000000 0%, #000000 100%);
+    border: 1px solid #000000;
     box-shadow: 0 5px 5px rgba(0, 0, 0, .25)
 }
 
@@ -1889,7 +1889,7 @@ footer .copy-right {
 }
 
 .top-scroll .btn-floating {
-    background: linear-gradient(to bottom right, #005bea 50%, #00c6fb 100%);
+    background: linear-gradient(to bottom right, #000000 50%, #000000 100%);
     width: 48px;
     height: 48px;
 }
