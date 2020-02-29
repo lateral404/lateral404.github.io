@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="使用GitHub+Coding双部署实现国内外网站加速, Cat00011cat,偏锋小白菜,网络日记,个人博客,BLOG">
-    <meta name="description" content="国外走Github，国内走Coding or 码云 实现分流加速">
+    <meta name="keywords" content="JSONP跨域劫持, Cat00011cat,偏锋小白菜,网络日记,个人博客,BLOG">
+    <meta name="description" content="关于学习JSONP跨域漏洞复现的笔记，以及见解！">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>使用GitHub+Coding双部署实现国内外网站加速 | Cat00011cat</title>
+    <title>JSONP跨域劫持 | Cat00011cat</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -325,7 +325,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '';
+        let pwd = '389924b2f9e222d3c162ca06c22d3caf650960e3a3c8ff61b55c3337a39c5f5f';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -338,12 +338,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lateral404/image/image/20200129221955.jfif')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">使用GitHub+Coding双部署实现国内外网站加速</h1>
+                    <h1 class="description center-align post-title">JSONP跨域劫持</h1>
                 </div>
             </div>
         </div>
@@ -365,8 +365,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Hexo/">
-                                <span class="chip bg-color">Hexo</span>
+                            <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                                <span class="chip bg-color">网络安全</span>
                             </a>
                         
                     </div>
@@ -377,8 +377,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Hexo/" class="post-category">
-                                Hexo
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" class="post-category">
+                                网络安全
                             </a>
                         
                     </div>
@@ -390,21 +390,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-01-28
+                    2020-03-01
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-02-22
+                    2020-03-01
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    688
+                    754
                 </div>
                 
 
@@ -427,84 +427,66 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>昨天在教大哥搭建hexo过程中出现了很多莫名其妙的问题（<del>很多地方都报错，但是都一一解决了，，，，不是到什么原因导致本地文件上传GitHub很慢，，，，</del>） </p>
-<p>在配置好hexo之后，我们发现访问网站很慢，HTML加载完了，，，CSS、JS和４K图片都没有加载出来（气氛瞬间变得尴尬啦） 但又不是我们使用的主题的问题，那么就是网络环境的影响，即使最后我们使用了创宇云CDN加速，但还是没有我们国内的网站访问起来快速，（听说去美国的服务器要经过太平洋下面的区域,那访问起来也算是挺快了啊）,</p>
-<h2 id="这个时候双部署出现啦"><a href="#这个时候双部署出现啦" class="headerlink" title="这个时候双部署出现啦"></a>这个时候双部署出现啦</h2><p>那我们就可以让我们的网站在国内和国外各部署一份,然后国内的用户访问国内的Coding或者码云,国外的用户访问国外的GitHub，进行分流。</p>
-<h1 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h1><ul>
-<li>首先我们打开<a href="https://coding.net/" target="_blank" rel="noopener">Coding官网</a>进行账号的注册 <a href="https://e.coding.net/signup?from=net&amp;_ga=2.65836072.709564922.1580182809-963943904.1580182809" target="_blank" rel="noopener">免费注册</a></li>
-</ul>
-<h2 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h2><p><a href="https://cat00011cat.coding.net/user/projects" target="_blank" rel="noopener">新建项目</a>  代码托管项目</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200128143815.png" alt=""></p>
-<p>接下来按照我的的格式填写，避免出现错误</p>
-<p><code>cat00011cat.coding.me</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200128143952.png" alt=""></p>
-<ul>
-<li>创建好之后，我们找到<strong>项目设置</strong> <strong>功能开关</strong>  开启 <strong>构建与部署</strong>  </li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200128144116.png" alt=""></p>
-<h2 id="生成并配置公钥"><a href="#生成并配置公钥" class="headerlink" title="生成并配置公钥"></a><del>生成</del>并配置公钥</h2><p>之前我们已经在部署Github的时候已经生成过.SSH啦，，这里就不用重新生成啦，，，因为GitHub和ssh密钥和Coding是通用的</p>
-<p>找到id_rsa.pub并打开。将密钥复制到Coding上，，，</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200128144416.png" alt=""></p>
-<ul>
-<li>个人设置——》》SSH公钥——》》添加公钥</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200128144815.png" alt=""></p>
-<p>配置完成</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200128145142.png" alt=""></p>
-<h2 id="修改-config"><a href="#修改-config" class="headerlink" title="修改_config"></a>修改_config</h2><ul>
-<li>配置deploy</li>
-</ul>
-<blockquote>
-<p>Github配置</p>
+                <h3 id="jsonp跨域原理背景"><a href="#jsonp跨域原理背景" class="headerlink" title="jsonp跨域原理背景"></a>jsonp跨域原理背景</h3><p>由于浏览器同源策略的限制，非同源下的请求，都会产生跨域问题，jsonp即是为了解决这个问题出现的一种简便解决方案。</p>
+<p><strong>同源策略即：</strong>同一协议，同一域名，同一端口号。当其中一个不满足时，我们的请求即会发生跨域问题。</p>
+<h3 id="案例一："><a href="#案例一：" class="headerlink" title="案例一："></a>案例一：</h3><p><a href="http://118.126.89.131/json/index.php?url=http://118.126.89.131/json/api.php" target="_blank" rel="noopener">http://118.126.89.131/json/index.php?url=http://118.126.89.131/json/api.php</a></p>
+<p>调用参数 登录账户<br>参数名可控  可能存在xss；如图</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200301024612.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200301024607.png" alt=""></p>
+<h3 id="案例二：尝试截获json信息原理"><a href="#案例二：尝试截获json信息原理" class="headerlink" title="案例二：尝试截获json信息原理"></a>案例二：尝试截获json信息原理</h3><blockquote>
+<p>挖掘漏洞主要看：</p>
+<p>测试Referer参数 测试是否判断来源；</p>
+<p>强效验就凉凉了，一定要有callback参数 漏洞才有可能存在。</p>
 </blockquote>
-<pre><code>deploy:
-type: git
-repository: git@github.com:lateral404/lateral404.github.io.git
-branch: master</code></pre><blockquote>
-<p>Coding配置</p>
-</blockquote>
-<pre><code>deploy：
-type: git
-repository: git@e.coding.net:cat00011cat/cat00011cat.coding.me.git
-branch: master</code></pre><blockquote>
-<p>双部署</p>
-</blockquote>
-<pre><code>deploy:
-  type: git
-  message: ""
-  repo: 
-    github: git@github.com:lateral404/lateral404.github.io.git,master
-
-    coding: git@e.coding.net:cat00011cat/cat00011cat.coding.me.git,master</code></pre><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200128145340.png" alt=""></p>
+<p>1、首先构造url：<a href="http://118.126.89.131/json/index.php?url=http://118.126.89.131/json/api.php" target="_blank" rel="noopener">http://118.126.89.131/json/index.php?url=http://118.126.89.131/json/api.php</a>  用BURP进行抓包分析：</p>
+<p>Go一下数据包，分析响应包 得出 ，代码执行了 回传json 和 提取json信息 等一系列的操作。如图</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200301024613.png" alt=""></p>
+<p>2、通过观察请求包，发现有Referer参数；</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200301024611.png" alt=""></p>
+<p>我们将其删除，观察是否 还能调取到json信息；</p>
+<p>如果能调取到说明存在jsonp跨域。如图</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200301024614.png" alt=""></p>
+<p>3、将json信息 写入数据库/或者指定txt文件中。</p>
+<p>info信息进行了编码。如图</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200301024610.png" alt=""></p>
+<p>解码后为json信息；如图</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200301024609.png" alt=""></p>
+<p>4、返回数据库/服务器info.txt查看 劫持到的json信息；如图</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200301024608.png" alt=""></p>
+<h3 id="案例三：实战利用jsonp劫持"><a href="#案例三：实战利用jsonp劫持" class="headerlink" title="案例三：实战利用jsonp劫持"></a>案例三：实战利用jsonp劫持</h3><p><strong>以 亿速云 为例</strong></p>
+<p>1、首先注册一个账号，随后开启BURP抓包。</p>
+<p>点击个人中心，抓取数据包。截下微信二维吗生成的请求包。如图</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200301041755.png" alt=""></p>
+<p>2、通过修改Origin参数 和 Referer 参数</p>
+<p>来判断是否存在CORS和JSONP跨域；</p>
 <ul>
-<li>Coding地址：</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200128151037.png" alt=""></p>
-<p>这里部署好就可以开始上传啦。。</p>
-<h2 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h2><ul>
-<li><p>输入命令hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</p>
+<li><p>修改Origin参数，发现输出了我们的网址，说明此处存在CORS跨域漏洞。</p>
 </li>
-<li><p>清空 生成 并部署</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200128150336.png" alt=""></p>
+<li><p>删除Referer来源判断参数发现 依旧返回数据包，并且没有报错。说明了存在JSONP跨域漏洞。</p>
 </li>
 </ul>
-<p>国外：域名解析线路走国外    GitHub</p>
-<p>国内：域名解析线路默认   Coding</p>
-<p>这样就实现了网站加速，上传速度也快了。</p>
-<h2 id="开启Coding-Pages"><a href="#开启Coding-Pages" class="headerlink" title="开启Coding Pages"></a>开启Coding Pages</h2><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200128151340.png" alt=""></p>
+<p>如图显示：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200301041802.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200301041757.png" alt=""></p>
+<p>3、将POST请求包转化为GET请求包。如图</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200301041753.png" alt=""></p>
+<p>转化玩之后GO一下发现还是可以获取 微信二维吗参数。如下图所示：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200301041801.png" alt=""></p>
+<p>4、获取JSON信息提取二维吗</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200301041756.png" alt=""></p>
+<p>发现还能获取生成微信二维码的API，，，说明我们可以利用CORS漏洞或者JSONP漏洞，，从而截取这个API。盗取用户的账户。如下图所示</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200301041759.png" alt=""></p>
+<p>访问URL 生成二维码。如下图：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200301041800.png" alt=""></p>
+<p>5、构造URL，截获受害者的API参数。</p>
+<p><a href="https://bug.chinacycc.com/cors/get.php?url=https://weixin.yisu.com/index.php/Speed/Uc/getAuditQrImg" target="_blank" rel="noopener">https://bug.chinacycc.com/cors/get.php?url=https://weixin.yisu.com/index.php/Speed/Uc/getAuditQrImg</a></p>
+<p>受害者只要在登录状态下触发此URL，二维码就会被盗取。从而免密码登录手机端。</p>
+<p>如下图所示：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200301041754.png" alt=""></p>
 <ul>
-<li>手动部署/一般是自动部署</li>
+<li>扫码绑定 成功登录 ；如下图所示</li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200128151339.png" alt=""></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200128151338.png" alt=""></p>
-<ul>
-<li>这个错误可能是deploy配置不当导致的，，，导致原因有很多，（已解决）</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200128150803.png" alt=""></p>
-<ul>
-<li>至于这个错误，我也不知道如何解决，，，反正不影响 部署，那就先不管。（未解决）</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200128150700.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200301041758.jpg" alt=""></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -538,7 +520,7 @@ branch: master</code></pre><blockquote>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.thecat.top" rel="external nofollow noreferrer">Cat00011cat</a>
+                    <a href="http://www.thecat.top" rel="external nofollow noreferrer">偏锋小白菜|Cat00011cat</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -548,7 +530,7 @@ branch: master</code></pre><blockquote>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.thecat.top/posts/6001.html">http://www.thecat.top/posts/6001.html</a>
+                    <a href="http://www.thecat.top/posts/18040.html">http://www.thecat.top/posts/18040.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -561,7 +543,7 @@ branch: master</code></pre><blockquote>
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="http://www.thecat.top" target="_blank">Cat00011cat</a>
+                    <a href="http://www.thecat.top" target="_blank">偏锋小白菜|Cat00011cat</a>
                     !
                 </span>
             </div>
@@ -586,8 +568,8 @@ branch: master</code></pre><blockquote>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Hexo/">
-                                    <span class="chip bg-color">Hexo</span>
+                                <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                                    <span class="chip bg-color">网络安全</span>
                                 </a>
                             
                         </div>
@@ -758,7 +740,7 @@ branch: master</code></pre><blockquote>
         repo: 'Leaving-a-message',
         owner: 'lateral404',
         admin: "lateral404",
-        id: '2020-01-28T14-21-41',
+        id: '2020-03-01T04-31-33',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1042,45 +1024,47 @@ branch: master</code></pre><blockquote>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/61329.html">
+                <a href="/posts/18040.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200130094453.webp" class="responsive-img" alt="如何优雅的将kali系统安装在U盘">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" class="responsive-img" alt="JSONP跨域劫持">
                         
-                        <span class="card-title">如何优雅的将kali系统安装在U盘</span>
+                        <span class="card-title">JSONP跨域劫持</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            将Kali Linux装进U盘并且实现数据持久化
+                            关于学习JSONP跨域漏洞复现的笔记，以及见解！
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-01-30
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-01
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/IT%E6%8A%80%E6%9C%AF/" class="post-category">
-                                    IT技术
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" class="post-category">
+                                    网络安全
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/IT%E6%8A%80%E6%9C%AF/">
-                        <span class="chip bg-color">IT技术</span>
+                    <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                        <span class="chip bg-color">网络安全</span>
                     </a>
                     
                 </div>
@@ -1094,30 +1078,30 @@ branch: master</code></pre><blockquote>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/17628.html">
+                <a href="/posts/31933.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200129221955.jfif" class="responsive-img" alt="迁移Hexo报错ERRORPluginloadfailed:hexo-filer-github-emojis">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200229120518.png" class="responsive-img" alt="CORS跨域漏洞的学习">
                         
-                        <span class="card-title">迁移Hexo报错ERRORPluginloadfailed:hexo-filer-github-emojis</span>
+                        <span class="card-title">CORS跨域漏洞的学习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            迁移报错'ERROR Plugin load failed:hexo-filer-github-emojis'
+                            CORS，跨域资源共享（Cross-origin resource sharing）
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-26
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-29
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Hexo/" class="post-category">
-                                    Hexo
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" class="post-category">
+                                    网络安全
                                 </a>
                             
                             
@@ -1127,8 +1111,8 @@ branch: master</code></pre><blockquote>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
+                    <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                        <span class="chip bg-color">网络安全</span>
                     </a>
                     
                 </div>
