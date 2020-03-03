@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="WindowsServer搭建网站笔记, Cat00011cat,偏锋小白菜,网络日记,个人博客,BLOG">
-    <meta name="description" content="Windows Server快速搭建网站">
+    <meta name="keywords" content="BitLocker加密Win0硬盘, Cat00011cat,偏锋小白菜,网络日记,个人博客,BLOG">
+    <meta name="description" content="防止非法未授权访问，或者数据被窃取。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>WindowsServer搭建网站笔记 | Cat00011cat</title>
+    <title>BitLocker加密Win0硬盘 | Cat00011cat</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -325,7 +325,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '389924b2f9e222d3c162ca06c22d3caf650960e3a3c8ff61b55c3337a39c5f5f';
+        let pwd = '';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -338,12 +338,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lateral404/image/image/20200202214138.jfif')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">WindowsServer搭建网站笔记</h1>
+                    <h1 class="description center-align post-title">BitLocker加密Win0硬盘</h1>
                 </div>
             </div>
         </div>
@@ -365,8 +365,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/IT%E6%8A%80%E6%9C%AF/">
-                                <span class="chip bg-color">IT技术</span>
+                            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/">
+                                <span class="chip bg-color">计算机</span>
                             </a>
                         
                     </div>
@@ -377,8 +377,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/IT%E6%8A%80%E6%9C%AF/" class="post-category">
-                                IT技术
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/" class="post-category">
+                                计算机
                             </a>
                         
                     </div>
@@ -390,28 +390,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-02
+                    2020-03-03
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-02-21
+                    2020-03-03
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    534
+                    227
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 				
@@ -427,86 +427,19 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="一、购买域名-服务器"><a href="#一、购买域名-服务器" class="headerlink" title="一、购买域名/服务器"></a>一、购买域名/服务器</h1><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200202184215.png" alt=""></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200202184216.png" alt=""></p>
-<h1 id="二、连接服务器"><a href="#二、连接服务器" class="headerlink" title="二、连接服务器"></a>二、连接服务器</h1><p>到购买XXX控制台，查看服务器公网IP</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200202184510.png" alt=""></p>
-<p>桌面 按 快捷键 Win R 运行mstsc 打开远程连接对话框</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200202184647.png" alt=""></p>
-<p>输入公网IP》》用户名》》密码  //进行</p>
-<p>连接，，验证指纹 选择ok就好</p>
-<ul>
-<li>格式：公网IP:3389</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200202184648.png" alt=""></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200202184646.png" alt=""></p>
-<h1 id="三、下载资源"><a href="#三、下载资源" class="headerlink" title="三、下载资源"></a>三、下载资源</h1><p>1、<a href="http://download.bt.cn/win/panel/BtSoft.zip" target="_blank" rel="noopener">BT集成面板</a></p>
-<p>2、<a href="http://updatenew.dedecms.com/base-v57/package/DedeCMS-V5.7-UTF8-SP2-Full.tar.gz" target="_blank" rel="noopener">DEDECMS程序</a></p>
-<p>3、<a href="https://www.7-zip.org/a/7z1902-x64.exe" target="_blank" rel="noopener">7-ZIP</a></p>
-<h1 id="四、安装并配置BT"><a href="#四、安装并配置BT" class="headerlink" title="四、安装并配置BT"></a>四、安装并配置BT</h1><blockquote>
-<p>如果双击安装包没反应的话，右键属性-解除锁定</p>
+                <blockquote>
+<p><strong>BitLocker密码及生成秘钥请妥善保管 遗失无法找回。可能导致整个硬盘数据永久无法访问。</strong></p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200202185337.png" alt=""></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200202185338.png" alt=""></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200202185339.png" alt=""></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200202185341.png" alt=""></p>
-<p>浏览器打开面板（建议自己下载一个火狐或谷歌避免出现错误）</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200202185340.png" alt=""></p>
-<blockquote>
-<p>无法访问面板，是因为没有开放8888端口，需要在安全组放行</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200202185832.png" alt=""></p>
-<p>添加安全组策略</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200202185945.jpg" alt=""></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200202190013.jpg" alt=""></p>
-<p>再次访问面板，面板正常响应打开；</p>
-<p>任意下载一个浏览器即可打开面板显示正常</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200202190101.jpg" alt=""></p>
-<p>用火狐浏览器打开正常</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200202190230.jpg" alt=""></p>
-<p>安装Apache套件</p>
-<p>这里用不到传输文件到其它服务器，所以不用安装filezilla0.9</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200202190315.jpg" alt=""></p>
-<p>漫长的等待过程../…..</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200202190453.jpg" alt=""></p>
-<ul>
-<li><p>软件安装—&gt;&gt;环境运行 </p>
-</li>
-<li><p>安装PhpMyAdmin（4.4版本）/PHP5.5</p>
-</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200202190700.jpg" alt=""></p>
-<h1 id="五、DNS解析"><a href="#五、DNS解析" class="headerlink" title="五、DNS解析"></a>五、DNS解析</h1><p>我之前很久之前，就已经注册了很多域名了，，，这里就不再进行注册</p>
-<p>直接DNS解析</p>
-<p>我用的是知道创宇云的DNS解析</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200202190830.png" alt=""></p>
-<p>添加好之后 Ping一下，，看看是否响应数据包，，，响应数据包说明解析成功生效</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200202190953.jpg" alt=""></p>
-<h1 id="六、创建网站"><a href="#六、创建网站" class="headerlink" title="六、创建网站"></a>六、创建网站</h1><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200202191040.jpg" alt=""></p>
-<p>找到站点根目录，（也可以在面板直接点击路径进入根目录）</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200202191109.jpg" alt=""></p>
-<p>上传DEDECMS程序</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200202191238.jpg" alt=""></p>
-<p>解压程序</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200202191310.jpg" alt=""></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200202191335.jpg" alt=""></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200202191351.jpg" alt=""></p>
-<p>访问 域名/install 进行程序的安装</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200202191442.jpg" alt=""></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200202191452.jpg" alt=""></p>
-<p>这个时候发现连接不上数据库，经过检查发现创建站点的时候数据库没有创建成功</p>
-<p>，，，没关系，回到BT面板，，，手动创建一个数据库，，并配置即可</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200202191741.png" alt=""></p>
-<p>回到安装程序的页面，，，，立即安装即可</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200202191816.jpg" alt=""></p>
-<ul>
-<li>前台</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200202191909.jpg" alt=""></p>
-<ul>
-<li>后台</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200202191919.jpg" alt=""></p>
+<p>此加密方法不会格式化您的数据。同样适用于移动硬盘、U盘等存储设备。</p>
+<h3 id="加密步骤："><a href="#加密步骤：" class="headerlink" title="加密步骤："></a>加密步骤：</h3><p>1、找到你要加密的硬盘，选中右键单击在弹出的菜单选择启用BitLocker加密选项。</p>
+<p>使用密码加密 如下图：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200303160119.png" alt=""></p>
+<p>2、接着选择自己喜欢的秘钥保存方式，将秘钥保存。（妥善保管，丢失后无法访问硬盘。建议上传到云端保存） 如下图：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200303160318.png" alt=""></p>
+<p>3、加密数据需要一段时间，耐心等待即可。 如下图：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200303160547.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200303160546.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200303160545.png" alt=""></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -540,7 +473,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.thecat.top" rel="external nofollow noreferrer">Cat00011cat</a>
+                    <a href="http://www.thecat.top" rel="external nofollow noreferrer">偏锋小白菜|Cat00011cat</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -550,7 +483,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.thecat.top/posts/34019.html">http://www.thecat.top/posts/34019.html</a>
+                    <a href="http://www.thecat.top/posts/60728.html">http://www.thecat.top/posts/60728.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -563,7 +496,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="http://www.thecat.top" target="_blank">Cat00011cat</a>
+                    <a href="http://www.thecat.top" target="_blank">偏锋小白菜|Cat00011cat</a>
                     !
                 </span>
             </div>
@@ -588,8 +521,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/IT%E6%8A%80%E6%9C%AF/">
-                                    <span class="chip bg-color">IT技术</span>
+                                <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/">
+                                    <span class="chip bg-color">计算机</span>
                                 </a>
                             
                         </div>
@@ -760,7 +693,7 @@
         repo: 'Leaving-a-message',
         owner: 'lateral404',
         admin: "lateral404",
-        id: '2020-02-02T20-22-53',
+        id: '2020-03-03T03-31-33',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1044,45 +977,47 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/33323.html">
+                <a href="/posts/60728.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200202214138.jfif" class="responsive-img" alt="安装DEDECMS出现404">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" class="responsive-img" alt="BitLocker加密Win0硬盘">
                         
-                        <span class="card-title">安装DEDECMS出现404</span>
+                        <span class="card-title">BitLocker加密Win0硬盘</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            DEDECMS访问出现404解决方案
+                            防止非法未授权访问，或者数据被窃取。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-03
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-03
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/IT%E6%8A%80%E6%9C%AF/" class="post-category">
-                                    IT技术
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/" class="post-category">
+                                    计算机
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/IT%E6%8A%80%E6%9C%AF/">
-                        <span class="chip bg-color">IT技术</span>
+                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/">
+                        <span class="chip bg-color">计算机</span>
                     </a>
                     
                 </div>
@@ -1096,30 +1031,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/19253.html">
+                <a href="/posts/18040.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200203191012.jfif" class="responsive-img" alt="常用的CMD命令笔记整理">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" class="responsive-img" alt="JSONP跨域劫持">
                         
-                        <span class="card-title">常用的CMD命令笔记整理</span>
+                        <span class="card-title">JSONP跨域劫持</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            常用CMD命令
+                            关于学习JSONP跨域漏洞复现的笔记，以及见解！
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-01
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/IT%E6%8A%80%E6%9C%AF/" class="post-category">
-                                    IT技术
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" class="post-category">
+                                    网络安全
                                 </a>
                             
                             
@@ -1129,8 +1064,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/IT%E6%8A%80%E6%9C%AF/">
-                        <span class="chip bg-color">IT技术</span>
+                    <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                        <span class="chip bg-color">网络安全</span>
                     </a>
                     
                 </div>

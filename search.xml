@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>BitLocker加密Win0硬盘</title>
+      <link href="/posts/60728.html"/>
+      <url>/posts/60728.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p><strong>BitLocker密码及生成秘钥请妥善保管 遗失无法找回。可能导致整个硬盘数据永久无法访问。</strong></p></blockquote><p>此加密方法不会格式化您的数据。同样适用于移动硬盘、U盘等存储设备。</p><h3 id="加密步骤："><a href="#加密步骤：" class="headerlink" title="加密步骤："></a>加密步骤：</h3><p>1、找到你要加密的硬盘，选中右键单击在弹出的菜单选择启用BitLocker加密选项。</p><p>使用密码加密 如下图：</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200303160119.png" alt=""></p><p>2、接着选择自己喜欢的秘钥保存方式，将秘钥保存。（妥善保管，丢失后无法访问硬盘。建议上传到云端保存） 如下图：</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200303160318.png" alt=""></p><p>3、加密数据需要一段时间，耐心等待即可。 如下图：</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200303160547.png" alt=""></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200303160546.png" alt=""></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200303160545.png" alt=""></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 计算机 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JSONP跨域劫持</title>
       <link href="/posts/18040.html"/>
       <url>/posts/18040.html</url>
