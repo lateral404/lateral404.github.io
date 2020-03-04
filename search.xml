@@ -29,6 +29,31 @@
     
     
     <entry>
+      <title>QQ轰炸鸡VBS脚本</title>
+      <link href="/posts/46205.html"/>
+      <url>/posts/46205.html</url>
+      
+        <content type="html"><![CDATA[<p>本屌话不多说，直接上VBS代码 如下：</p><p>带数字的</p><pre class=" language-visual-basic"><code class="language-visual-basic">Dim WshShellSet WshShell= Wscript.CreateObject("WScript.Shell")WshShell.AppActivate "被怼人昵称"for i=1 to 300WScript.Sleep 100WshShell.SendKeys "^v"WshShell.SendKeys iWshShell.SendKeys "%s"Next</code></pre><p>不带数字的</p><pre class=" language-visual-basic"><code class="language-visual-basic">set wshshell=wscript.createobject("wscript.shell")wshshell.AppActivate"要发送的人的名字"for i=1 to 100wscript.sleep 100wshshell.sendKeys "^v"wshshell.sendKeys "%s"next</code></pre><p>使用方法：</p><p>1、代码复制粘贴到.txt文件，ANSI编码并另存为命名为.vbs结尾</p><p>2、发送消息复制粘贴到消息待发送区域</p><p>3、接着双击，vbs脚本自动循环发送消息</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 编程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>BitLocker加密Win0硬盘</title>
       <link href="/posts/60728.html"/>
       <url>/posts/60728.html</url>
