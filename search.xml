@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Windows局域网共享文件/远程控制</title>
+      <link href="/posts/60536.html"/>
+      <url>/posts/60536.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="局域网共享文件夹："><a href="#局域网共享文件夹：" class="headerlink" title="局域网共享文件夹："></a>局域网共享文件夹：</h1><p>1、首先在你想要共享的文件夹或者磁盘，选中单击右键  -授予访问权限-高级共享 ；如下图所示：</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200306094852.png" alt=""></p><p>2、点击高级共享-共享此文件夹-点击权限（完全控制）-复制用户名Everyone （提升权限需要用到，不然会提示权限不足或者其它报错）</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200306094851.png" alt=""></p><p>3、点击安全-Authenticated Users-编辑-选中Authenticated Users 添加用户Everyone，；勾选完全权限，确认即可。</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200306094850.png" alt=""></p><p>这是会看到多了一个Everyone用户，给他完全权限。</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200306094853.png" alt=""></p><p>4、查看网络路径，Ctrl R 输入路径 访问即可。</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200306094849.png" alt=""></p><p>也可以使用<code>Bat脚本</code>一建打开共享文件夹：</p><p>代码如下：</p><pre class=" language-batch"><code class="language-batch"><span class="token command"><span class="token keyword">explorer</span> \\Cat00011cat\e</span></code></pre><h1 id="局域网远程桌面："><a href="#局域网远程桌面：" class="headerlink" title="局域网远程桌面："></a>局域网远程桌面：</h1><p>1、首先打开控制面板-系统-远程控制；</p><p>远程协助：允许远程协助连接此计算机</p><p>远程桌面：允许远程连接至此计算机</p><p>接着 ctrl r /cmd命令下    输入<code>netplwiz</code>   查看用户。</p><p>如下图：</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200306100020.png" alt=""></p><p>2、远程连接</p><p>在需要被远程的机子上cmd窗口执行<code>ipconfig</code>查看本机ip，用于连接。如下图</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200306101029.png" alt=""></p><p>输入ip:8080 进行连接</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200306101011.png" alt=""></p><p>输入密码，连接成功。</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200306101019.png" alt=""></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 计算机 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>SQL注入漏洞</title>
       <link href="/posts/12105.html"/>
       <url>/posts/12105.html</url>
