@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>新技能get√Ps偷梁换柱大法之快速去除公章</title>
+      <link href="/posts/63137.html"/>
+      <url>/posts/63137.html</url>
+      
+        <content type="html"><![CDATA[<p>首先呢，故事是这样开始de。</p><p>人家找我要Ps绿色版安装包呗，结果。。。。。奇奇怪怪的知识就增加了。</p><blockquote><p>需求：清除A文档已有公章，扣取B文档的公章；将B文档的公章移植到A文档。</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200324164602.jpg" alt=""></p></blockquote><p>慢慢来，不急。</p><p>附上镇楼章<img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200324164424.png" alt=""></p><ul><li><p>清除A文档已经有的公章</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200324164603.gif" alt=""></p><p>1、首先选择红通道，点击红通道公章颜色就变得暗淡了；如下图</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200324164600.png" alt=""></p><p>2、CTRL L调出色阶，适当调整使公章彻底消失。如下图</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200324164555.png" alt=""></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200324164554.png" alt=""></p><p>3、回到红通道，按住ctrl键的同时鼠标左键点击红色通道缩略图；选中选区。</p><p>ctrl c复制选区 </p><p>接着回到RGB通道  </p><p>ctrl v粘贴选区。</p><p>这个时候，公章就已经完全去除了。</p><p>如下图：</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200324164557.png" alt=""></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200324164556.png" alt=""></p><p>4、接着回到图层，直接拖入我们准备好的公章即可<img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200324164424.png" alt=""></p><p>建议新建透明图层，在拖入素材（图层才是PS的灵魂）</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200324164559.png" alt=""></p></li><li><p>扣取B文档的公章</p><p>1、因为颜色不是复杂，我们使用<code>色彩范围</code>可以轻松选取公章并抠出。</p><p>选择—色彩范围。如下图：</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200324164558.png" alt=""></p><p><strong>出现扣取的公章</strong> 可以调整<code>颜色容差</code> 进行扩大选取范围，。</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200324164601.png" alt=""></p></li><li><p>最终效果：</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200324164559.png" alt=""></p></li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 平面设计 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Premiere2020学习笔记</title>
       <link href="/posts/49796.html"/>
       <url>/posts/49796.html</url>
