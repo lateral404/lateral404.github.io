@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>135编辑器带你玩转『暗黑模式』</title>
+      <link href="/posts/22887.html"/>
+      <url>/posts/22887.html</url>
+      
+        <content type="html"><![CDATA[<p>说白了就是黑色模式。</p><p>公众号排版注意事项：</p><ul><li><p>为了适配暗黑模式；图片格式必须为PNG。</p></li><li><p>显示2种颜色的字体：</p><p>操作步骤：</p><p>选中一种喜欢的颜色，将色盘拖至偏黑的地方点击确认即可。</p><p>个人理解的原理：暗黑模式下将偏黑的颜色融入了背景从而实现欺骗视觉（白亮色模式与之相反），呈现出来2种颜色交互的假象。</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200327111108.gif" alt=""></p><p>更多技巧还在挖掘，，待更新………</p><p>欢迎大佬指出。</p></li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 计算机 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>135编辑器入门指南</title>
       <link href="/posts/4561.html"/>
       <url>/posts/4561.html</url>
