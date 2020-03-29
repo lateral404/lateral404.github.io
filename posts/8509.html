@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="巧用bat批处理对文件后缀名进行批量修改, Cat00011cat,偏锋小白菜,网络日记,个人博客,BLOG">
-    <meta name="description" content="bat批处理批量修改文件后缀，提高办公效率">
+    <meta name="keywords" content="使用OneDrive自建网盘, Cat00011cat,偏锋小白菜,网络日记,个人博客,BLOG">
+    <meta name="description" content="微软网盘OneDrive申请注册5T空间容量网盘和基于OneDrive搭建私人网盘的笔记。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>巧用bat批处理对文件后缀名进行批量修改 | 偏锋小白菜</title>
+    <title>使用OneDrive自建网盘 | 偏锋小白菜</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -325,7 +325,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '';
+        let pwd = '389924b2f9e222d3c162ca06c22d3caf650960e3a3c8ff61b55c3337a39c5f5f';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -338,12 +338,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lateral404/image/image/20200329221858.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">巧用bat批处理对文件后缀名进行批量修改</h1>
+                    <h1 class="description center-align post-title">使用OneDrive自建网盘</h1>
                 </div>
             </div>
         </div>
@@ -365,23 +365,14 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/IT%E6%8A%80%E6%9C%AF/">
-                                <span class="chip bg-color">IT技术</span>
+                            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/">
+                                <span class="chip bg-color">计算机</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/IT%E6%8A%80%E6%9C%AF/" class="post-category">
-                                IT技术
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -390,28 +381,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-01-08
+                    2020-03-29
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-02-22
+                    2020-03-29
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    494
+                    926
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 				
@@ -427,43 +418,82 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h3><p>今天呢，帮大哥diy爬取了一些类似于室内家具效果图的图片素材<br><del>偏锋小菜鸡</del>一会功夫爬取了近千张的素材，美滋滋的打开文件夹  </p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200108102915.png" alt=""></p>
-<p>结果一看，！！！？？？？是这样子的；如图所示</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200108103033.png" alt=""></p>
-<p>发现图片后缀名全是错误的，例如这样<strong>-JPEG</strong></p>
-<p>哇，这个总不能我一张一张的改吧？？？<br>我此时此刻的心情是这样的<em>&amp;……&amp;&amp;*</em>&amp;……%&amp;&amp;&amp;……%&amp;……</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200108103031.png" alt=""></p>
-<p><em>偏锋小菜鸡</em>，灵机一闪想到了批量重命名文件名；想必理论上命名后缀也可以的。</p>
-<h4 id="进入实战"><a href="#进入实战" class="headerlink" title="进入实战"></a>进入实战</h4><p>果不其然，可以做一个批处理命令，一键修改文件名后缀。</p>
-<pre><code>@echo off
-echo --------------------------------------------------偏锋专用批量修改脚本---------------------------- 
-----------------------
-echo ------------------------------------------------------------------------------------------------- 
--------------------------
-color a
-pause
-echo 【您即将进行批量修改后缀名操作.....】
-pause
-echo 【！！！包括此文件后缀也会被更改！！！】
-pause
-ren * *.jpg
-pause
-echo 按任意键退出
-pause</code></pre><p><strong>代码注释：</strong></p>
-<pre><code>echo xxx                         ::输出提示信息
-@echo off/no                     ::打开回显或关闭回显功能/如果想关闭“ECHO OFF”命令行自身的显示，则需要在该 
-                                   命令行前加上“@”
-pause                            ::暂停
-color                            ::字体颜色
-ren * *.jpg                      ::ren重命名命令； “ * ”代表文件参数（通俗来说就是需要修改的文件名字）当然 
-                                   文件名统一的话也可以修改，例如ren                       img.png *.jpg (记得一个参数一个空格)</code></pre><p><strong>脚本打开效果</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200108103032.png" alt=""></p>
-<h4 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h4><p>创建一个txt文本，将以上代码复制到文本中，保存修改文本后缀.txt为.bat（如图所示）</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200108103034.png" alt=""></p>
-<p>双击打开脚本，按照提示操作，，最后我们可以看到文件后缀全部修改为.jpg了；如图所示</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200108103035.png" alt=""></p>
-<p>至此，总算搞定了。</p>
+                <p>很久之前就注册过两个，可实时间一长都基本忘记当时是怎么注册的了，结果今天折腾基于OneDrive搭建私人网盘。结果发现都不会注册账号了。<strong>emm 我自己都看不起自己，真tm菜！</strong></p>
+<blockquote>
+<p>一般个人普通用户是10G的空间，但是通过教育邮箱来注册的话是1T空间，而管理员是可以把这个空间调到5T的。</p>
+<p>如果您是大学生且学校有学生邮箱的，可以使用自己的邮箱来注册。那么问题来了，我书读的少，没有学校教育邮箱，如何获得5TB空间的OneDrive？？？</p>
+</blockquote>
+<p><strong>注意事项：</strong></p>
+<ul>
+<li><p>微软会定期屏蔽一些邮箱地址注册。</p>
+</li>
+<li><p>空间默认为5T，当里面的内容达到4.7T时，可以申请增加容量到25T。</p>
+</li>
+<li><p>至于网盘可以用多久这个谁都不清楚，所以<strong>切勿存放个人敏感文件。防止信息泄露。</strong></p>
+</li>
+</ul>
+<h1 id="申请步骤如下"><a href="#申请步骤如下" class="headerlink" title="申请步骤如下"></a>申请步骤如下</h1><p>一、获取一个学生身份的教育临时邮箱，打开下面网址，复制网页右上角自动生成的邮箱地址，然后保持此网址在线不要关闭。</p>
+<ul>
+<li>临时邮箱：<a href="http://xkx.me/" target="_blank" rel="noopener">xkx.me</a></li>
+</ul>
+<p>点击右上角的编辑图标可以自定义邮箱前缀，</p>
+<p>自定义的前缀请使用<strong>小写字母</strong>，大写字母获取不到验证码。</p>
+<p>二、打开教育版申请地址<a href="https://signup.microsoft.com/signup?sku=student" target="_blank" rel="noopener">https://signup.microsoft.com/signup?sku=student</a> 填入刚刚获取到的邮箱地址，再点“注册”。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200329144659.png" alt=""></p>
+<p>返回临时邮箱网页查看验证码，</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200329144657.png" alt=""></p>
+<p><strong>创建账户就不再赘述了。</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200329144709.png" alt=""></p>
+<p>出现邀请页直接跳过。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200329144658.png" alt=""></p>
+<p>注册好了，点“下一步”，设置下账户安全设置。（一定要绑定一个可以收邮件的邮箱，方便后找回密码）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200329144703.png" alt=""></p>
+<p>耐心等待OneDirive初始化；</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200329144705.png" alt=""></p>
+<p>选择OneDrive</p>
+<p><del>好了，现在已经完成注册了，很简单吧？进去后可以使用在线版的office和5T的云盘了，该全局不带桌面版的office的，只有5T的OneDrive云盘可用。</del></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200329144701.png" alt=""></p>
+<p>再次耐心等待，完成身份验证邮箱和安全问题后，进入又一次的配置，</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200329144700.png" alt=""></p>
+<p>三、查看储存空间</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200329144707.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200329144706.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200329144708.png" alt=""></p>
+<p><strong>此网盘可以映射到本地电脑。</strong></p>
+<h1 id="搭建私有网盘"><a href="#搭建私有网盘" class="headerlink" title="搭建私有网盘"></a>搭建私有网盘</h1><p>基于OneDrive 5T大空间搭建。嘿嘿嘿，微软服务器在海外可能会限速挂代理、迅雷、IDM理论上可以不限速。</p>
+<ul>
+<li><p>网盘不耗费服务器流量</p>
+</li>
+<li><p>也不占用服务器空间</p>
+</li>
+</ul>
+<p><strong>大概的步骤如下，也不是太难。</strong></p>
+<p>1、首先下载<a href="https://www.lanzous.com/iarvwmh" target="_blank" rel="noopener">网站程序</a></p>
+<p>2、讲程序上传至服务器并且解压。</p>
+<p>3、给config和cache目录777读写权限，访问域名进行安装。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200329221855.png" alt=""></p>
+<p>4、获取应用ID和机密。（可能需要登陆账户）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200329221857.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200329221852.png" alt=""></p>
+<p><strong>点击快速启动</strong> 获取应用ID</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200329221854.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200329221859.png" alt=""></p>
+<p>5、绑定账号并且授权，等待跳转安装成功页面；至此就搭建好了。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200329221851.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200329221856.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200329221853.png" alt=""></p>
+<ul>
+<li><p>如果刷新网页上传的文件依然还是不显示，说明需要清除缓存重构。（可以在服务器弄个定时计划。定时执行清除重构）也可以在后台设置。</p>
+</li>
+<li><p>计划任务</p>
+<pre class=" language-powershell"><code class="language-powershell">php <span class="token operator">/</span>www<span class="token operator">/</span>wwwroot<span class="token operator">/</span>ndmiao<span class="token punctuation">.</span>cn<span class="token operator">/</span>one<span class="token punctuation">.</span>php token:refresh
+php <span class="token operator">/</span>www<span class="token operator">/</span>wwwroot<span class="token operator">/</span>ndmiao<span class="token punctuation">.</span>cn<span class="token operator">/</span>one<span class="token punctuation">.</span>php cache:refresh</code></pre>
+</li>
+</ul>
+<blockquote>
+<p>可以在线上传文件当然也可以通过OneDrive上传都是同步的；这样就可以随时随地在其它设备下载自己的文件咯。</p>
+<p>相当于网盘映射了公网。</p>
+</blockquote>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -497,7 +527,7 @@ ren * *.jpg                      ::ren重命名命令； “ * ”代表文件�
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.thecat.top" rel="external nofollow noreferrer">Cat00011cat</a>
+                    <a href="http://www.thecat.top" rel="external nofollow noreferrer">偏锋小白菜|Cat00011cat</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -507,7 +537,7 @@ ren * *.jpg                      ::ren重命名命令； “ * ”代表文件�
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.thecat.top/posts/4400.html">http://www.thecat.top/posts/4400.html</a>
+                    <a href="http://www.thecat.top/posts/8509.html">http://www.thecat.top/posts/8509.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -520,7 +550,7 @@ ren * *.jpg                      ::ren重命名命令； “ * ”代表文件�
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="http://www.thecat.top" target="_blank">Cat00011cat</a>
+                    <a href="http://www.thecat.top" target="_blank">偏锋小白菜|Cat00011cat</a>
                     !
                 </span>
             </div>
@@ -545,8 +575,8 @@ ren * *.jpg                      ::ren重命名命令； “ * ”代表文件�
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/IT%E6%8A%80%E6%9C%AF/">
-                                    <span class="chip bg-color">IT技术</span>
+                                <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/">
+                                    <span class="chip bg-color">计算机</span>
                                 </a>
                             
                         </div>
@@ -717,7 +747,7 @@ ren * *.jpg                      ::ren重命名命令； “ * ”代表文件�
         repo: 'Leaving-a-message',
         owner: 'lateral404',
         admin: "lateral404",
-        id: '2020-01-08T10-10-24',
+        id: '2020-03-29T03-31-33',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1001,45 +1031,43 @@ ren * *.jpg                      ::ren重命名命令； “ * ”代表文件�
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/undefined.html">
+                <a href="/posts/8509.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200129214218.png" class="responsive-img" alt="windows——优雅地实现批量下载">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200329221858.png" class="responsive-img" alt="使用OneDrive自建网盘">
                         
-                        <span class="card-title">windows——优雅地实现批量下载</span>
+                        <span class="card-title">使用OneDrive自建网盘</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            通过Wget批量下载HTTP协议头的文件
+                            微软网盘OneDrive申请注册5T空间容量网盘和基于OneDrive搭建私人网盘的笔记。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-01-08
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-29
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/IT%E6%8A%80%E6%9C%AF/" class="post-category">
-                                    IT技术
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            偏锋小白菜|Cat00011cat
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/IT%E6%8A%80%E6%9C%AF/">
-                        <span class="chip bg-color">IT技术</span>
+                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/">
+                        <span class="chip bg-color">计算机</span>
                     </a>
                     
                 </div>
@@ -1053,32 +1081,28 @@ ren * *.jpg                      ::ren重命名命令； “ * ”代表文件�
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/35247.html">
+                <a href="/posts/22887.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200129213410.jfif" class="responsive-img" alt="Win10开启暗黑模式小技巧">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" class="responsive-img" alt="135编辑器带你玩转『暗黑模式』">
                         
-                        <span class="card-title">Win10开启暗黑模式小技巧</span>
+                        <span class="card-title">135编辑器带你玩转『暗黑模式』</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            保护视力，Win10也能像MacOS一样开启暗黑模式
+                            揭秘深色模式。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-27
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/IT%E6%8A%80%E6%9C%AF/" class="post-category">
-                                    IT技术
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            偏锋小白菜|Cat00011cat
                             
                         </span>
                     </div>
@@ -1086,8 +1110,8 @@ ren * *.jpg                      ::ren重命名命令； “ * ”代表文件�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/IT%E6%8A%80%E6%9C%AF/">
-                        <span class="chip bg-color">IT技术</span>
+                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/">
+                        <span class="chip bg-color">计算机</span>
                     </a>
                     
                 </div>
