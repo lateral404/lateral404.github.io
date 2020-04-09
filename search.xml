@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Ps技巧</title>
+      <link href="/posts/24518.html"/>
+      <url>/posts/24518.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="一、快速抠出透明的杯子，并且保持质感。"><a href="#一、快速抠出透明的杯子，并且保持质感。" class="headerlink" title="一、快速抠出透明的杯子，并且保持质感。"></a>一、快速抠出透明的杯子，并且保持质感。</h1><p>1、拷贝背景（保护原有图像不受损坏）</p><p>2、ctrl shift n 创建透明图层。</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200406015205.png" alt=""></p><p>3、R图层——红通道；G图层——绿通道；B图层——蓝通道。</p><p>操作方法：</p><p>0x1</p><p>选中背景 ctrl i反相。</p><p>0x2</p><p>选中R图层，切换到通道，选中红通道。按CTRL 鼠标左键点击通道缩略图从而选中玻璃杯，回到通道RGB进行颜色的填充。</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200406015210.png" alt=""></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200406015206.png" alt=""></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200406015211.png" alt=""></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200406015207.png" alt=""></p><p>4、完成</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200406015208.png" alt=""></p><blockquote><p>容易出现的问题：</p><p>选完滤色混合模式，发现杯子是荧光蓝，这是因为没有关闭R、G通道填充颜色导致的。</p></blockquote><h1 id="二、扣取毛发"><a href="#二、扣取毛发" class="headerlink" title="二、扣取毛发"></a>二、扣取毛发</h1><p>1、利用选择并遮住主体扣取毛发</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200406105230.png" alt=""></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200406105229.png" alt=""></p><h1 id="三、扣取半透明状的物体"><a href="#三、扣取半透明状的物体" class="headerlink" title="三、扣取半透明状的物体"></a>三、扣取半透明状的物体</h1><p>1、将素材拖入到另一个图层，使用滤色混合模式即可扣取。</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200406105420.png" alt=""></p><p>2、使用蒙版扣取</p><p>在背景图层上添加一个图层蒙版，回到背景图像ctrl a全选ctrl c复制；随后按住alt键鼠标左键点击蒙版进入蒙版，ctrl v粘贴图像。最后回到图像图层就扣好了。</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200406105419.png" alt=""></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200406105421.png" alt=""></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200406105417.png" alt=""></p><p>半透明的烟雾，婚纱都可以使用此方法扣取。只能扣取半透明的图像。</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200406105418.png" alt=""></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 平面设计 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>OneDrive国内提速方案</title>
       <link href="/posts/5633.html"/>
       <url>/posts/5633.html</url>
