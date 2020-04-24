@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="PHP之两种输出方式, 小白菜博客">
-    <meta name="description" content="echo 和 print 语句的区别。">
+    <meta name="keywords" content="PHP总结笔记, 小白菜博客">
+    <meta name="description" content="数据类型、类型比较、变量基础知识总结">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>PHP之两种输出方式 | 小白菜博客</title>
+    <title>PHP总结笔记 | 小白菜博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -343,7 +343,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">PHP之两种输出方式</h1>
+                    <h1 class="description center-align post-title">PHP总结笔记</h1>
                 </div>
             </div>
         </div>
@@ -381,28 +381,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-20
+                    2020-04-24
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-20
+                    2020-04-24
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    368
+                    756
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 				
@@ -418,52 +418,139 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<p>echo 和 print 语句的区别：</p>
+                <h1 id="PHP5-数据类型"><a href="#PHP5-数据类型" class="headerlink" title="PHP5 数据类型"></a>PHP5 数据类型</h1><p>String（字符串）, Integer（整型）, Float（浮点型）, Boolean（布尔型）, Array（数组）, Object（对象）, NULL（空值）。</p>
+<h2 id="PHP整型"><a href="#PHP整型" class="headerlink" title="PHP整型"></a>PHP整型</h2><blockquote>
+<p>整数是一个没有小数的数字。</p>
+<p>整数规则：</p>
+<pre><code>        整数必须至少有一个数字（0-9）
+
+        整数不能包含逗号或空格
+
+        整数是没有小数点的的
+
+        整数可以是正数或负数
+
+        整型可以用三种格式来指定：十进制，十六进制（以0x为前缀）或八进制（前缀为0 ）。            </code></pre></blockquote>
 <ul>
-<li><p>echo 可以输出一个或者多个字符串</p>
-</li>
-<li><p>print  只允许输出一个字符串，返回值为1</p>
-<ul>
-<li>之所以echo输出的速度比print快，是因为echo没有返回值。</li>
+<li>使用PHP var_dump() 函数返回变量的数据类型和值</li>
 </ul>
-</li>
-</ul>
-<p>echo 和 print 是一个语言结构，在使用的时候加不加括号都可以的。</p>
-</blockquote>
-<h1 id="echo-输出字符串"><a href="#echo-输出字符串" class="headerlink" title="echo 输出字符串"></a>echo 输出字符串</h1><pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
-    <span class="token keyword">echo</span> <span class="token string">"&lt;h1>你好，世界！&lt;/h1>"</span><span class="token punctuation">;</span>
-    <span class="token keyword">echo</span> <span class="token string">"Hello World!&lt;br>"</span><span class="token punctuation">;</span>
-    <span class="token keyword">echo</span> <span class="token string">"我是一个"</span><span class="token punctuation">,</span><span class="token string">"字符串，"</span><span class="token punctuation">,</span><span class="token string">"使用了"</span><span class="token punctuation">,</span><span class="token string">"多个"</span><span class="token punctuation">,</span><span class="token string">"参数。"</span><span class="token punctuation">;</span>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+<span class="token variable">$c</span> <span class="token operator">=</span> <span class="token number">111</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">//正数</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$c</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">echo</span> <span class="token string">"&lt;br>"</span><span class="token punctuation">;</span>
+<span class="token variable">$c</span> <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">111</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">//负数</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$c</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">echo</span> <span class="token string">"&lt;br>"</span><span class="token punctuation">;</span>
+<span class="token variable">$c</span> <span class="token operator">=</span> <span class="token number">0x3</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">//十六进制数</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$c</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">echo</span> <span class="token string">"&lt;br>"</span><span class="token punctuation">;</span>
+<span class="token variable">$c</span> <span class="token operator">=</span> <span class="token number">00011</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">//八进制数</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$c</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token delimiter">?></span></code></pre>
-<h2 id="echo输出字符串和变量"><a href="#echo输出字符串和变量" class="headerlink" title="echo输出字符串和变量"></a>echo输出字符串和变量</h2><pre class=" language-php"><code class="language-php"><span class="token variable">$txt</span> <span class="token operator">=</span> <span class="token string">"你好，世界！"</span><span class="token punctuation">;</span>
-<span class="token variable">$domain</span> <span class="token operator">=</span> <span class="token string">"WWW.THECAT.TOP"</span><span class="token punctuation">;</span>
-<span class="token variable">$cars</span> <span class="token operator">=</span> <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">"BMW"</span><span class="token punctuation">,</span><span class="token string">"Volvo"</span><span class="token punctuation">,</span><span class="token string">"Toyota"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token keyword">echo</span> <span class="token string">"$txt"</span><span class="token punctuation">;</span>
+<h2 id="PHP-浮点型"><a href="#PHP-浮点型" class="headerlink" title="PHP 浮点型"></a>PHP 浮点型</h2><blockquote>
+<p>浮点数是带小数部分的数字，或是指数形式。</p>
+</blockquote>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+<span class="token variable">$c</span> <span class="token operator">=</span> <span class="token number">11.111</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$c</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">echo</span> <span class="token string">"&lt;br>"</span><span class="token punctuation">;</span>
-<span class="token keyword">echo</span> <span class="token string">"我的域名是：$domain"</span><span class="token punctuation">;</span>
+<span class="token variable">$c</span> <span class="token operator">=</span> <span class="token number">2.2e2</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$c</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">echo</span> <span class="token string">"&lt;br>"</span><span class="token punctuation">;</span>
-<span class="token keyword">echo</span> <span class="token string">"理想的座驾：{$cars[0]}"</span><span class="token punctuation">;</span></code></pre>
-<h1 id="print-输出字符串"><a href="#print-输出字符串" class="headerlink" title="print 输出字符串"></a>print 输出字符串</h1><pre class=" language-php"><code class="language-php"><span class="token keyword">print</span> <span class="token string">"&lt;h1>你好 世界！&lt;/h1>"</span><span class="token punctuation">;</span>
-<span class="token keyword">print</span> <span class="token string">"Hello World!"</span><span class="token punctuation">;</span>
-<span class="token keyword">print</span> <span class="token string">"&lt;br>"</span><span class="token punctuation">;</span>
-<span class="token keyword">Print</span> <span class="token string">"浮躁，繁荣de，World，我什么时候才能静下心来学习？"</span><span class="token punctuation">;</span></code></pre>
-<h2 id="print-输出字符串和变量"><a href="#print-输出字符串和变量" class="headerlink" title="print 输出字符串和变量"></a>print 输出字符串和变量</h2><pre class=" language-php"><code class="language-php"><span class="token variable">$txt</span> <span class="token operator">=</span> <span class="token string">"一身清贫怎敢入繁华！"</span><span class="token punctuation">;</span>
-<span class="token variable">$txt0</span> <span class="token operator">=</span> <span class="token string">"How dare two sleeve breeze miss the beauty!"</span><span class="token punctuation">;</span>
-<span class="token variable">$cars</span> <span class="token operator">=</span> <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">"三生有幸copy怎敢遇见你，"</span><span class="token punctuation">,</span><span class="token string">"四目相对怎敢目无你，"</span><span class="token punctuation">,</span><span class="token string">"五行皆空怎敢奢求你，"</span><span class="token punctuation">,</span><span class="token string">"六道轮百回怎敢忘度记你。"</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$c</span> <span class="token operator">=</span> <span class="token number">3E-5</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$c</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token delimiter">?></span></code></pre>
+<h2 id="PHP布尔形"><a href="#PHP布尔形" class="headerlink" title="PHP布尔形"></a>PHP布尔形</h2><blockquote>
+<p>布尔形可以是TRUE 和 FALSE。 </p>
+<pre><code>                                        通常用于条件判断。</code></pre></blockquote>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+<span class="token variable">$c</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
 
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"$txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"&lt;br>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"$txt0,二袖清风怎敢误佳人！"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"&lt;br>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"{$cars[0]}"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"&lt;br>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"{$cars[1]}"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"&lt;br>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"{$cars[2]}"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"&lt;br>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"{$cars[3]}"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<span class="token variable">$c</span> <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token delimiter">?></span></code></pre>
+<h1 id="PHP数组"><a href="#PHP数组" class="headerlink" title="PHP数组"></a>PHP数组</h1><blockquote>
+<p>数组可以在变量中存储多个值。</p>
+</blockquote>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+<span class="token variable">$cars</span> <span class="token operator">=</span> <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">"A"</span><span class="token punctuation">,</span> <span class="token string">"B"</span><span class="token punctuation">,</span><span class="token string">"C"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$cars</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">echo</span> <span class="token string">"&lt;br>"</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token string">"{$cars[0]}"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token string">"{$cars[1]}"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token string">"{$cars[2]}"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token delimiter">?></span></code></pre>
+<h1 id="PHP-NULL-值"><a href="#PHP-NULL-值" class="headerlink" title="PHP NULL 值"></a>PHP NULL 值</h1><blockquote>
+<p>NULL 值表示变量没有值。</p>
+<p>可以通过设置变量值为 NULL 来清空变量数据：</p>
+</blockquote>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+<span class="token variable">$a</span> <span class="token operator">=</span> <span class="token string">"Hello World！"</span><span class="token punctuation">;</span>
+
+<span class="token variable">$b</span> <span class="token operator">=</span> <span class="token string">"NULL"</span><span class="token punctuation">;</span>
+<span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$b</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token delimiter">?></span></code></pre>
+<h2 id="PHP-类型比较"><a href="#PHP-类型比较" class="headerlink" title="PHP 类型比较"></a>PHP 类型比较</h2><blockquote>
+<p>松散比较：使用两个等号 == 比较，只比较值，不比较类型。<br> 严格比较：用三个等号 === 比较，除了比较值，也比较类型。</p>
+</blockquote>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token number">42</span> <span class="token operator">==</span> <span class="token string">"42"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">echo</span> <span class="token string">'1、值相等'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">echo</span> <span class="token string">"&lt;br>"</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 换行符</span>
+
+<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token number">42</span> <span class="token operator">===</span> <span class="token string">"42"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">echo</span> <span class="token string">'2、类型相等'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">echo</span> <span class="token string">'3、不相等'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token delimiter">?></span>
+<span class="token comment" spellcheck="true">//输出：</span>
+<span class="token comment" spellcheck="true">//1、值相等</span>
+<span class="token comment" spellcheck="true">//3、不相等 </span></code></pre>
+<h1 id="PHP常量"><a href="#PHP常量" class="headerlink" title="PHP常量"></a>PHP常量</h1><blockquote>
+<ul>
+<li><p>常量值被定义后，在脚本的其他任何地方都不能被改变。</p>
+<ul>
+<li><p>一个常量由英文字母、下划线、和数字组成,但数字不能作为首字母出现。 </p>
+</li>
+<li><p>(常量名不需要加 $ 修饰符)。</p>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>该函数有三个参数: 
+
+`name`：必选参数，常量名称，即标志符。 
+
+`value`：必选参数，常量的值。 
+
+`case_insensitive `：可选参数，如果设置为 TRUE，该常量则大小写不敏感。默认是大小写敏感的。</code></pre></blockquote>
+<h2 id="区分大小写的常量"><a href="#区分大小写的常量" class="headerlink" title="区分大小写的常量"></a>区分大小写的常量</h2><pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+    <span class="token function">define</span><span class="token punctuation">(</span><span class="token string">"HELLO"</span><span class="token punctuation">,</span> <span class="token string">"还在人海里浮沉"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">//常量名称需要加双引号</span>
+    <span class="token keyword">echo</span> hello<span class="token punctuation">;</span>            <span class="token comment" spellcheck="true">//常量名不需要加 $ 修饰符 和 双引号</span>
+<span class="token delimiter">?></span></code></pre>
+<h2 id="不区分大小写的常量"><a href="#不区分大小写的常量" class="headerlink" title="不区分大小写的常量"></a>不区分大小写的常量</h2><pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token string">"HELLO"</span><span class="token punctuation">,</span><span class="token string">"不区分大小写的常量"</span><span class="token punctuation">,</span><span class="token constant">TRUE</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">echo</span> <span class="token constant">HELLO</span><span class="token punctuation">;</span>
+<span class="token keyword">echo</span> <span class="token string">"&lt;br>"</span><span class="token punctuation">;</span>
+<span class="token keyword">echo</span> hello<span class="token punctuation">;</span>
+<span class="token delimiter">?></span></code></pre>
+<h2 id="常量是全局的"><a href="#常量是全局的" class="headerlink" title="常量是全局的"></a>常量是全局的</h2><blockquote>
+<p>常量在定义后，默认是全局变量，可以在整个运行的脚本的任何地方使用。</p>
+</blockquote>
+<p>以下实例演示了在函数内使用常量，即便常量定义在函数外也可以正常使用常量。</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+    <span class="token function">define</span><span class="token punctuation">(</span><span class="token string">"WORLD"</span><span class="token punctuation">,</span> <span class="token string">"常量值"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">function</span> <span class="token function">MyTest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">echo</span> <span class="token constant">WORLD</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+    <span class="token function">MyTest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token delimiter">?></span>
+
+<span class="token comment" spellcheck="true">//输出:</span>
+<span class="token comment" spellcheck="true">//常量值</span></code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -507,7 +594,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.thecat.top/posts/49496.html">http://www.thecat.top/posts/49496.html</a>
+                    <a href="http://www.thecat.top/posts/51165.html">http://www.thecat.top/posts/51165.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -717,7 +804,7 @@
         repo: 'Leaving-a-message',
         owner: 'lateral404',
         admin: "lateral404",
-        id: '2020-04-20T22-31-33',
+        id: '2020-04-24T12-31-33',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1001,28 +1088,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/14806.html">
+                <a href="/posts/51165.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200420002912.jpg" class="responsive-img" alt="PHP之定界符EOF">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200420002912.jpg" class="responsive-img" alt="PHP总结笔记">
                         
-                        <span class="card-title">PHP之定界符EOF</span>
+                        <span class="card-title">PHP总结笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            EOF（Heredoc）技术。可用来输出大段的html和javascript脚本。
+                            数据类型、类型比较、变量基础知识总结
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-21
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-24
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1031,6 +1119,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1049,23 +1138,23 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/7597.html">
+                <a href="/posts/14806.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200420002912.jpg" class="responsive-img" alt="PHP语法及变量篇">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200420002912.jpg" class="responsive-img" alt="PHP之定界符EOF">
                         
-                        <span class="card-title">PHP语法及变量篇</span>
+                        <span class="card-title">PHP之定界符EOF</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            第一天对变量的认知。
+                            EOF（Heredoc）技术。可用来输出大段的html和javascript脚本。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-21
                             </span>
                         <span class="publish-author">
                             
