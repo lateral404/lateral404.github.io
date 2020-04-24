@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="弱口令爆破与验证绕过, 小白菜博客">
-    <meta name="description" content="弱口令漏洞的爆破思路以及BURP爆破功能介绍">
+    <meta name="keywords" content="Windows10下安装python2和python3双版本, 小白菜博客">
+    <meta name="description" content="看标题吧！！！">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>弱口令爆破与验证绕过 | 小白菜博客</title>
+    <title>Windows10下安装python2和python3双版本 | 小白菜博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -325,7 +325,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '389924b2f9e222d3c162ca06c22d3caf650960e3a3c8ff61b55c3337a39c5f5f';
+        let pwd = '';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -338,12 +338,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lateral404/image/image/20200209180359.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lateral404/image/image/20200425015539.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">弱口令爆破与验证绕过</h1>
+                    <h1 class="description center-align post-title">Windows10下安装python2和python3双版本</h1>
                 </div>
             </div>
         </div>
@@ -365,23 +365,14 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
-                                <span class="chip bg-color">网络安全</span>
+                            <a href="/tags/%E7%BC%96%E7%A8%8B/">
+                                <span class="chip bg-color">编程</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" class="post-category">
-                                网络安全
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -390,28 +381,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-09
+                    2020-04-25
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-02-10
+                    2020-04-25
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    925
+                    338
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    1 分
                 </div>
                 
 				
@@ -427,91 +418,44 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><strong>弱口令</strong>并非我们所说的123456、1234567890、1314520、770880之类的密码，这些密码都太肤浅，</p>
-<p>弱口令分为<strong>2种类型</strong></p>
-<pre><code>1、常规类型：
-123456
-654321
-123123
-111111
-999999
-666666
-2、默认类型
-admin
-admin123
-qaz123123
-qwerqaz</code></pre><p>我们在爆破的过程中，会出现账户密码输入多次错误导致被封，限制登陆。</p>
-<p>那，</p>
-<h1 id="服务端是如何判断我们输入三次了？"><a href="#服务端是如何判断我们输入三次了？" class="headerlink" title="服务端是如何判断我们输入三次了？"></a>服务端是如何判断我们输入三次了？</h1><p>1、根据IP进行判断：</p>
-<p>建立一个IP数据库用于查询当前登陆者输入的次数是否超过XXX次，一般很少使用；增加服务器负担。</p>
-<p><em>IP被办了，可以重启路由器，；或者挂VPN</em></p>
-<p>2、根据Cookie进行判断</p>
-<p>绕过Cookie判断，，，直接删除cookie在进行爆破，；</p>
-<p>没有Cookie它就没办法判断我们输入错误操过XXX次</p>
-<h2 id="验证码"><a href="#验证码" class="headerlink" title="验证码"></a>验证码</h2><ul>
-<li>验证码分为<strong>服务端和客户端</strong></li>
-</ul>
-<h2 id="基于客户端的验证绕过"><a href="#基于客户端的验证绕过" class="headerlink" title="基于客户端的验证绕过"></a>基于客户端的验证绕过</h2><p>首先我们先测试验证码是否有效，</p>
-<p>第一次验证的时候验证码一定要是正确的；</p>
-<p>我们用BURP抓取登录的这个数据包，</p>
-<p>这个数据包我们先不要放，</p>
-<p>不要让数据包发送出去我们直接丢弃，</p>
-<p>CTRL I发送过去进行爆破，</p>
-<p><strong>爆破IP被封</strong>，使用<code>X-Forwarded-For: You IP</code> 头进行绕过 。</p>
-<p>把这段参数放到Cookie上方</p>
-<h1 id="Burp-Intruder（BURP-英吹的）介绍"><a href="#Burp-Intruder（BURP-英吹的）介绍" class="headerlink" title="Burp Intruder（BURP 英吹的）介绍"></a>Burp Intruder（BURP 英吹的）介绍</h1><p>首先来聊一下爆破过程的几种方法，总体来说，按照 Burp 工具，可以了解到基本上有四种方法，分别是 Sniper、Cluster bomb、Battering ram、Pitch fork。具体的使用方法如下：</p>
-<ul>
-<li>Sniper (狙击手) 方法:</li>
-</ul>
+                <p>一、安装Python2.x</p>
+<p>双击 python-2.7.12.amd64.msi 然后一路 Next就可以了。<br>需要注意的是python 2.x 默认安装在 C盘根目录下，这非常便于查找，因此我们安装 python 3.x的时候也建议安装在C盘根目录下。</p>
+<p>二、安装Python3.x</p>
+<p>此处选择自定义安装，因为要修改默认安装位置。另外这里勾选了 “Add Python 3.8 to PATH” 选项，会自动配置环境变量，而python 2.x 需要我们手动配置，这个下面说。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200425015541.png" alt=""></p>
+<p>此处勾选“Install for all users” 并自定义安装路径为”C:\Python38”</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200425015540.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200425015544.png" alt=""></p>
+<p>三、配置环境变量</p>
+<p>格式如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200425015543.png" alt=""></p>
+<p>四、将python 2.x 和 python 3.x的相关命令区分开来</p>
 <blockquote>
-<p>当使用sniper模式时，加载一个单一的payload，对标记的点进行爆破，当然，如果只有一个标记点不用说，直接爆破，但是这个模式对于两个或者两个以上的标记点采用的方法时其中一个标记点加载字典内容，另一个标记点保持默认，当字典结束之后，互相交换，之前加载字典的标记点变成默认，默认的变成加载字典如下图所示：</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200210162338.png" alt=""></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200210162407.png" alt=""></p>
+<p>解决方案是：</p>
 <ul>
-<li>Cluster bomb（集束炸弹）方法：</li>
-</ul>
-<blockquote>
-<p>当使用这个方法的时候，两个字典会不断的迭代吧，我也说不清楚，反正他的规模就是两个payload的笛卡尔积，</p>
-<p>说白了就是 <strong>一对多</strong></p>
-<p>举一个很形象的例子吧：</p>
-<pre><code>pay1字典：123 
-
-pay2字典：456 </code></pre><p>那么使用这种方法的结果就是这样的：</p>
-<pre><code>1-4、1-5、1-6
-
-2-4、2-5、2-6 
-
-3-4、3-5、3-6 </code></pre><p>如下图所示：</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200210163507.png" alt=""></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200210163525.png" alt=""></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200210163533.png" alt=""></p>
+<li><p>将python 3.x 下的所有命令文件名称后都添加一个3，如：python.exe ==&gt; python3.exe</p>
 <ul>
-<li>Battering ram 方法：</li>
+<li><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200425015536.png" alt=""></li>
 </ul>
-<blockquote>
-<p>对于这个方法，我学习了之后认为他就是sniper一个参数情况的特殊版，只不过在这里Battering ram指的是只加载一个字典，如果只有一个标记点，那么没什么区别，如果有多个标记点，那么标记点的内容是一样的，都是字典中的某一个，所以因为名字叫做“攻城锤”，狙击枪变成锤子啦，哈哈哈哈…….如下图：</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200210164404.png" alt=""></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200210164421.png" alt=""></p>
+</li>
+<li><p>Python2.x 文件名称后加2，，如python.exe ==&gt; python2.exe</p>
 <ul>
-<li>Pitch fork 方法：</li>
+<li><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200425015537.png" alt=""></li>
 </ul>
-<blockquote>
-<p>这个方法比较特殊，要求必须传入两个以上的标记点，如果只有一个会报错，当标记 两个之后，</p>
-<p>举一个例子： </p>
-<pre><code>pay1：1，2，3 
-
-pay2：4，5，6 
-
-那么爆破的值为：1-4、2-5、3-6 
-
-当字典不是对称（密码不一样多）的时候，会取最小值！</code></pre><p>如下图所示：</p>
+</li>
+</ul>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200210165209.png" alt=""></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200210165223.png" alt=""></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200210165232.png" alt=""></p>
+<p>删除py3的pip文件。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200425015545.png" alt=""></p>
+<p>在执行此命令</p>
+<p><code>python3 -m pip install -U pip</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200425015542.png" alt=""></p>
+<p>五、测试</p>
+<blockquote>
+<p>说明：一定要重新启动命令终端，否则的path变量不会被重新加载。</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200425015538.png" alt=""></p>
+<p>最后执行<code>pip3 -v</code></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -545,7 +489,7 @@ pay2：4，5，6
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.thecat.top" rel="external nofollow noreferrer">Cat00011cat</a>
+                    <a href="http://www.thecat.top" rel="external nofollow noreferrer">小白菜|Cat00011cat</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -555,7 +499,7 @@ pay2：4，5，6
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.thecat.top/posts/29163.html">http://www.thecat.top/posts/29163.html</a>
+                    <a href="http://www.thecat.top/posts/62309.html">http://www.thecat.top/posts/62309.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -568,7 +512,7 @@ pay2：4，5，6
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="http://www.thecat.top" target="_blank">Cat00011cat</a>
+                    <a href="http://www.thecat.top" target="_blank">小白菜|Cat00011cat</a>
                     !
                 </span>
             </div>
@@ -593,8 +537,8 @@ pay2：4，5，6
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
-                                    <span class="chip bg-color">网络安全</span>
+                                <a href="/tags/%E7%BC%96%E7%A8%8B/">
+                                    <span class="chip bg-color">编程</span>
                                 </a>
                             
                         </div>
@@ -765,7 +709,7 @@ pay2：4，5，6
         repo: 'Leaving-a-message',
         owner: 'lateral404',
         admin: "lateral404",
-        id: '2020-02-09T18-31-33',
+        id: '2020-04-25T01-58-33',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1049,45 +993,43 @@ pay2：4，5，6
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/27182.html">
+                <a href="/posts/62309.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200209160430.jfif" class="responsive-img" alt="CSRF漏洞的验证与防御">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200425015539.jpg" class="responsive-img" alt="Windows10下安装python2和python3双版本">
                         
-                        <span class="card-title">CSRF漏洞的验证与防御</span>
+                        <span class="card-title">Windows10下安装python2和python3双版本</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Referer验证与Tokne密钥防御原理，每天进步一点点！
+                            看标题吧！！！
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-09
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-25
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" class="post-category">
-                                    网络安全
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            小白菜|Cat00011cat
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
-                        <span class="chip bg-color">网络安全</span>
+                    <a href="/tags/%E7%BC%96%E7%A8%8B/">
+                        <span class="chip bg-color">编程</span>
                     </a>
                     
                 </div>
@@ -1101,32 +1043,28 @@ pay2：4，5，6
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/21678.html">
+                <a href="/posts/32544.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200209015106.jfif" class="responsive-img" alt="CSRF跨站请求伪造笔记整理">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200424235427.png" class="responsive-img" alt="美少妇与Android的故事">
                         
-                        <span class="card-title">CSRF跨站请求伪造笔记整理</span>
+                        <span class="card-title">美少妇与Android的故事</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            CSRF跨站请求伪造，是一种挟制用户在当前已登录的Web应用程序上执行非本意的操作的攻击方法。
+                            此文章仅供个人学习，请勿用于其他非法用途。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-24
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" class="post-category">
-                                    网络安全
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            小白菜|Cat00011cat
                             
                         </span>
                     </div>

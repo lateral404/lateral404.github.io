@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Windows10下安装python2和python3双版本</title>
+      <link href="/posts/62309.html"/>
+      <url>/posts/62309.html</url>
+      
+        <content type="html"><![CDATA[<p>一、安装Python2.x</p><p>双击 python-2.7.12.amd64.msi 然后一路 Next就可以了。<br>需要注意的是python 2.x 默认安装在 C盘根目录下，这非常便于查找，因此我们安装 python 3.x的时候也建议安装在C盘根目录下。</p><p>二、安装Python3.x</p><p>此处选择自定义安装，因为要修改默认安装位置。另外这里勾选了 “Add Python 3.8 to PATH” 选项，会自动配置环境变量，而python 2.x 需要我们手动配置，这个下面说。</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200425015541.png" alt=""></p><p>此处勾选“Install for all users” 并自定义安装路径为”C:\Python38”</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200425015540.png" alt=""></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200425015544.png" alt=""></p><p>三、配置环境变量</p><p>格式如下：</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200425015543.png" alt=""></p><p>四、将python 2.x 和 python 3.x的相关命令区分开来</p><blockquote><p>解决方案是：</p><ul><li><p>将python 3.x 下的所有命令文件名称后都添加一个3，如：python.exe ==&gt; python3.exe</p><ul><li><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200425015536.png" alt=""></li></ul></li><li><p>Python2.x 文件名称后加2，，如python.exe ==&gt; python2.exe</p><ul><li><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200425015537.png" alt=""></li></ul></li></ul></blockquote><p>删除py3的pip文件。</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200425015545.png" alt=""></p><p>在执行此命令</p><p><code>python3 -m pip install -U pip</code></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200425015542.png" alt=""></p><p>五、测试</p><blockquote><p>说明：一定要重新启动命令终端，否则的path变量不会被重新加载。</p></blockquote><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200425015538.png" alt=""></p><p>最后执行<code>pip3 -v</code></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 编程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>美少妇与Android的故事</title>
       <link href="/posts/32544.html"/>
       <url>/posts/32544.html</url>
