@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="2018, 小白菜博客">
-    <meta name="description" content="2018 | 小白菜博客">
+    <meta name="keywords" content="标签: 编程, 小白菜博客">
+    <meta name="description" content="标签: 编程 | 小白菜博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>2018 | 小白菜博客</title>
+    <title>标签: 编程 | 小白菜博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -321,19 +321,32 @@
 
 </header>
 
-    <link rel="stylesheet" href="/css/gallery.css">
-<link type="text/css" href="/libs/fancybox/jquery.fancybox.css" rel="stylesheet">
-<link type="text/css" href="/libs/justifiedGallery/justifiedGallery.min.css" rel="stylesheet">
+    <div class="bg-cover pd-header about-cover">
+    <div class="container">
+    <div class="row">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
+                
+                Cat00011cat
+                
+            </div>
 
-
-
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
-    <div class="container" style="right: 0px;left: 0px;">
-        <div class="row">
-            <div class="col s12 m12 l12">
-                <div class="brand">
-                    <h1 class="description center-align post-title">2018</h1>
-                </div>
+            <div class="description center-align">
+                
+                <span id="subtitle"></span>
+                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                <script>
+                    var typed = new Typed("#subtitle", {
+                        strings: ['如果能遇到对的人晚点也没关系，只要那个人是你。','不乱于心，不困于情，不畏将来，不念过往，如此，安好。'],
+                        startDelay: 333,
+                        typeSpeed: 99,
+                        loop: true,
+                        backSpeed: 111,
+                        showCursor: true
+                    });
+                </script>
+                
             </div>
         </div>
     </div>
@@ -341,26 +354,180 @@
 
 
 
-<div class="container">
-    <div class="photo-wrapper">
-        <div class="waterfall" id="mygallery">
-            <a href="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200210135332.png" target="_blank"     class="photo-item" rel="example_group noopener"     data-fancybox="images">      <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200210135332.png"       alt=gh/lateral404/image/image/20200210135332.png>
-    </a><a href="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200210135331.png" target="_blank"     class="photo-item" rel="example_group noopener"     data-fancybox="images">      <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200210135331.png"       alt=gh/lateral404/image/image/20200210135331.png>
-    </a>
+<script>
+    // 每天切换 banner 图.  Switch banner image every day.
+/*    
+    $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
+</script>
 
+
+    </div>
+</div>
+
+<main class="content">
+
+    
+
+<div id="tags" class="container chip-container">
+    <div class="card">
+        <div class="card-content">
+            <div class="tag-title center-align">
+                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
+            </div>
+            <div class="tag-chips">
+                
+                
+                <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/" title="计算机: 8">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="计算机" style="background-color: #F9EBEA;">计算机
+                        <span class="tag-length">8</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" title="网络安全: 27">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="网络安全" style="background-color: #F5EEF8;">网络安全
+                        <span class="tag-length">27</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/IT%E6%8A%80%E6%9C%AF/" title="IT技术: 16">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="IT技术" style="background-color: #D5F5E3;">IT技术
+                        <span class="tag-length">16</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E7%BC%96%E7%A8%8B/" title="编程: 11">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            data-tagname="编程" style="background-color: #E8F8F5;">编程
+                        <span class="tag-length">11</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Hexo/" title="Hexo: 13">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Hexo" style="background-color: #FEF9E7;">Hexo
+                        <span class="tag-length">13</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/" title="生活随笔: 3">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="生活随笔" style="background-color: #F8F9F9;">生活随笔
+                        <span class="tag-length">3</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E5%B9%B3%E9%9D%A2%E8%AE%BE%E8%AE%A1/" title="平面设计: 6">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="平面设计" style="background-color: #82E0AA;">平面设计
+                        <span class="tag-length">6</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/IT%E6%8A%80%E6%9C%AF-%E7%BC%96%E7%A8%8B/" title="-IT技术 -编程: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="-IT技术 -编程" style="background-color: #D7BDE2;">-IT技术 -编程
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E5%94%AF%E5%BA%B7%E6%9D%AF/" title="唯康杯: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="唯康杯" style="background-color: #A3E4D7;">唯康杯
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
+            
+            
+            <div class="article tag-post col s12 m6 l4" data-tags="编程" data-aos="fade-up">
+                <div class="card">
+                    <a href="/posts/65440.html">
+                        <div class="card-image tag-image">
+                            
+                            <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200129210804.jfif" class="responsive-img" alt="HTML简介">
+                            
+                            <span class="card-title">HTML简介</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-01
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E7%BC%96%E7%A8%8B/" class="post-category">
+                                编程
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </article>
+</main>
+
+
+<div class="container paging">
+    <div class="row">
+        <div class="col s6 m4 l4">
+            
+            <a href="/tags/%E7%BC%96%E7%A8%8B/"
+               class="left btn-floating btn-large waves-effect waves-light bg-color">
+                <i class="fas fa-angle-left"></i>
+            </a>
+            
+        </div>
+        <div class="page-info col m4 l4 hide-on-small-only">
+            <div class="center-align b-text-gray">2 / 2</div>
+        </div>
+        <div class="col s6 m4 l4">
+            
+            <a class="right btn-floating btn-large disabled">
+                <i class="fas fa-angle-right"></i>
+            </a>
+            
         </div>
     </div>
 </div>
 
 
-<script src="/libs/fancybox/fancybox.js"></script>
-<script src="/libs/justifiedGallery/justifiedGallery.min.js"></script>
-<script>
 
-  $("a[rel=example_group]").fancybox();
-  $("#mygallery").justifiedGallery({margins: 5, rowHeight: 150});
-
-</script>
 
     <footer class="page-footer bg-color">
 <link rel="stylesheet" href="/live2d/css/live2d.css" />
