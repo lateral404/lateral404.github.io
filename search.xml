@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>C语言概述</title>
+      <link href="/posts/35294.html"/>
+      <url>/posts/35294.html</url>
+      
+        <content type="html"><![CDATA[<p>C语言核心开发步骤四个：</p><p><strong>1):</strong> 写代码</p><p><strong>2):</strong> 编译</p><p><strong>3):</strong>链接</p><p><strong>4):</strong>运行</p><ul><li><strong>使用的编辑器：</strong></li></ul><p>VC6.0++  ——   Dev-C++    （别问为啥用老版本编辑器，因为我是小白）</p><p>VC安装步骤：<a href="http://thecat.top/index.php/archives/339/" target="_blank" rel="noopener">http://thecat.top/index.php/archives/339/</a></p><ul><li><strong>使用Dev-C++  编写 我的 第一个 C程序：</strong><ul><li>快捷键   编译：f9   ;;    运行f10</li></ul></li></ul><pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Hello World ! \n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200428200937.PNG" alt=""></p><ul><li><p><strong>老师说考试会考，拿小本本记下来</strong></p><ul><li><p>美国国家标准协会ANSI</p></li><li><p>最新的C语言标准C99于1999年颁布，20000年3月被ANSI采用。</p></li></ul></li></ul><h2 id="语句注释："><a href="#语句注释：" class="headerlink" title="语句注释："></a>语句注释：</h2><p><code>#include &lt;stdio.h&gt;</code>            预处理指令</p><p><code>int main()</code>         主函数的函数头</p><p><code>{</code>          函数体的开始标记  </p><p><code>printf("Hello，World！\n");</code>            输出的内容 ;  ——-&gt;<code>\n</code> 转义字符，表示换行。</p><p><code>return 0;</code>           程序的返回值为0</p><p><code>}</code>             函数的结束标记</p><blockquote><p>如果返回值改为1的话；；那么终端也就返回一个1</p></blockquote><ul><li><p><code>&lt;stdio.h&gt;</code>    基本输入输出头文件 ；；尖括号可以换成<code>"  "</code> </p></li><li><p>C语言有且只能有一个主函数。</p></li><li><p>每一条语句以<code>;</code> 结束。</p></li></ul><h2 id="代码注释符号："><a href="#代码注释符号：" class="headerlink" title="代码注释符号："></a>代码注释符号：</h2><pre class=" language-c"><code class="language-c"><span class="token comment" spellcheck="true">// 单行注释</span></code></pre><pre><code>/*多行注释*/</code></pre><blockquote><p><strong>1）：</strong>一个完整的C程序由一个或多个源程序构成。</p><p>2）：<strong>任何一个C程序必须包含一个main函数，可以包含多个其他函数。</strong></p><p><strong>3）：</strong> 一个函数由两部分组成，函数头和函数体；若一个函数体有多个大括号，那么最外层就是这个函数体的范围。</p></blockquote><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 编程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>虚拟机15.5.2Pro装MAC系统</title>
       <link href="/posts/35121.html"/>
       <url>/posts/35121.html</url>
