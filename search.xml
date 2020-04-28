@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>虚拟机15.5.2Pro装MAC系统</title>
+      <link href="/posts/35121.html"/>
+      <url>/posts/35121.html</url>
+      
+        <content type="html"><![CDATA[<p>VMware版本如下：</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200428170842.png" alt=""></p><h1 id="打补丁"><a href="#打补丁" class="headerlink" title="打补丁"></a>打补丁</h1><p>首先下载unlocker-master注入破解补丁，使得虚拟机有Apple选项 可以选择mac os镜像。。</p><p>这里需要注意的是镜像后缀智能是<code>.cdr</code>或者<code>.iso</code></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200428170847.png" alt=""></p><p>注入完补丁之后，同文件夹下会出现两个文件夹 如图。。</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200428170846.png" alt=""></p><ul><li>为了避免报错创建完虚拟机之后，需要配置一下VMX文件，如下图所示;</li></ul><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200428170845.png" alt=""></p><h1 id="解决连接不上服务器下载不了Vmware-Tools"><a href="#解决连接不上服务器下载不了Vmware-Tools" class="headerlink" title="解决连接不上服务器下载不了Vmware Tools"></a>解决连接不上服务器下载不了Vmware Tools</h1><p>首先下载 我这里的准备好的VMware tools，，，，</p><p>下载好了需要配置以下几点，方可安装。</p><p>1、在Mac中配置Finder偏好设置，，，，</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200428170843.png" alt=""></p><p>2、虚拟机-可移动设备-cd 设置，，选择刚刚下载好的Vmware Tools，，导入mac安装即可。。</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200428170844.png" alt=""></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200428170841.png" alt=""></p><p>安装完重启Mac 屏幕就是全屏自适应的  如下：：</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200428170822.png" alt=""></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 计算机 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>PHP运算符优先级</title>
       <link href="/posts/45326.html"/>
       <url>/posts/45326.html</url>

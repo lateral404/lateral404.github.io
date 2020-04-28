@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="MSF目标主机内网渗透之SSH暴力破解, 小白菜博客">
-    <meta name="description" content="内网渗透之SSH暴力破解攻占目标主机步骤，攻占前提我们得有强大的字典">
+    <meta name="keywords" content="虚拟机15.5.2Pro装MAC系统, 小白菜博客">
+    <meta name="description" content="记录一下啊踩得坑，嘿嘿。每次装都会有坑">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>MSF目标主机内网渗透之SSH暴力破解 | 小白菜博客</title>
+    <title>虚拟机15.5.2Pro装MAC系统 | 小白菜博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -338,12 +338,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lateral404/image/image/20200129222319.jfif')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lateral404/image/image/20200428170822.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">MSF目标主机内网渗透之SSH暴力破解</h1>
+                    <h1 class="description center-align post-title">虚拟机15.5.2Pro装MAC系统</h1>
                 </div>
             </div>
         </div>
@@ -365,23 +365,14 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
-                                <span class="chip bg-color">网络安全</span>
+                            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/">
+                                <span class="chip bg-color">计算机</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" class="post-category">
-                                网络安全
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -390,21 +381,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-01-14
+                    2020-04-28
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-02-21
+                    2020-04-28
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    326
+                    260
                 </div>
                 
 
@@ -427,32 +418,26 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="爆破环境支持"><a href="#爆破环境支持" class="headerlink" title="爆破环境支持"></a>爆破环境支持</h1><blockquote>
-<p><strong>攻击机和目标主机在同一内网下；目标主机（受害者）必须开放一些端口服务，例如21端口ftp服务、22端口ssh服务等…</strong></p>
-</blockquote>
-<h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><blockquote>
-<p><strong>一台开放22端口的主机（靶机）</strong></p>
-<p><strong>一台Kali LInux（攻击机）</strong></p>
-</blockquote>
-<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><h2 id="启用MSF终端并搜索相关工具及载荷"><a href="#启用MSF终端并搜索相关工具及载荷" class="headerlink" title="启用MSF终端并搜索相关工具及载荷"></a>启用MSF终端并搜索相关工具及载荷</h2><p>首先打开Kali Linux终端输入<code>msfconsole</code>命令启动Metasploit终端。等待终端加载……</p>
-<p>然后在终端输入命令<code>search ssh_login</code>搜索ssh_login的相关工具和攻击载荷；</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200114163238.jpg" alt=""></p>
-<h2 id="启用漏洞利用模块"><a href="#启用漏洞利用模块" class="headerlink" title="启用漏洞利用模块"></a>启用漏洞利用模块</h2><p>在终端输入命令<code>use auxiliary/scanner/ssh/ssh_login</code>启用漏洞利用模块，提示符会自动进入该路径下；</p>
-<p>接着在终端中输入命令<code>show options</code>查看需要设置的相关项，<strong>yes</strong>表示必须填写的参数。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200114163239.jpg" alt=""></p>
-<h2 id="填写相关参数"><a href="#填写相关参数" class="headerlink" title="填写相关参数"></a>填写相关参数</h2><p><strong>设置目标主机的IP地址</strong></p>
-<p><code>set RHOSTS xxx.xxx.x.x</code></p>
-<p><strong>设置22端口</strong></p>
-<p><code>set RPORT 22</code></p>
-<p><strong>指定登录用户名”root”</strong></p>
-<p><code>set USERNAME root</code></p>
-<p><strong>设置暴力破解字典的路径</strong></p>
-<p><code>set PASS_FILE  /root/deaktop/passwd.txt</code></p>
-<p><strong>设置线程</strong></p>
-<p><code>set THEEADS 100</code></p>
-<p><strong>运行</strong></p>
-<p><code>run &amp; exploit</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200114163240.jpg" alt=""></p>
+                <p>VMware版本如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200428170842.png" alt=""></p>
+<h1 id="打补丁"><a href="#打补丁" class="headerlink" title="打补丁"></a>打补丁</h1><p>首先下载unlocker-master注入破解补丁，使得虚拟机有Apple选项 可以选择mac os镜像。。</p>
+<p>这里需要注意的是镜像后缀智能是<code>.cdr</code>或者<code>.iso</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200428170847.png" alt=""></p>
+<p>注入完补丁之后，同文件夹下会出现两个文件夹 如图。。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200428170846.png" alt=""></p>
+<ul>
+<li>为了避免报错创建完虚拟机之后，需要配置一下VMX文件，如下图所示;</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200428170845.png" alt=""></p>
+<h1 id="解决连接不上服务器下载不了Vmware-Tools"><a href="#解决连接不上服务器下载不了Vmware-Tools" class="headerlink" title="解决连接不上服务器下载不了Vmware Tools"></a>解决连接不上服务器下载不了Vmware Tools</h1><p>首先下载 我这里的准备好的VMware tools，，，，</p>
+<p>下载好了需要配置以下几点，方可安装。</p>
+<p>1、在Mac中配置Finder偏好设置，，，，</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200428170843.png" alt=""></p>
+<p>2、虚拟机-可移动设备-cd 设置，，选择刚刚下载好的Vmware Tools，，导入mac安装即可。。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200428170844.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200428170841.png" alt=""></p>
+<p>安装完重启Mac 屏幕就是全屏自适应的  如下：：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200428170822.png" alt=""></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -486,7 +471,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.thecat.top" rel="external nofollow noreferrer">Cat00011cat</a>
+                    <a href="http://www.thecat.top" rel="external nofollow noreferrer">小白菜|Cat00011cat</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -496,7 +481,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.thecat.top/posts/11738.html">http://www.thecat.top/posts/11738.html</a>
+                    <a href="http://www.thecat.top/posts/35121.html">http://www.thecat.top/posts/35121.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -509,7 +494,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="http://www.thecat.top" target="_blank">Cat00011cat</a>
+                    <a href="http://www.thecat.top" target="_blank">小白菜|Cat00011cat</a>
                     !
                 </span>
             </div>
@@ -534,8 +519,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
-                                    <span class="chip bg-color">网络安全</span>
+                                <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/">
+                                    <span class="chip bg-color">计算机</span>
                                 </a>
                             
                         </div>
@@ -706,7 +691,7 @@
         repo: 'Leaving-a-message',
         owner: 'lateral404',
         admin: "lateral404",
-        id: '2020-01-14T16-34-58',
+        id: '2020-04-28T02-31-33',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -990,45 +975,43 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/683.html">
+                <a href="/posts/35121.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200129222709.jfif" class="responsive-img" alt="修改GitBash窗口默认字体大小">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200428170822.png" class="responsive-img" alt="虚拟机15.5.2Pro装MAC系统">
                         
-                        <span class="card-title">修改GitBash窗口默认字体大小</span>
+                        <span class="card-title">虚拟机15.5.2Pro装MAC系统</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Git Bash开启老年模式（字体放大）
+                            记录一下啊踩得坑，嘿嘿。每次装都会有坑
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-01-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-28
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/IT%E6%8A%80%E6%9C%AF/" class="post-category">
-                                    IT技术
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            小白菜|Cat00011cat
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/IT%E6%8A%80%E6%9C%AF/">
-                        <span class="chip bg-color">IT技术</span>
+                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/">
+                        <span class="chip bg-color">计算机</span>
                     </a>
                     
                 </div>
@@ -1042,32 +1025,28 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/63097.html">
+                <a href="/posts/45326.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200129221955.jfif" class="responsive-img" alt="保姆级搭建Hexo步骤">
+                        <img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200420002912.jpg" class="responsive-img" alt="PHP运算符优先级">
                         
-                        <span class="card-title">保姆级搭建Hexo步骤</span>
+                        <span class="card-title">PHP运算符优先级</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            控制台指令一顿搓，基本上都能搭建成功
+                            PHP运算符优先级学习笔记
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-27
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Hexo/" class="post-category">
-                                    Hexo
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            小白菜|Cat00011cat
                             
                         </span>
                     </div>
@@ -1075,8 +1054,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
+                    <a href="/tags/%E7%BC%96%E7%A8%8B/">
+                        <span class="chip bg-color">编程</span>
                     </a>
                     
                 </div>
