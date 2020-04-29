@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Dev C++问题汇总</title>
+      <link href="/posts/36053.html"/>
+      <url>/posts/36053.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="1-编译器设置验证报错解决方案"><a href="#1-编译器设置验证报错解决方案" class="headerlink" title="1): 编译器设置验证报错解决方案"></a>1): 编译器设置验证报错解决方案</h3><p><strong>按照提示的路径找到对应文件夹，重命名文件夹名字与提示的对应。</strong></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200429190814.png" alt=""></p><h3 id="2-devc-在win10下看起来很模糊的详细处理方案"><a href="#2-devc-在win10下看起来很模糊的详细处理方案" class="headerlink" title="2):devc++在win10下看起来很模糊的详细处理方案"></a>2):devc++在win10下看起来很模糊的详细处理方案</h3><p>1，右键点击桌面显示模糊的应用程序，菜单栏选择“属性”。</p><p>2，弹出的小窗口点击“兼容性”，接着点击进入“更改DPI设置”。</p><p>3，然后勾选“代替DPI缩放行为”，最后点击“确定”就可以了。</p><p><strong>图文步骤：</strong></p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200429191138.png" alt=""></p><p>更改前：</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200429191228.png" alt=""></p><p>更改后：</p><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200429191227.png" alt=""></p><h3 id="3-编辑器自定义主题"><a href="#3-编辑器自定义主题" class="headerlink" title="3):编辑器自定义主题"></a>3):编辑器自定义主题</h3><p><img src="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200207141100.gif" data-original="https://cdn.jsdelivr.net/gh/lateral404/image/image/20200429194723.jpg" alt=""></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 编程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>C语言概述</title>
       <link href="/posts/35294.html"/>
       <url>/posts/35294.html</url>
